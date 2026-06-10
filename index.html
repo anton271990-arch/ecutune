@@ -7,10 +7,12 @@
     <!-- SEO Meta Tags -->
     <title>Чип-тюнинг и калибровка ЭБУ удалённо по всей России | Kalibr-ECU</title>
     <meta name="description" content="Удалённая калибровка прошивок ЭБУ с гарантией 1 год. Чип-тюнинг Stage 1/2, отключение DPF, EGR, AdBlue для легковых и грузовых авто. Индивидуальная настройка. Цены от 2500₽.">
-    <meta name="keywords" content="чип тюнинг, калибровка эбу, удаленный чип тюнинг, отключение dpf, удаление adblue, прошивка эбу, чип тюнинг грузовых, отключение экологии грузовых">
+    <meta name="keywords" content="чип тюнинг, калибровка эбу, удаленный чип тюнинг, отключение dpf, удаление adblue, прошивка эбу, чип тюнинг грузовых, отключение экологии грузовых, прошивка эбу удаленно">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Russian">
     <meta name="author" content="Kalibr-ECU">
+    <meta name="copyright" content="Kalibr-ECU">
+    <link rel="canonical" href="https://kalibr-ecu.ru/">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Чип-тюнинг и калибровка ЭБУ | Kalibr-ECU">
@@ -18,6 +20,13 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kalibr-ecu.ru">
     <meta property="og:image" content="https://kalibr-ecu.ru/og-image.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Kalibr-ECU">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Чип-тюнинг и калибровка ЭБУ | Kalibr-ECU">
+    <meta name="twitter:description" content="Удалённая калибровка ЭБУ с гарантией 1 год. Цены от 2500₽.">
     
     <!-- Geo Tags -->
     <meta name="geo.region" content="RU">
@@ -25,6 +34,14 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Preconnect для ускорения загрузки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://mc.yandex.ru">
+    <link rel="preconnect" href="https://api.telegram.org">
+    <link rel="dns-prefetch" href="https://mc.yandex.ru">
+    <link rel="dns-prefetch" href="https://api.telegram.org">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -754,6 +771,37 @@
             font-size: 14px;
         }
 
+        /* === ПЛАВАЮЩАЯ КНОПКА WHATSAPP (для Директа) === */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 64px;
+            height: 64px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7); }
+            100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); }
+        }
+
         /* === АНИМАЦИИ === */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
@@ -795,6 +843,13 @@
             .btn { width: 100%; }
             .pricing-card.popular { transform: scale(1); }
             .pricing-card.popular:hover { transform: translateY(-8px); }
+            .floating-whatsapp {
+                width: 56px;
+                height: 56px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 28px;
+            }
         }
 
         ::-webkit-scrollbar { width: 8px; }
@@ -920,6 +975,26 @@
       ]
     }
     </script>
+
+    <!-- Яндекс.Метрика -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(109753043, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            ecommerce:"dataLayer",
+            triggerEvent:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109753043" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Яндекс.Метрика -->
 </head>
 <body>
 
@@ -946,7 +1021,7 @@
                 <a href="#reviews">Отзывы</a>
                 <a href="#contact">Контакты</a>
             </nav>
-            <a href="#contact" class="header-cta">Получить расчет</a>
+            <a href="#contact" class="header-cta" data-goal="order_click">Получить расчет</a>
         </div>
     </div>
 </header>
@@ -971,7 +1046,7 @@
                 <div class="feature-item">Грузовые авто</div>
             </div>
             <div class="hero-buttons">
-                <a href="#contact" class="btn">Рассчитать стоимость</a>
+                <a href="#contact" class="btn" data-goal="order_click">Рассчитать стоимость</a>
                 <a href="#pricing" class="btn btn-secondary">Смотреть цены</a>
             </div>
         </div>
@@ -1067,7 +1142,7 @@
                     <li>Гарантия 1 год</li>
                     <li>Возврат к стоку бесплатно</li>
                 </ul>
-                <a href="#contact" class="btn" style="width: 100%;">Заказать</a>
+                <a href="#contact" class="btn" style="width: 100%;" data-goal="order_click">Заказать</a>
             </article>
             <article class="pricing-card popular fade-in">
                 <h3 class="pricing-title">Отключение экологии</h3>
@@ -1080,7 +1155,7 @@
                     <li>Комплексное решение</li>
                     <li>Гарантия на работу</li>
                 </ul>
-                <a href="#contact" class="btn" style="width: 100%;">Заказать</a>
+                <a href="#contact" class="btn" style="width: 100%;" data-goal="order_click">Заказать</a>
             </article>
             <article class="pricing-card fade-in">
                 <h3 class="pricing-title">Чип-тюнинг грузовых</h3>
@@ -1093,7 +1168,7 @@
                     <li>Гарантия 1 год</li>
                     <li>Приоритетная обработка</li>
                 </ul>
-                <a href="#contact" class="btn" style="width: 100%;">Заказать</a>
+                <a href="#contact" class="btn" style="width: 100%;" data-goal="order_click">Заказать</a>
             </article>
         </div>
     </div>
@@ -1303,16 +1378,31 @@
             <h2 class="fade-in" id="contact-title">Получите бесплатную консультацию</h2>
             <p class="fade-in">Оставьте заявку и мы рассчитаем стоимость чип-тюнинга для вашего автомобиля в течение 15 минут. Скидка 10% действует при первом обращении!</p>
             
-            <form class="form-group fade-in" onsubmit="handleSubmit(event)" aria-label="Форма заявки">
+            <form class="form-group fade-in" onsubmit="handleSubmit(event)" aria-label="Форма заявки" id="leadForm">
                 <input type="text" class="form-input" id="clientName" placeholder="Ваше имя" required aria-label="Ваше имя">
                 <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required aria-label="Номер телефона">
                 <input type="text" class="form-input" id="carModel" placeholder="Марка и модель авто (например: BMW X5 3.0d или MAN TGS)" required aria-label="Марка и модель автомобиля">
+                
+                <!-- Скрытые поля для UTM-меток (для Яндекс.Директа) -->
+                <input type="hidden" id="utm_source" name="utm_source" value="">
+                <input type="hidden" id="utm_medium" name="utm_medium" value="">
+                <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
+                <input type="hidden" id="utm_content" name="utm_content" value="">
+                <input type="hidden" id="utm_term" name="utm_term" value="">
+                <input type="hidden" id="yclid" name="yclid" value="">
+                <input type="hidden" id="gclid" name="gclid" value="">
+                
                 <button type="submit" class="btn" id="submitBtn">🚀 Получить расчет со скидкой 10%</button>
                 <p class="form-note">🔒 Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
             </form>
         </div>
     </div>
 </section>
+
+<!-- Плавающая кнопка WhatsApp (для Директа) -->
+<a href="https://wa.me/79000978031" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" data-goal="whatsapp_click" title="Написать в WhatsApp">
+    💬
+</a>
 
 <!-- Подвал -->
 <footer class="footer" role="contentinfo">
@@ -1351,7 +1441,29 @@
     // ============================================
     const TELEGRAM_BOT_TOKEN = '8620925258:AAEEApK9ea6nNaTAyBCioOzscnHZh9quGlc';
     const TELEGRAM_CHAT_ID = '802893584';
+    const METRIKA_ID = 109753043;
     // ============================================
+
+    // Захват UTM-меток из URL при загрузке страницы (для Директа)
+    (function captureUTM() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'yclid', 'gclid'];
+        
+        utmFields.forEach(field => {
+            const value = urlParams.get(field);
+            if (value) {
+                const input = document.getElementById(field);
+                if (input) input.value = value;
+                // Сохраняем в sessionStorage для навигации по сайту
+                sessionStorage.setItem(field, value);
+            } else {
+                // Если в URL нет, берем из sessionStorage
+                const saved = sessionStorage.getItem(field);
+                const input = document.getElementById(field);
+                if (saved && input) input.value = saved;
+            }
+        });
+    })();
 
     // Маска для телефона
     const phoneInput = document.getElementById('phone');
@@ -1377,6 +1489,14 @@
         return div.innerHTML;
     }
 
+    // Универсальная функция отправки цели в Метрику
+    function reachGoal(goalName) {
+        if (typeof ym !== 'undefined') {
+            ym(METRIKA_ID, 'reachGoal', goalName);
+            console.log('🎯 Цель отправлена:', goalName);
+        }
+    }
+
     // Обработка отправки формы в Telegram
     async function handleSubmit(e) {
         e.preventDefault();
@@ -1386,6 +1506,13 @@
         const name = document.getElementById('clientName').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const car = document.getElementById('carModel').value.trim();
+        
+        // Получаем UTM-метки
+        const utmSource = document.getElementById('utm_source').value || 'direct';
+        const utmMedium = document.getElementById('utm_medium').value || 'none';
+        const utmCampaign = document.getElementById('utm_campaign').value || 'none';
+        const utmContent = document.getElementById('utm_content').value || 'none';
+        const utmTerm = document.getElementById('utm_term').value || 'none';
         
         btn.disabled = true;
         btn.innerHTML = '⏳ Отправка...';
@@ -1399,6 +1526,9 @@
                         `👤 <b>Имя:</b> ${safeName}\n` +
                         `📞 <b>Телефон:</b> ${safePhone}\n` +
                         `🚙 <b>Авто:</b> ${safeCar}\n\n` +
+                        `📊 <b>Источник:</b> ${utmSource} / ${utmMedium}\n` +
+                        `📊 <b>Кампания:</b> ${utmCampaign}\n` +
+                        `📊 <b>Ключ:</b> ${utmTerm}\n\n` +
                         `📅 <b>Дата:</b> ${dateStr}`;
         
         try {
@@ -1421,6 +1551,9 @@
                 btn.innerHTML = '✅ Заявка успешно отправлена!';
                 btn.style.background = 'linear-gradient(135deg, #10B981 0%, #34D399 100%)';
                 
+                // ✅ ОТПРАВКА ЦЕЛИ В ЯНДЕКС.МЕТРИКУ
+                reachGoal('form_submit');
+                
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.background = '';
@@ -1437,7 +1570,7 @@
             btn.style.background = 'linear-gradient(135deg, #EF4444 0%, #F87171 100%)';
             
             setTimeout(() => {
-                const fallbackMsg = `Заявка с сайта:%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AАвто: ${encodeURIComponent(car)}`;
+                const fallbackMsg = `Заявка с сайта:%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AАвто: ${encodeURIComponent(car)}%0AИсточник: ${utmSource}/${utmCampaign}`;
                 const telegramUrl = `https://t.me/kalibr_compass?text=${fallbackMsg}`;
                 
                 if (confirm('Не удалось отправить форму автоматически. Открыть Telegram для отправки заявки?')) {
@@ -1459,6 +1592,34 @@
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+        });
+    });
+
+    // ✅ ОТСЛЕЖИВАНИЕ КЛИКОВ ПО КНОПКАМ "ЗАКАЗАТЬ/РАССЧИТАТЬ"
+    document.querySelectorAll('[data-goal="order_click"]').forEach(link => {
+        link.addEventListener('click', function() {
+            reachGoal('order_click');
+        });
+    });
+
+    // ✅ ОТСЛЕЖИВАНИЕ КЛИКОВ ПО ТЕЛЕФОНУ
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', function() {
+            reachGoal('phone_click');
+        });
+    });
+
+    // ✅ ОТСЛЕЖИВАНИЕ КЛИКОВ ПО WHATSAPP
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', function() {
+            reachGoal('whatsapp_click');
+        });
+    });
+
+    // ✅ ОТСЛЕЖИВАНИЕ КЛИКОВ ПО TELEGRAM
+    document.querySelectorAll('a[href*="t.me"]').forEach(link => {
+        link.addEventListener('click', function() {
+            reachGoal('telegram_click');
         });
     });
 
