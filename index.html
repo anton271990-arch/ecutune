@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Чип-тюнинг и калибровка ЭБУ удалённо по всей России | Kalibr-ECU</title>
-    <meta name="description" content="Удалённая калибровка прошивок ЭБУ с гарантией 1 год. Отключение AdBlue (мочевины), DPF, EGR для легковых и китайских грузовиков (Sitrak, Howo, Shacman). Цены от 2500₽.">
-    <meta name="keywords" content="чип тюнинг, калибровка эбу, отключение adblue, удаление мочевины, отключение dpf, прошивка эбу грузовых, sitrak, howo">
+    <meta name="description" content="Удалённая калибровка прошивок ЭБУ с гарантией 1 год. Отключение AdBlue (мочевины), DPF, EGR для легковых и грузовых авто (Sitrak, Howo, Shacman, КАМАЗ, МАЗ, ГАЗ). Цены от 2500₽.">
+    <meta name="keywords" content="чип тюнинг, калибровка эбу, отключение adblue, удаление мочевины, отключение dpf, прошивка эбу грузовых, sitrak, howo, камаз, маз, газ">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Russian">
     <meta name="author" content="Kalibr-ECU">
@@ -25,7 +25,7 @@
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --primary-dark: #0A0E1A; --secondary-dark: #0D1117; --accent-blue: #0066FF; --accent-light: #0099FF; --text-white: #FFFFFF; --text-gray: #8899A6; --border-color: #1E2A3A; }
+        :root { --primary-dark: #0A0E1A; --secondary-dark: #0D1117; --accent-blue: #0066FF; --accent-light: #0099FF; --text-white: #FFFFFF; --text-gray: #8899A6; --border-color: #1E2A3A; --accent-green: #10B981; --accent-orange: #F59E0B; }
         body { font-family: 'Inter', sans-serif; background-color: var(--primary-dark); color: var(--text-white); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; line-height: 1.2; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -111,6 +111,35 @@
         .review-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; }
         .review-info h4 { font-size: 16px; margin-bottom: 4px; }
         .review-info p { color: var(--text-gray); font-size: 13px; }
+        
+        /* Калькулятор */
+        .calculator { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 24px; padding: 50px; max-width: 800px; margin: 0 auto; }
+        .calc-step { margin-bottom: 30px; }
+        .calc-step-title { font-size: 18px; font-weight: 600; margin-bottom: 16px; color: var(--text-white); }
+        .calc-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+        .calc-option { background: rgba(255,255,255,0.03); border: 2px solid var(--border-color); border-radius: 12px; padding: 16px; text-align: center; cursor: pointer; transition: all 0.3s; font-size: 15px; font-weight: 500; }
+        .calc-option:hover { border-color: var(--accent-blue); background: rgba(0,102,255,0.05); }
+        .calc-option.active { border-color: var(--accent-blue); background: rgba(0,102,255,0.15); color: var(--accent-light); }
+        .calc-result { background: linear-gradient(135deg, rgba(0,102,255,0.1), rgba(0,153,255,0.05)); border: 2px solid var(--accent-blue); border-radius: 16px; padding: 30px; margin-top: 30px; text-align: center; }
+        .calc-result-price { font-size: 48px; font-weight: 800; color: var(--accent-light); margin: 10px 0; }
+        .calc-result-note { color: var(--text-gray); font-size: 14px; }
+        
+        /* Таймер */
+        .timer-block { display: flex; gap: 15px; justify-content: center; margin: 30px 0; flex-wrap: wrap; }
+        .timer-item { background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px 20px; min-width: 80px; text-align: center; }
+        .timer-value { font-size: 32px; font-weight: 800; color: var(--accent-light); line-height: 1; }
+        .timer-label { font-size: 12px; color: var(--text-gray); text-transform: uppercase; margin-top: 4px; }
+        
+        /* FAQ */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 12px; overflow: hidden; transition: all 0.3s; }
+        .faq-item:hover { border-color: var(--accent-blue); }
+        .faq-question { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 16px; }
+        .faq-question::after { content: '+'; font-size: 24px; color: var(--accent-light); transition: transform 0.3s; }
+        .faq-item.open .faq-question::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; color: var(--text-gray); font-size: 15px; line-height: 1.7; }
+        .faq-item.open .faq-answer { max-height: 500px; padding: 0 24px 20px; }
+        
         .cta { padding: 100px 0; background: linear-gradient(180deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); text-align: center; position: relative; }
         .cta-content { max-width: 650px; margin: 0 auto; position: relative; z-index: 2; }
         .cta h2 { font-size: 42px; margin-bottom: 20px; }
@@ -138,8 +167,8 @@
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-        @media (max-width: 992px) { .hero h1 { font-size: 42px; } .section-title, .cta h2 { font-size: 36px; } .nav { display: none; } .header-top { flex-direction: column; gap: 15px; } }
-        @media (max-width: 768px) { .hero { min-height: auto; padding: 80px 0; margin-top: 140px; } .hero h1 { font-size: 32px; } .hero-subtitle { font-size: 16px; } .section { padding: 80px 0; } .section-title, .cta h2 { font-size: 28px; } .hero-features { flex-direction: column; align-items: flex-start; } .hero-buttons { flex-direction: column; } .btn { width: 100%; } .pricing-card.popular { transform: scale(1); } .pricing-card.popular:hover { transform: translateY(-8px); } .floating-whatsapp { width: 56px; height: 56px; bottom: 20px; right: 20px; font-size: 28px; } }
+        @media (max-width: 992px) { .hero h1 { font-size: 42px; } .section-title, .cta h2 { font-size: 36px; } .nav { display: none; } .header-top { flex-direction: column; gap: 15px; } .calculator { padding: 30px 20px; } }
+        @media (max-width: 768px) { .hero { min-height: auto; padding: 80px 0; margin-top: 140px; } .hero h1 { font-size: 32px; } .hero-subtitle { font-size: 16px; } .section { padding: 80px 0; } .section-title, .cta h2 { font-size: 28px; } .hero-features { flex-direction: column; align-items: flex-start; } .hero-buttons { flex-direction: column; } .btn { width: 100%; } .pricing-card.popular { transform: scale(1); } .pricing-card.popular:hover { transform: translateY(-8px); } .floating-whatsapp { width: 56px; height: 56px; bottom: 20px; right: 20px; font-size: 28px; } .calc-options { grid-template-columns: 1fr 1fr; } .timer-value { font-size: 24px; } }
         ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: var(--primary-dark); } ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 4px; }
     </style>
 
@@ -174,11 +203,12 @@
         <div class="header-content">
             <nav class="nav" aria-label="Основная навигация">
                 <a href="#services">Услуги</a>
+                <a href="#calculator">Калькулятор</a>
                 <a href="#pricing">Цены</a>
                 <a href="#advantages">Преимущества</a>
                 <a href="#process">Как работаем</a>
                 <a href="#reviews">Отзывы</a>
-                <a href="#contact">Контакты</a>
+                <a href="#faq">FAQ</a>
             </nav>
             <a href="#contact" class="header-cta" data-goal="order_click">Получить расчет</a>
         </div>
@@ -188,23 +218,23 @@
 <section class="hero" aria-labelledby="hero-title">
     <div class="container">
         <div class="hero-content">
-            <div class="hero-badge">Профессиональный чип-тюнинг с 2015 года</div>
+            <div class="hero-badge">🔥 Профессиональный чип-тюнинг с 2015 года</div>
             <h1 id="hero-title">
-                <span>Калибровка ЭБУ на заказ</span><br>
-                для легковых и грузовых авто
+                <span>Увеличим мощность до 30%</span><br>
+                за 24 часа — удалённо
             </h1>
             <p class="hero-subtitle">
-                Присылаете стоковую прошивку — получаете готовый результат. Увеличим мощность до 30%, снизим расход топлива и отключим экологию. Специализация на китайских грузовиках: Sitrak, Howo, Shacman, FAW, JAC.
+                Присылаете стоковую прошивку — получаете готовый результат. Отключим AdBlue, DPF, EGR. Специализация на китайских грузовиках (Sitrak, Howo, Shacman) и российских (КАМАЗ, МАЗ, ГАЗ).
             </p>
             <div class="hero-features">
                 <div class="feature-item">Гарантия 1 год</div>
                 <div class="feature-item">Работа по всей России</div>
                 <div class="feature-item">Результат от 15 минут</div>
-                <div class="feature-item">Лицензионное ПО</div>
-                <div class="feature-item">Грузовые авто</div>
+                <div class="feature-item">Более 500 клиентов</div>
+                <div class="feature-item">Возврат к стоку бесплатно</div>
             </div>
             <div class="hero-buttons">
-                <a href="#contact" class="btn" data-goal="order_click">Рассчитать стоимость</a>
+                <a href="#calculator" class="btn" data-goal="order_click">🚀 Рассчитать стоимость</a>
                 <a href="#pricing" class="btn btn-secondary">Смотреть цены</a>
             </div>
         </div>
@@ -219,14 +249,14 @@
         </div>
         <div class="brands-grid">
             <div class="brand-category">🚗 Легковые автомобили</div>
-            <a href="#" class="brand-item fade-in">BMW</a>
-            <a href="#" class="brand-item fade-in">Mercedes</a>
-            <a href="#" class="brand-item fade-in">Audi</a>
-            <a href="#" class="brand-item fade-in">Volkswagen</a>
-            <a href="#" class="brand-item fade-in">Kia</a>
-            <a href="#" class="brand-item fade-in">Hyundai</a>
-            <a href="#" class="brand-item fade-in">Toyota</a>
-            <a href="#" class="brand-item fade-in">И другие</a>
+            <a href="#contact" class="brand-item fade-in">BMW</a>
+            <a href="#contact" class="brand-item fade-in">Mercedes</a>
+            <a href="#contact" class="brand-item fade-in">Audi</a>
+            <a href="#contact" class="brand-item fade-in">Volkswagen</a>
+            <a href="#contact" class="brand-item fade-in">Kia</a>
+            <a href="#contact" class="brand-item fade-in">Hyundai</a>
+            <a href="#contact" class="brand-item fade-in">Toyota</a>
+            <a href="#contact" class="brand-item fade-in">И другие</a>
             
             <div class="brand-category">🚛 Грузовые автомобили</div>
             <a href="sitrak.html" class="brand-item fade-in">Sitrak</a>
@@ -234,9 +264,9 @@
             <a href="shacman.html" class="brand-item fade-in">Shacman</a>
             <a href="faw.html" class="brand-item fade-in">FAW</a>
             <a href="jac.html" class="brand-item fade-in">JAC</a>
-            <a href="#" class="brand-item fade-in">Kamaz</a>
-            <a href="#" class="brand-item fade-in">МАЗ</a>
-            <a href="#" class="brand-item fade-in">И другие</a>
+            <a href="kamaz.html" class="brand-item fade-in">КАМАЗ</a>
+            <a href="maz.html" class="brand-item fade-in">МАЗ</a>
+            <a href="gaz.html" class="brand-item fade-in">ГАЗ</a>
         </div>
     </div>
 </section>
@@ -251,28 +281,63 @@
             <a href="adblue.html" class="service-card fade-in">
                 <div class="service-icon" aria-hidden="true">💧</div>
                 <h3>Отключение AdBlue (мочевины)</h3>
-                <p>Программное отключение системы AdBlue на дизельных двигателях. Решение проблем с SCR-системой, датчиками NOx. Специализация на китайских грузовиках.</p>
+                <p>Программное отключение системы AdBlue на дизельных двигателях. Решение проблем с SCR-системой, датчиками NOx. Специализация на грузовиках.</p>
             </a>
-            <a href="#" class="service-card fade-in">
+            <a href="#contact" class="service-card fade-in">
                 <div class="service-icon" aria-hidden="true">🌿</div>
                 <h3>Эко-тюнинг (DPF, EGR)</h3>
                 <p>Программное отключение сажевого фильтра (DPF), системы рециркуляции (EGR) и вихревых заслонок. Полное решение проблем с экологией.</p>
             </a>
-            <a href="#" class="service-card fade-in">
+            <a href="#contact" class="service-card fade-in">
                 <div class="service-icon" aria-hidden="true">⚡</div>
                 <h3>Чип-тюнинг Stage 1/2</h3>
                 <p>Безопасное увеличение мощности и крутящего момента без вмешательства в железо. Прирост до 30% мощности для легковых и грузовых авто.</p>
             </a>
-            <a href="#" class="service-card fade-in">
+            <a href="#contact" class="service-card fade-in">
                 <div class="service-icon" aria-hidden="true">🚛</div>
                 <h3>Комплекс для грузовых</h3>
-                <p>Увеличение мощности, снижение расхода топлива и полное отключение экологии для Sitrak, Howo, Shacman, FAW, JAC и других марок.</p>
+                <p>Увеличение мощности, снижение расхода топлива и полное отключение экологии для Sitrak, Howo, Shacman, КАМАЗ, МАЗ, ГАЗ.</p>
             </a>
         </div>
     </div>
 </section>
 
-<section class="section section-dark" id="pricing" aria-labelledby="pricing-title">
+<section class="section section-dark" id="calculator" aria-labelledby="calculator-title">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title" id="calculator-title">🧮 Онлайн-калькулятор стоимости</h2>
+            <p class="section-subtitle">Узнайте точную стоимость за 30 секунд</p>
+        </div>
+        <div class="calculator fade-in">
+            <div class="calc-step">
+                <div class="calc-step-title">1. Тип автомобиля</div>
+                <div class="calc-options" data-group="type">
+                    <div class="calc-option" data-value="car" data-price="3000">🚗 Легковой</div>
+                    <div class="calc-option" data-value="lighttruck" data-price="3500">🚐 Лёгкий грузовик (ГАЗель)</div>
+                    <div class="calc-option" data-value="truck" data-price="4000">🚛 Грузовик (КАМАЗ, МАЗ)</div>
+                    <div class="calc-option" data-value="chinesetruck" data-price="3500">🚚 Китайский грузовик</div>
+                </div>
+            </div>
+            <div class="calc-step">
+                <div class="calc-step-title">2. Какие работы нужны?</div>
+                <div class="calc-options" data-group="service" data-multiselect="true">
+                    <div class="calc-option" data-value="chip" data-price="2000">⚡ Чип-тюнинг</div>
+                    <div class="calc-option" data-value="adblue" data-price="2500">💧 Отключение AdBlue</div>
+                    <div class="calc-option" data-value="dpf" data-price="2000">🌿 Отключение DPF/EGR</div>
+                    <div class="calc-option" data-value="complex" data-price="4000">🔥 Комплекс (всё сразу)</div>
+                </div>
+            </div>
+            <div class="calc-result" id="calcResult" style="display:none;">
+                <div style="color: var(--text-gray); font-size: 14px;">Ориентировочная стоимость:</div>
+                <div class="calc-result-price" id="calcPrice">0 ₽</div>
+                <div class="calc-result-note">Точная цена зависит от версии ПО вашего ЭБУ</div>
+                <a href="#contact" class="btn" style="margin-top: 20px;" data-goal="calc_submit">🚀 Получить точный расчёт</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light" id="pricing" aria-labelledby="pricing-title">
     <div class="container">
         <div class="section-header fade-in">
             <h2 class="section-title" id="pricing-title">Стоимость услуг</h2>
@@ -302,10 +367,10 @@
                 <a href="#contact" class="btn" style="width: 100%;" data-goal="order_click">Заказать</a>
             </article>
             <article class="pricing-card fade-in">
-                <h3 class="pricing-title">Грузовые (Китай)</h3>
+                <h3 class="pricing-title">Грузовые (КАМАЗ, МАЗ, ГАЗ)</h3>
                 <div class="pricing-price">от 3000 <span>₽</span></div>
                 <ul class="pricing-features">
-                    <li>Sitrak, Howo, Shacman, FAW</li>
+                    <li>КАМАЗ, МАЗ, ГАЗ</li>
                     <li>Отключение AdBlue / DPF</li>
                     <li>Увеличение тяги</li>
                     <li>Приоритетная обработка</li>
@@ -316,7 +381,7 @@
     </div>
 </section>
 
-<section class="section section-light" id="advantages" aria-labelledby="advantages-title">
+<section class="section section-dark" id="advantages" aria-labelledby="advantages-title">
     <div class="container">
         <div class="section-header fade-in">
             <h2 class="section-title" id="advantages-title">Почему выбирают нас</h2>
@@ -341,13 +406,13 @@
             <article class="advantage-item fade-in">
                 <div class="advantage-number">04</div>
                 <h3>Эксперты по грузовикам</h3>
-                <p>Глубокое знание прошивок китайских грузовиков (Bosch, Denso, Delphi).</p>
+                <p>Глубокое знание прошивок КАМАЗ, МАЗ, ГАЗ и китайских грузовиков (Bosch, Denso, Delphi).</p>
             </article>
         </div>
     </div>
 </section>
 
-<section class="section section-dark" id="process" aria-labelledby="process-title">
+<section class="section section-light" id="process" aria-labelledby="process-title">
     <div class="container">
         <div class="section-header fade-in">
             <h2 class="section-title" id="process-title">Как мы работаем</h2>
@@ -378,7 +443,7 @@
     </div>
 </section>
 
-<section class="section section-light" id="reviews" aria-labelledby="reviews-title">
+<section class="section section-dark" id="reviews" aria-labelledby="reviews-title">
     <div class="container">
         <div class="section-header fade-in">
             <h2 class="section-title" id="reviews-title">Отзывы клиентов</h2>
@@ -395,10 +460,10 @@
             </article>
             <article class="review-card fade-in">
                 <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                <p class="review-text">"Прошивал Howo T7H. Увеличили мощность и отключили всю экологию. Расход упал, тяга на подъемах стала намного увереннее."</p>
+                <p class="review-text">"Прошивал КАМАЗ-5490. Отключили мочевину и DPF, сделали чип-тюнинг. Расход упал на 2 литра, тяга стала намного увереннее. Рекомендую!"</p>
                 <div class="review-author">
                     <div class="review-avatar">А</div>
-                    <div class="review-info"><h4>Алексей</h4><p>Howo T7H, 2020</p></div>
+                    <div class="review-info"><h4>Алексей</h4><p>КАМАЗ-5490, 2019</p></div>
                 </div>
             </article>
             <article class="review-card fade-in">
@@ -409,6 +474,69 @@
                     <div class="review-info"><h4>Дмитрий</h4><p>Kia Sportage, 2016</p></div>
                 </div>
             </article>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"МАЗ-5440, отключили AdBlue и сделали чип. Машина ожила, ошибок больше нет. Сделали за 2 часа, всё чётко!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">С</div>
+                    <div class="review-info"><h4>Сергей</h4><p>МАЗ-5440, 2018</p></div>
+                </div>
+            </article>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"ГАЗель NEXT с Cummins. Чипанул и отключил EGR. Расход с 13 упал до 10.5 литров, тяга на гружёной отличная."</p>
+                <div class="review-author">
+                    <div class="review-avatar">В</div>
+                    <div class="review-info"><h4>Виктор</h4><p>ГАЗель NEXT, 2020</p></div>
+                </div>
+            </article>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"Howo T7H, комплекс работ: чип + отключение всей экологии. Ребята знают своё дело, всё объяснили, гарантию дали."</p>
+                <div class="review-author">
+                    <div class="review-avatar">М</div>
+                    <div class="review-info"><h4>Михаил</h4><p>Howo T7H, 2020</p></div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title" id="faq-title">Частые вопросы</h2>
+            <p class="section-subtitle">Ответы на самые популярные вопросы наших клиентов</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item fade-in">
+                <div class="faq-question">Безопасен ли чип-тюнинг для двигателя?</div>
+                <div class="faq-answer">Да, при профессиональном подходе чип-тюнинг абсолютно безопасен. Мы работаем в пределах заводского запаса прочности двигателя, не превышаем допустимые нагрузки. Все калибровки тестируются и проверяются. Даём гарантию 1 год на все работы.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Слетит ли гарантия дилера после прошивки?</div>
+                <div class="faq-answer">При необходимости мы можем сохранить оригинальные идентификаторы прошивки, что сделает изменения невидимыми для дилерского оборудования. Также мы бесплатно возвращаем стоковую прошивку в любой момент.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Что если мне не понравится результат?</div>
+                <div class="faq-answer">Мы предоставляем гарантию 1 год на все работы. Если результат вас не устроит, бесплатно откатим прошивку до заводской. За 9 лет работы таких случаев было менее 1%.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Как происходит удалённая работа?</div>
+                <div class="faq-answer">Вы (или ваш мастер в любом сервисе) считываете стоковую прошивку через OBD-II разъём. Отправляете файл нам через мессенджер. Мы калибруем и присылаем готовый файл обратно. Вы или ваш мастер загружаете его в ЭБУ. Весь процесс занимает от 15 минут до 24 часов.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Отключение AdBlue — это законно?</div>
+                <div class="faq-answer">Программное отключение AdBlue предназначено для использования вне дорог общего пользования или в случае неисправности системы SCR. Решение о использовании принимает владелец транспортного средства.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Сколько стоит и как оплатить?</div>
+                <div class="faq-answer">Стоимость зависит от марки авто и типа работ — от 2500 до 8000 рублей. Точную цену назовём после получения файла прошивки. Оплата после согласования стоимости, до получения готового файла. Принимаем переводы на карту, СБП, безнал для юр.лиц.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Работаете ли вы с моим регионом?</div>
+                <div class="faq-answer">Да, мы работаем удалённо по всей России — от Калининграда до Владивостока. Также работаем с клиентами из Казахстана и Беларуси. Географических ограничений нет.</div>
+            </div>
         </div>
     </div>
 </section>
@@ -416,14 +544,30 @@
 <section class="cta" id="contact" aria-labelledby="contact-title">
     <div class="container">
         <div class="cta-content">
-            <div class="discount-badge">Скидка <span>10%</span> на первую калибровку</div>
+            <div class="discount-badge">🔥 Скидка <span>10%</span> на первую калибровку — только сегодня!</div>
+            
+            <div class="timer-block">
+                <div class="timer-item">
+                    <div class="timer-value" id="timerHours">23</div>
+                    <div class="timer-label">часов</div>
+                </div>
+                <div class="timer-item">
+                    <div class="timer-value" id="timerMinutes">59</div>
+                    <div class="timer-label">минут</div>
+                </div>
+                <div class="timer-item">
+                    <div class="timer-value" id="timerSeconds">59</div>
+                    <div class="timer-label">секунд</div>
+                </div>
+            </div>
+            
             <h2 class="fade-in" id="contact-title">Получите бесплатную консультацию</h2>
             <p class="fade-in">Оставьте заявку и мы рассчитаем стоимость чип-тюнинга для вашего автомобиля в течение 15 минут.</p>
             
             <form class="form-group fade-in" onsubmit="handleSubmit(event)" aria-label="Форма заявки" id="leadForm">
                 <input type="text" class="form-input" id="clientName" placeholder="Ваше имя" required>
                 <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required>
-                <input type="text" class="form-input" id="carModel" placeholder="Марка и модель авто (например: Sitrak C7H)" required>
+                <input type="text" class="form-input" id="carModel" placeholder="Марка и модель авто (например: КАМАЗ-5490)" required>
                 
                 <input type="hidden" id="utm_source" name="utm_source" value="">
                 <input type="hidden" id="utm_medium" name="utm_medium" value="">
@@ -448,15 +592,20 @@
             <div class="footer-col">
                 <h4>Услуги</h4>
                 <a href="adblue.html">Отключение мочевины (AdBlue)</a>
-                <a href="#">Эко-тюнинг (DPF, EGR)</a>
-                <a href="#">Чип-тюнинг</a>
+                <a href="#services">Эко-тюнинг (DPF, EGR)</a>
+                <a href="#services">Чип-тюнинг</a>
                 <a href="sitrak.html">Чип-тюнинг Sitrak</a>
                 <a href="howo.html">Чип-тюнинг Howo</a>
+                <a href="kamaz.html">Чип-тюнинг КАМАЗ</a>
+                <a href="maz.html">Чип-тюнинг МАЗ</a>
+                <a href="gaz.html">Чип-тюнинг ГАЗ</a>
             </div>
             <div class="footer-col">
                 <h4>Контакты</h4>
                 <a href="tel:+79000978031">📞 +7 (900) 097-80-31</a>
                 <a href="mailto:aleks_moroz84@mail.ru">📧 aleks_moroz84@mail.ru</a>
+                <a href="https://wa.me/79000978031" target="_blank">💬 WhatsApp</a>
+                <a href="https://t.me/kalibr_compass" target="_blank">✈️ Telegram</a>
                 <p style="margin-top: 10px;">🌍 Работаем удаленно по всей России</p>
             </div>
         </div>
@@ -472,6 +621,7 @@
     const TELEGRAM_CHAT_ID = '802893584';
     const METRIKA_ID = 109753043;
 
+    // UTM capture
     (function captureUTM() {
         const urlParams = new URLSearchParams(window.location.search);
         ['utm_source', 'utm_medium', 'utm_campaign'].forEach(field => {
@@ -488,6 +638,7 @@
         });
     })();
 
+    // Phone mask
     const phoneInput = document.getElementById('phone');
     phoneInput.addEventListener('input', function(e) {
         let value = e.target.value.replace(/\D/g, '');
@@ -515,6 +666,70 @@
         }
     }
 
+    // Calculator
+    const calcState = { type: null, services: [] };
+    document.querySelectorAll('.calc-options').forEach(group => {
+        const groupName = group.dataset.group;
+        const multi = group.dataset.multiselect === 'true';
+        group.querySelectorAll('.calc-option').forEach(option => {
+            option.addEventListener('click', () => {
+                if (multi) {
+                    option.classList.toggle('active');
+                    const val = option.dataset.value;
+                    const idx = calcState.services.indexOf(val);
+                    if (idx >= 0) calcState.services.splice(idx, 1);
+                    else calcState.services.push(val);
+                } else {
+                    group.querySelectorAll('.calc-option').forEach(o => o.classList.remove('active'));
+                    option.classList.add('active');
+                    calcState.type = option.dataset.value;
+                }
+                updateCalc();
+            });
+        });
+    });
+    function updateCalc() {
+        const result = document.getElementById('calcResult');
+        const priceEl = document.getElementById('calcPrice');
+        if (!calcState.type || calcState.services.length === 0) {
+            result.style.display = 'none';
+            return;
+        }
+        const typeOption = document.querySelector(`.calc-options[data-group="type"] .calc-option[data-value="${calcState.type}"]`);
+        let total = parseInt(typeOption.dataset.price);
+        calcState.services.forEach(s => {
+            const opt = document.querySelector(`.calc-options[data-group="service"] .calc-option[data-value="${s}"]`);
+            if (opt) total += parseInt(opt.dataset.price);
+        });
+        priceEl.textContent = total.toLocaleString('ru-RU') + ' ₽';
+        result.style.display = 'block';
+    }
+
+    // Countdown timer
+    function updateTimer() {
+        const now = new Date();
+        const end = new Date();
+        end.setHours(23, 59, 59, 999);
+        let diff = end - now;
+        if (diff < 0) diff = 0;
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('timerHours').textContent = String(h).padStart(2, '0');
+        document.getElementById('timerMinutes').textContent = String(m).padStart(2, '0');
+        document.getElementById('timerSeconds').textContent = String(s).padStart(2, '0');
+    }
+    updateTimer();
+    setInterval(updateTimer, 1000);
+
+    // FAQ
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            q.parentElement.classList.toggle('open');
+        });
+    });
+
+    // Form submit
     async function handleSubmit(e) {
         e.preventDefault();
         const btn = document.getElementById('submitBtn');
@@ -561,24 +776,31 @@
         }
     }
 
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 
+    // Goal tracking
     document.querySelectorAll('[data-goal="order_click"]').forEach(el => el.addEventListener('click', () => reachGoal('order_click')));
+    document.querySelectorAll('[data-goal="calc_submit"]').forEach(el => el.addEventListener('click', () => reachGoal('calc_submit')));
     document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('click', () => reachGoal('phone_click')));
     document.querySelectorAll('a[href*="wa.me"]').forEach(el => el.addEventListener('click', () => reachGoal('whatsapp_click')));
     document.querySelectorAll('a[href*="t.me"]').forEach(el => el.addEventListener('click', () => reachGoal('telegram_click')));
 
+    // Fade-in observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+    // Header scroll effect
     window.addEventListener('scroll', () => {
         const header = document.querySelector('.header');
         if (window.scrollY > 50) {
