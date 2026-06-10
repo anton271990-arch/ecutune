@@ -3,469 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
     <title>Чип-тюнинг и калибровка ЭБУ удалённо по всей России | Kalibr-ECU</title>
-    <meta name="description" content="Удалённая калибровка прошивок ЭБУ с гарантией 1 год. Чип-тюнинг Stage 1/2, отключение DPF, EGR, AdBlue для легковых и грузовых авто. Индивидуальная настройка. Цены от 2500₽.">
-    <meta name="keywords" content="чип тюнинг, калибровка эбу, удаленный чип тюнинг, отключение dpf, удаление adblue, прошивка эбу, чип тюнинг грузовых, отключение экологии грузовых, прошивка эбу удаленно">
+    <meta name="description" content="Удалённая калибровка прошивок ЭБУ с гарантией 1 год. Отключение AdBlue (мочевины), DPF, EGR для легковых и китайских грузовиков (Sitrak, Howo, Shacman). Цены от 2500₽.">
+    <meta name="keywords" content="чип тюнинг, калибровка эбу, отключение adblue, удаление мочевины, отключение dpf, прошивка эбу грузовых, sitrak, howo">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Russian">
     <meta name="author" content="Kalibr-ECU">
-    <meta name="copyright" content="Kalibr-ECU">
     <link rel="canonical" href="https://kalibr-ecu.ru/">
-    
-    <!-- ✅ ПОДТВЕРЖДЕНИЕ ЯНДЕКС.ВЕБМАСТЕРА -->
     <meta name="yandex-verification" content="9cb6013ee1a158a6" />
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Чип-тюнинг и калибровка ЭБУ | Kalibr-ECU">
-    <meta property="og:description" content="Увеличим мощность до 30%, отключим экологию для легковых и грузовых авто. Гарантия 1 год.">
+    <meta property="og:description" content="Увеличим мощность до 30%, отключим экологию. Гарантия 1 год. Работаем с грузовиками и легковыми авто.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kalibr-ecu.ru">
-    <meta property="og:image" content="https://kalibr-ecu.ru/og-image.jpg">
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:site_name" content="Kalibr-ECU">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Чип-тюнинг и калибровка ЭБУ | Kalibr-ECU">
-    <meta name="twitter:description" content="Удалённая калибровка ЭБУ с гарантией 1 год. Цены от 2500₽.">
-    
-    <!-- Geo Tags -->
-    <meta name="geo.region" content="RU">
-    <meta name="geo.placename" content="Россия">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Preconnect для ускорения загрузки -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://mc.yandex.ru">
-    <link rel="preconnect" href="https://api.telegram.org">
-    <link rel="dns-prefetch" href="https://mc.yandex.ru">
-    <link rel="dns-prefetch" href="https://api.telegram.org">
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-dark: #0A0E1A;
-            --secondary-dark: #0D1117;
-            --accent-blue: #0066FF;
-            --accent-light: #0099FF;
-            --text-white: #FFFFFF;
-            --text-gray: #8899A6;
-            --border-color: #1E2A3A;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--primary-dark);
-            color: var(--text-white);
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
+        :root { --primary-dark: #0A0E1A; --secondary-dark: #0D1117; --accent-blue: #0066FF; --accent-light: #0099FF; --text-white: #FFFFFF; --text-gray: #8899A6; --border-color: #1E2A3A; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--primary-dark); color: var(--text-white); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; line-height: 1.2; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* ШАПКА */
-        .header {
-            position: fixed; top: 0; width: 100%;
-            background: rgba(10, 14, 26, 0.95);
-            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            z-index: 1000; padding: 15px 0;
-            border-bottom: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-        .header-top {
-            display: flex; justify-content: space-between; align-items: center;
-            margin-bottom: 10px; padding-bottom: 10px;
-            border-bottom: 1px solid var(--border-color);
-        }
+        .header { position: fixed; top: 0; width: 100%; background: rgba(10, 14, 26, 0.95); backdrop-filter: blur(12px); z-index: 1000; padding: 15px 0; border-bottom: 1px solid var(--border-color); }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--border-color); }
         .header-contacts { display: flex; align-items: center; gap: 20px; }
-        .header-phone {
-            font-size: 20px; font-weight: 700; color: var(--text-white);
-            text-decoration: none; display: flex; align-items: center; gap: 8px;
-        }
+        .header-phone { font-size: 20px; font-weight: 700; color: var(--text-white); text-decoration: none; display: flex; align-items: center; gap: 8px; }
         .header-phone:hover { color: var(--accent-light); }
         .header-messengers { display: flex; gap: 10px; }
-        .messenger-icon {
-            width: 32px; height: 32px; background: rgba(255,255,255,0.1);
-            border-radius: 8px; display: flex; align-items: center; justify-content: center;
-            text-decoration: none; font-size: 16px; transition: all 0.3s;
-        }
+        .messenger-icon { width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; transition: all 0.3s; }
         .messenger-icon:hover { background: var(--accent-blue); transform: translateY(-2px); }
         .header-address { color: var(--text-gray); font-size: 14px; display: flex; align-items: center; gap: 6px; }
         .header-content { display: flex; justify-content: space-between; align-items: center; }
         .nav { display: flex; gap: 30px; }
-        .nav a {
-            color: var(--text-white); text-decoration: none; font-weight: 500; font-size: 14px; transition: color 0.3s;
-        }
+        .nav a { color: var(--text-white); text-decoration: none; font-weight: 500; font-size: 14px; transition: color 0.3s; }
         .nav a:hover { color: var(--accent-light); }
-        .header-cta {
-            background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%) !important;
-            color: #FFFFFF !important; padding: 10px 24px; border-radius: 8px;
-            text-decoration: none !important; font-weight: 600; font-size: 14px; transition: all 0.3s;
-        }
-        .header-cta:hover {
-            transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,102,255,0.3);
-            background: linear-gradient(135deg, #0077FF 0%, #00AAFF 100%) !important;
-        }
-
-        /* ГЛАВНЫЙ ЭКРАН */
-        .hero {
-            margin-top: 110px; min-height: 90vh; display: flex; align-items: center;
-            position: relative; overflow: hidden;
-            background: linear-gradient(135deg, rgba(10,14,26,0.92) 0%, rgba(13,17,23,0.85) 100%), 
-                        url(https://i.ibb.co/fGPSC1js/1781007881.png) center/cover no-repeat;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .hero::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(0,102,255,0.15) 0%, transparent 50%);
-            pointer-events: none;
-        }
+        .header-cta { background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%) !important; color: #FFFFFF !important; padding: 10px 24px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 14px; transition: all 0.3s; }
+        .header-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,102,255,0.3); }
+        .hero { margin-top: 110px; min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(10,14,26,0.92) 0%, rgba(13,17,23,0.85) 100%), url(https://i.ibb.co/fGPSC1js/1781007881.png) center/cover no-repeat; border-bottom: 1px solid var(--border-color); }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(0,102,255,0.15) 0%, transparent 50%); pointer-events: none; }
         .hero-content { position: relative; z-index: 2; max-width: 850px; padding: 60px 0; }
-        .hero-badge {
-            display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px;
-            background: rgba(0,102,255,0.1); border: 1px solid rgba(0,102,255,0.3);
-            border-radius: 30px; font-size: 14px; color: var(--accent-light); font-weight: 600;
-            margin-bottom: 24px; animation: fadeInDown 0.8s ease;
-        }
-        .hero h1 {
-            font-size: 56px; margin-bottom: 24px; font-weight: 800; line-height: 1.1;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
-        }
-        .hero h1 span {
-            background: linear-gradient(135deg, #FFFFFF 0%, #0099FF 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-        }
-        .hero-subtitle {
-            font-size: 19px; color: var(--text-gray); margin-bottom: 32px; line-height: 1.6;
-            max-width: 700px; animation: fadeInUp 0.8s ease 0.4s backwards;
-        }
-        .hero-features {
-            display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.6s backwards;
-        }
-        .feature-item {
-            display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-white);
-            background: rgba(255,255,255,0.03); padding: 10px 18px; border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; background: rgba(0,102,255,0.1); border: 1px solid rgba(0,102,255,0.3); border-radius: 30px; font-size: 14px; color: var(--accent-light); font-weight: 600; margin-bottom: 24px; animation: fadeInDown 0.8s ease; }
+        .hero h1 { font-size: 56px; margin-bottom: 24px; font-weight: 800; line-height: 1.1; animation: fadeInUp 0.8s ease 0.2s backwards; }
+        .hero h1 span { background: linear-gradient(135deg, #FFFFFF 0%, #0099FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-subtitle { font-size: 19px; color: var(--text-gray); margin-bottom: 32px; line-height: 1.6; max-width: 700px; animation: fadeInUp 0.8s ease 0.4s backwards; }
+        .hero-features { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.6s backwards; }
+        .feature-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-white); background: rgba(255,255,255,0.03); padding: 10px 18px; border-radius: 8px; border: 1px solid var(--border-color); }
         .feature-item::before { content: '✓'; color: var(--accent-light); font-weight: bold; font-size: 16px; }
         .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.8s backwards; }
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-            padding: 18px 36px; background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%) !important;
-            color: #FFFFFF !important; text-decoration: none !important; border-radius: 10px;
-            font-weight: 600; font-size: 16px; border: none; cursor: pointer; transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,102,255,0.25); font-family: 'Inter', sans-serif;
-        }
-        .btn:hover {
-            transform: translateY(-2px); box-shadow: 0 15px 40px rgba(0,102,255,0.4);
-            background: linear-gradient(135deg, #0077FF 0%, #00AAFF 100%) !important;
-        }
-        .btn-secondary {
-            background: transparent !important; border: 1px solid #1E2A3A; box-shadow: none; color: #FFFFFF !important;
-        }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 36px; background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%) !important; color: #FFFFFF !important; text-decoration: none !important; border-radius: 10px; font-weight: 600; font-size: 16px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,102,255,0.25); font-family: 'Inter', sans-serif; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(0,102,255,0.4); background: linear-gradient(135deg, #0077FF 0%, #00AAFF 100%) !important; }
+        .btn-secondary { background: transparent !important; border: 1px solid #1E2A3A; box-shadow: none; color: #FFFFFF !important; }
         .btn-secondary:hover { background: rgba(255,255,255,0.05) !important; border-color: #0066FF; }
-
-        /* СЕКЦИИ */
         .section { padding: 100px 0; }
         .section-dark { background: var(--secondary-dark); }
         .section-light { background: var(--primary-dark); }
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-title { font-size: 42px; margin-bottom: 16px; font-weight: 700; }
         .section-subtitle { color: var(--text-gray); font-size: 18px; max-width: 600px; margin: 0 auto; }
-
-        /* БЛОК МАРОК АВТО */
         .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 40px; }
-        .brand-item {
-            background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px;
-            padding: 24px 16px; text-align: center; transition: all 0.3s; font-weight: 600; font-size: 16px;
-        }
+        .brand-item { background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px 16px; text-align: center; transition: all 0.3s; font-weight: 600; font-size: 16px; text-decoration: none; color: var(--text-white); display: block; }
         .brand-item:hover { background: rgba(0,102,255,0.1); border-color: var(--accent-blue); transform: translateY(-4px); }
-        .brand-category {
-            grid-column: 1 / -1; text-align: left; font-size: 20px; font-weight: 700; color: var(--accent-light);
-            margin-top: 30px; padding-bottom: 10px; border-bottom: 2px solid var(--accent-blue);
-        }
+        .brand-category { grid-column: 1 / -1; text-align: left; font-size: 20px; font-weight: 700; color: var(--accent-light); margin-top: 30px; padding-bottom: 10px; border-bottom: 2px solid var(--accent-blue); }
         .brand-category:first-child { margin-top: 0; }
-
-        /* УСЛУГИ */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .service-card {
-            background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 20px;
-            padding: 40px 30px; transition: all 0.4s ease; position: relative; overflow: hidden;
-        }
-        .service-card::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-            background: linear-gradient(90deg, var(--accent-blue), var(--accent-light));
-            transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px 30px; transition: all 0.4s ease; position: relative; overflow: hidden; text-decoration: none; color: inherit; display: block; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent-blue), var(--accent-light)); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
         .service-card:hover { transform: translateY(-8px); border-color: rgba(0,102,255,0.5); box-shadow: 0 20px 50px rgba(0,102,255,0.1); }
         .service-card:hover::before { transform: scaleX(1); }
-        .service-icon {
-            width: 64px; height: 64px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light));
-            border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px;
-        }
+        .service-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px; }
         .service-card h3 { font-size: 22px; margin-bottom: 16px; }
         .service-card p { color: var(--text-gray); font-size: 15px; line-height: 1.7; }
-
-        /* ЦЕНЫ */
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .pricing-card {
-            background: rgba(255,255,255,0.03); border: 2px solid var(--border-color); border-radius: 20px;
-            padding: 40px 30px; text-align: center; transition: all 0.3s; position: relative;
-        }
+        .pricing-card { background: rgba(255,255,255,0.03); border: 2px solid var(--border-color); border-radius: 20px; padding: 40px 30px; text-align: center; transition: all 0.3s; position: relative; }
         .pricing-card.popular { border-color: var(--accent-blue); background: rgba(0,102,255,0.05); transform: scale(1.05); }
-        .pricing-card.popular::before {
-            content: 'ПОПУЛЯРНО'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-light));
-            padding: 6px 20px; border-radius: 20px; font-size: 12px; font-weight: 700;
-        }
+        .pricing-card.popular::before { content: 'ПОПУЛЯРНО'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); padding: 6px 20px; border-radius: 20px; font-size: 12px; font-weight: 700; }
         .pricing-card:hover { transform: translateY(-8px); border-color: var(--accent-blue); }
         .pricing-card.popular:hover { transform: scale(1.05) translateY(-8px); }
         .pricing-title { font-size: 24px; margin-bottom: 20px; font-weight: 700; }
         .pricing-price { font-size: 48px; font-weight: 800; color: var(--accent-light); margin: 20px 0; }
         .pricing-price span { font-size: 18px; color: var(--text-gray); font-weight: 400; }
         .pricing-features { list-style: none; margin: 30px 0; text-align: left; }
-        .pricing-features li {
-            padding: 10px 0; border-bottom: 1px solid var(--border-color); color: var(--text-gray);
-            display: flex; align-items: center; gap: 10px;
-        }
+        .pricing-features li { padding: 10px 0; border-bottom: 1px solid var(--border-color); color: var(--text-gray); display: flex; align-items: center; gap: 10px; }
         .pricing-features li::before { content: '✓'; color: var(--accent-light); font-weight: bold; }
-
-        /* ПРЕИМУЩЕСТВА */
         .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        .advantage-item {
-            text-align: center; padding: 40px 30px; background: rgba(255,255,255,0.02);
-            border: 1px solid var(--border-color); border-radius: 20px; transition: all 0.3s ease;
-        }
+        .advantage-item { text-align: center; padding: 40px 30px; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 20px; transition: all 0.3s ease; }
         .advantage-item:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
         .advantage-number { font-size: 56px; font-weight: 800; color: var(--accent-blue); opacity: 0.2; margin-bottom: 16px; line-height: 1; }
         .advantage-item h3 { font-size: 20px; margin-bottom: 12px; }
         .advantage-item p { color: var(--text-gray); font-size: 15px; }
-
-        /* ПРОЦЕСС РАБОТЫ */
         .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        .step {
-            position: relative; padding: 40px 30px; background: rgba(255,255,255,0.02);
-            border: 1px solid var(--border-color); border-radius: 20px; text-align: center; transition: all 0.3s ease;
-        }
+        .step { position: relative; padding: 40px 30px; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 20px; text-align: center; transition: all 0.3s ease; }
         .step:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
-        .step-number {
-            width: 64px; height: 64px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light));
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 24px; font-weight: 700; margin: 0 auto 24px;
-        }
+        .step-number { width: 64px; height: 64px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; margin: 0 auto 24px; }
         .step h3 { font-size: 20px; margin-bottom: 12px; }
         .step p { color: var(--text-gray); font-size: 15px; }
-
-        /* ОТЗЫВЫ */
         .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px; }
-        .review-card {
-            background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 16px;
-            padding: 30px; transition: all 0.3s;
-        }
+        .review-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 16px; padding: 30px; transition: all 0.3s; }
         .review-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
         .review-stars { color: #FFD700; font-size: 20px; margin-bottom: 16px; }
         .review-text { color: var(--text-white); font-size: 15px; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
         .review-author { display: flex; align-items: center; gap: 12px; }
-        .review-avatar {
-            width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light));
-            border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;
-        }
+        .review-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; }
         .review-info h4 { font-size: 16px; margin-bottom: 4px; }
         .review-info p { color: var(--text-gray); font-size: 13px; }
-
-        /* ФОРМА ЗАЯВКИ */
-        .cta {
-            padding: 100px 0; background: linear-gradient(180deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
-            text-align: center; position: relative;
-        }
+        .cta { padding: 100px 0; background: linear-gradient(180deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); text-align: center; position: relative; }
         .cta-content { max-width: 650px; margin: 0 auto; position: relative; z-index: 2; }
         .cta h2 { font-size: 42px; margin-bottom: 20px; }
         .cta p { font-size: 18px; color: var(--text-gray); margin-bottom: 40px; }
-        .discount-badge {
-            display: inline-block; background: rgba(0,102,255,0.15); border: 1px solid var(--accent-blue);
-            color: var(--accent-light); padding: 12px 28px; border-radius: 30px; font-size: 16px;
-            font-weight: 700; margin-bottom: 30px; box-shadow: 0 0 30px rgba(0,102,255,0.2);
-        }
+        .discount-badge { display: inline-block; background: rgba(0,102,255,0.15); border: 1px solid var(--accent-blue); color: var(--accent-light); padding: 12px 28px; border-radius: 30px; font-size: 16px; font-weight: 700; margin-bottom: 30px; box-shadow: 0 0 30px rgba(0,102,255,0.2); }
         .discount-badge span { color: #FFD700; font-size: 20px; }
         .form-group { display: flex; flex-direction: column; gap: 16px; max-width: 500px; margin: 0 auto; }
-        .form-input {
-            padding: 18px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color);
-            border-radius: 12px; color: white; font-size: 16px; font-family: 'Inter', sans-serif; transition: all 0.3s ease;
-        }
+        .form-input { padding: 18px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px; color: white; font-size: 16px; font-family: 'Inter', sans-serif; transition: all 0.3s ease; }
         .form-input:focus { outline: none; border-color: var(--accent-blue); background: rgba(255,255,255,0.06); }
         .form-input::placeholder { color: var(--text-gray); }
-        .form-note { 
-            color: var(--text-gray); 
-            font-size: 13px; 
-            margin-top: 16px; 
-            opacity: 0.7; 
-        }
-        .form-note a {
-            color: var(--accent-light);
-            text-decoration: underline;
-            transition: color 0.3s;
-        }
-        .form-note a:hover {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-
-        /* ПОДВАЛ */
+        .form-note { color: var(--text-gray); font-size: 13px; margin-top: 16px; opacity: 0.7; }
+        .form-note a { color: var(--accent-light); text-decoration: underline; }
+        .form-note a:hover { color: #FFFFFF; }
         .footer { background: #05070A; padding: 80px 0 40px; border-top: 1px solid var(--border-color); }
         .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 60px; }
         .footer-col h4 { font-size: 18px; margin-bottom: 24px; color: var(--text-white); }
-        .footer-col p, .footer-col a {
-            color: var(--text-gray); text-decoration: none; line-height: 1.9; font-size: 15px;
-            transition: color 0.3s; display: block;
-        }
+        .footer-col p, .footer-col a { color: var(--text-gray); text-decoration: none; line-height: 1.9; font-size: 15px; transition: color 0.3s; display: block; }
         .footer-col a:hover { color: var(--accent-light); }
-        .footer-bottom { 
-            text-align: center; 
-            padding-top: 30px; 
-            border-top: 1px solid var(--border-color); 
-            color: var(--text-gray); 
-            font-size: 14px; 
-        }
-        .footer-bottom a {
-            color: var(--text-gray);
-            text-decoration: underline;
-            font-size: 13px;
-            display: inline-block;
-            margin-top: 10px;
-            transition: color 0.3s;
-        }
-        .footer-bottom a:hover {
-            color: var(--accent-light);
-        }
-
-        /* ПЛАВАЮЩАЯ КНОПКА WHATSAPP */
-        .floating-whatsapp {
-            position: fixed; bottom: 30px; right: 30px; width: 64px; height: 64px;
-            background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 32px; text-decoration: none; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-            z-index: 999; transition: all 0.3s ease; animation: pulse 2s infinite;
-        }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid var(--border-color); color: var(--text-gray); font-size: 14px; }
+        .footer-bottom a { color: var(--text-gray); text-decoration: underline; display: inline-block; margin-top: 10px; }
+        .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; width: 64px; height: 64px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); z-index: 999; transition: all 0.3s ease; animation: pulse 2s infinite; }
         .floating-whatsapp:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6); }
-        @keyframes pulse {
-            0% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7); }
-            100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); }
-        }
-
-        /* АНИМАЦИИ */
+        @keyframes pulse { 0% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7); } 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-        /* АДАПТИВНОСТЬ */
-        @media (max-width: 992px) {
-            .hero h1 { font-size: 42px; }
-            .section-title, .cta h2 { font-size: 36px; }
-            .nav { display: none; }
-            .header-top { flex-direction: column; gap: 15px; }
-        }
-        @media (max-width: 768px) {
-            .hero { min-height: auto; padding: 80px 0; margin-top: 140px; }
-            .hero h1 { font-size: 32px; }
-            .hero-subtitle { font-size: 16px; }
-            .section { padding: 80px 0; }
-            .section-title, .cta h2 { font-size: 28px; }
-            .hero-features { flex-direction: column; align-items: flex-start; }
-            .hero-buttons { flex-direction: column; }
-            .btn { width: 100%; }
-            .pricing-card.popular { transform: scale(1); }
-            .pricing-card.popular:hover { transform: translateY(-8px); }
-            .floating-whatsapp { width: 56px; height: 56px; bottom: 20px; right: 20px; font-size: 28px; }
-        }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--primary-dark); }
-        ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 4px; }
+        @media (max-width: 992px) { .hero h1 { font-size: 42px; } .section-title, .cta h2 { font-size: 36px; } .nav { display: none; } .header-top { flex-direction: column; gap: 15px; } }
+        @media (max-width: 768px) { .hero { min-height: auto; padding: 80px 0; margin-top: 140px; } .hero h1 { font-size: 32px; } .hero-subtitle { font-size: 16px; } .section { padding: 80px 0; } .section-title, .cta h2 { font-size: 28px; } .hero-features { flex-direction: column; align-items: flex-start; } .hero-buttons { flex-direction: column; } .btn { width: 100%; } .pricing-card.popular { transform: scale(1); } .pricing-card.popular:hover { transform: translateY(-8px); } .floating-whatsapp { width: 56px; height: 56px; bottom: 20px; right: 20px; font-size: 28px; } }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: var(--primary-dark); } ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 4px; }
     </style>
 
-    <!-- JSON-LD Микроразметка Schema.org -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "Kalibr-ECU",
-      "description": "Профессиональная удалённая калибровка прошивок ЭБУ и чип-тюнинг для легковых и грузовых автомобилей с гарантией 1 год",
-      "url": "https://kalibr-ecu.ru",
-      "telephone": "+7-900-097-80-31",
-      "email": "aleks_moroz84@mail.ru",
-      "address": { "@type": "PostalAddress", "addressCountry": "RU" },
-      "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "20:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "18:00" }
-      ],
-      "priceRange": "от 2500 ₽",
-      "areaServed": { "@type": "Country", "name": "Россия" },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog", "name": "Услуги чип-тюнинга",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Чип-тюнинг Stage 1/2", "description": "Увеличение мощности двигателя до 30%" }, "price": "3000", "priceCurrency": "RUB" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Отключение экологии (DPF, EGR, AdBlue)", "description": "Программное отключение сажевого фильтра и системы AdBlue" }, "price": "2500", "priceCurrency": "RUB" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Чип-тюнинг грузовых автомобилей", "description": "Увеличение мощности и отключение экологии для грузовиков" }, "price": "5000", "priceCurrency": "RUB" }
-        ]
-      },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "500" }
-    }
+    { "@context": "https://schema.org", "@type": "AutoRepair", "name": "Kalibr-ECU", "description": "Профессиональная удалённая калибровка прошивок ЭБУ и чип-тюнинг для легковых и грузовых автомобилей", "url": "https://kalibr-ecu.ru", "telephone": "+7-900-097-80-31", "email": "aleks_moroz84@mail.ru", "address": { "@type": "PostalAddress", "addressCountry": "RU" }, "priceRange": "от 2500 ₽", "areaServed": { "@type": "Country", "name": "Россия" } }
     </script>
 
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Безопасен ли чип-тюнинг для двигателя?", "acceptedAnswer": { "@type": "Answer", "text": "Да, мы работаем в рамках заводского запаса прочности двигателя. Прирост мощности составляет до 30% без снижения ресурса. Даём гарантию 1 год на ПО." } },
-        { "@type": "Question", "name": "Как происходит удалённая калибровка?", "acceptedAnswer": { "@type": "Answer", "text": "Вы считываете стоковую прошивку через OBD2-адаптер, присылаете нам файл. Мы калибруем и отправляем готовую прошивку обратно. Весь процесс занимает до 24 часов." } },
-        { "@type": "Question", "name": "Работаете ли вы с грузовыми автомобилями?", "acceptedAnswer": { "@type": "Answer", "text": "Да, мы специализируемся на чип-тюнинге грузовых автомобилей: MAN, Volvo, Scania, DAF, Mercedes Trucks, Kamaz, МАЗ и других. Увеличиваем мощность и отключаем экологию (DPF, EGR, AdBlue)." } },
-        { "@type": "Question", "name": "Можно ли вернуть заводскую прошивку?", "acceptedAnswer": { "@type": "Answer", "text": "Да, мы бесплатно предоставляем возврат к заводской версии (стоку) в любой момент по вашему запросу." } }
-      ]
-    }
-    </script>
-
-    <!-- ✅ ЯНДЕКС.МЕТРИКА -->
     <script type="text/javascript">
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
        m[i].l=1*new Date();
        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-       ym(109753043, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true,
-            ecommerce:"dataLayer",
-            triggerEvent:true
-       });
+       ym(109753043, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer", triggerEvent:true });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/109753043" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Яндекс.Метрика -->
 </head>
 <body>
 
-<!-- Шапка -->
 <header class="header" id="header">
     <div class="container">
         <div class="header-top">
             <div class="header-contacts">
                 <a href="tel:+79000978031" class="header-phone" aria-label="Позвонить нам">📞 +7 (900) 097-80-31</a>
                 <div class="header-messengers">
-                    <a href="https://wa.me/79000978031" class="messenger-icon" title="WhatsApp" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">💬</a>
-                    <a href="https://t.me/kalibr_compass" class="messenger-icon" title="Telegram" target="_blank" rel="noopener" aria-label="Написать в Telegram">✈️</a>
+                    <a href="https://wa.me/79000978031" class="messenger-icon" title="WhatsApp" target="_blank" rel="noopener">💬</a>
+                    <a href="https://t.me/kalibr_compass" class="messenger-icon" title="Telegram" target="_blank" rel="noopener">✈️</a>
                 </div>
             </div>
             <div class="header-address">🌍 Работаем по всей России</div>
@@ -476,7 +177,6 @@
                 <a href="#pricing">Цены</a>
                 <a href="#advantages">Преимущества</a>
                 <a href="#process">Как работаем</a>
-                <a href="#faq">Вопросы</a>
                 <a href="#reviews">Отзывы</a>
                 <a href="#contact">Контакты</a>
             </nav>
@@ -485,7 +185,6 @@
     </div>
 </header>
 
-<!-- Главный экран -->
 <section class="hero" aria-labelledby="hero-title">
     <div class="container">
         <div class="hero-content">
@@ -495,7 +194,7 @@
                 для легковых и грузовых авто
             </h1>
             <p class="hero-subtitle">
-                Присылаете стоковую прошивку — получаете готовый результат. Увеличим мощность до 30%, снизим расход топлива и отключим экологию. Работаем с легковыми автомобилями и грузовиками: BMW, Mercedes, VAG, Kia, MAN, Volvo, Scania, DAF и другими марками.
+                Присылаете стоковую прошивку — получаете готовый результат. Увеличим мощность до 30%, снизим расход топлива и отключим экологию. Специализация на китайских грузовиках: Sitrak, Howo, Shacman, FAW, JAC.
             </p>
             <div class="hero-features">
                 <div class="feature-item">Гарантия 1 год</div>
@@ -505,14 +204,13 @@
                 <div class="feature-item">Грузовые авто</div>
             </div>
             <div class="hero-buttons">
-                <a href="#contact" class="btn" data-goal="order_click">Скидка 10% на первую калибровку</a>
+                <a href="#contact" class="btn" data-goal="order_click">Рассчитать стоимость</a>
                 <a href="#pricing" class="btn btn-secondary">Смотреть цены</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- С какими марками работаем -->
 <section class="section section-dark" aria-labelledby="brands-title">
     <div class="container">
         <div class="section-header fade-in">
@@ -521,70 +219,64 @@
         </div>
         <div class="brands-grid">
             <div class="brand-category">🚗 Легковые автомобили</div>
-            <div class="brand-item fade-in">BMW</div>
-            <div class="brand-item fade-in">Mercedes</div>
-            <div class="brand-item fade-in">Audi</div>
-            <div class="brand-item fade-in">Volkswagen</div>
-            <div class="brand-item fade-in">Skoda</div>
-            <div class="brand-item fade-in">Kia</div>
-            <div class="brand-item fade-in">Hyundai</div>
-            <div class="brand-item fade-in">Toyota</div>
-            <div class="brand-item fade-in">Lexus</div>
-            <div class="brand-item fade-in">Mazda</div>
-            <div class="brand-item fade-in">Nissan</div>
-            <div class="brand-item fade-in">И другие</div>
+            <a href="#" class="brand-item fade-in">BMW</a>
+            <a href="#" class="brand-item fade-in">Mercedes</a>
+            <a href="#" class="brand-item fade-in">Audi</a>
+            <a href="#" class="brand-item fade-in">Volkswagen</a>
+            <a href="#" class="brand-item fade-in">Kia</a>
+            <a href="#" class="brand-item fade-in">Hyundai</a>
+            <a href="#" class="brand-item fade-in">Toyota</a>
+            <a href="#" class="brand-item fade-in">И другие</a>
             
-            <div class=<div class="brand-category">🚛 Грузовые автомобили</div>
-<a href="sitrak.html" class="brand-item fade-in" style="text-decoration: none; color: inherit;">Sitrak</a>
-<a href="howo.html" class="brand-item fade-in" style="text-decoration: none; color: inherit;">Howo</a>
-<a href="trucks.html" class="brand-item fade-in" style="text-decoration: none; color: inherit;">Shacman</a>
-<a href="trucks.html" class="brand-item fade-in" style="text-decoration: none; color: inherit;">FAW</a>
-<a href="trucks.html" class="brand-item fade-in" style="text-decoration: none; color: inherit;">JAC</a>
-<a href="trucks.html" class="brand-item fade-in" style="text-decoration: none; color: inherit;">Mercedes Trucks</a>
-<a href="trucks.html" class="brand-item fade-in" style="text-decoration: none; color: inherit;">Kamaz</a>
-<a href="trucks.html" class="brand-item fade-in" style="text-decoration: none; color: inherit;">МАЗ</a>
+            <div class="brand-category">🚛 Грузовые автомобили</div>
+            <a href="sitrak.html" class="brand-item fade-in">Sitrak</a>
+            <a href="howo.html" class="brand-item fade-in">Howo</a>
+            <a href="shacman.html" class="brand-item fade-in">Shacman</a>
+            <a href="faw.html" class="brand-item fade-in">FAW</a>
+            <a href="jac.html" class="brand-item fade-in">JAC</a>
+            <a href="#" class="brand-item fade-in">Kamaz</a>
+            <a href="#" class="brand-item fade-in">МАЗ</a>
+            <a href="#" class="brand-item fade-in">И другие</a>
         </div>
     </div>
 </section>
 
-<!-- Услуги -->
 <section class="section section-light" id="services" aria-labelledby="services-title">
     <div class="container">
         <div class="section-header fade-in">
             <h2 class="section-title" id="services-title">Наши услуги</h2>
-            <p class="section-subtitle">Основные направления работы по калибровке ЭБУ для легковых и грузовых авто</p>
+            <p class="section-subtitle">Основные направления работы по калибровке ЭБУ</p>
         </div>
         <div class="services-grid">
-    <a href="adblue.html" class="service-card fade-in" style="text-decoration: none; color: inherit;">
-        <div class="service-icon" aria-hidden="true">💧</div>
-        <h3>Отключение AdBlue (мочевины)</h3>
-        <p>Программное отключение системы AdBlue на дизельных двигателях. Решение проблем с SCR-системой, датчиками NOx. Специализация на китайских грузовиках.</p>
-    </a>
-    <a href="eco-tuning.html" class="service-card fade-in" style="text-decoration: none; color: inherit;">
-        <div class="service-icon" aria-hidden="true">🌿</div>
-        <h3>Эко-тюнинг (DPF, EGR)</h3>
-        <p>Программное отключение сажевого фильтра (DPF), системы рециркуляции (EGR) и вихревых заслонок. Полное решение проблем с экологией.</p>
-    </a>
-    <a href="chiptuning.html" class="service-card fade-in" style="text-decoration: none; color: inherit;">
-        <div class="service-icon" aria-hidden="true">⚡</div>
-        <h3>Чип-тюнинг Stage 1/2</h3>
-        <p>Безопасное увеличение мощности и крутящего момента без вмешательства в железо. Прирост до 30% мощности для легковых и грузовых авто.</p>
-    </a>
-    <a href="trucks.html" class="service-card fade-in" style="text-decoration: none; color: inherit;">
-        <div class="service-icon" aria-hidden="true">🚛</div>
-        <h3>Грузовые автомобили</h3>
-        <p>Комплексные решения для Sitrak, Howo, Shacman, FAW, JAC и других марок. Увеличение тяги, снижение расхода, отключение экологии.</p>
-            </article>
+            <a href="adblue.html" class="service-card fade-in">
+                <div class="service-icon" aria-hidden="true">💧</div>
+                <h3>Отключение AdBlue (мочевины)</h3>
+                <p>Программное отключение системы AdBlue на дизельных двигателях. Решение проблем с SCR-системой, датчиками NOx. Специализация на китайских грузовиках.</p>
+            </a>
+            <a href="#" class="service-card fade-in">
+                <div class="service-icon" aria-hidden="true">🌿</div>
+                <h3>Эко-тюнинг (DPF, EGR)</h3>
+                <p>Программное отключение сажевого фильтра (DPF), системы рециркуляции (EGR) и вихревых заслонок. Полное решение проблем с экологией.</p>
+            </a>
+            <a href="#" class="service-card fade-in">
+                <div class="service-icon" aria-hidden="true">⚡</div>
+                <h3>Чип-тюнинг Stage 1/2</h3>
+                <p>Безопасное увеличение мощности и крутящего момента без вмешательства в железо. Прирост до 30% мощности для легковых и грузовых авто.</p>
+            </a>
+            <a href="#" class="service-card fade-in">
+                <div class="service-icon" aria-hidden="true">🚛</div>
+                <h3>Комплекс для грузовых</h3>
+                <p>Увеличение мощности, снижение расхода топлива и полное отключение экологии для Sitrak, Howo, Shacman, FAW, JAC и других марок.</p>
+            </a>
         </div>
     </div>
 </section>
 
-<!-- ЦЕНЫ -->
 <section class="section section-dark" id="pricing" aria-labelledby="pricing-title">
     <div class="container">
         <div class="section-header fade-in">
             <h2 class="section-title" id="pricing-title">Стоимость услуг</h2>
-            <p class="section-subtitle">Прозрачные цены без скрытых платежей. Точная стоимость зависит от марки авто</p>
+            <p class="section-subtitle">Прозрачные цены без скрытых платежей</p>
         </div>
         <div class="pricing-grid">
             <article class="pricing-card fade-in">
@@ -593,7 +285,6 @@
                 <ul class="pricing-features">
                     <li>Увеличение мощности до 30%</li>
                     <li>Снижение расхода топлива</li>
-                    <li>Улучшение отклика педали газа</li>
                     <li>Гарантия 1 год</li>
                     <li>Возврат к стоку бесплатно</li>
                 </ul>
@@ -606,21 +297,17 @@
                     <li>Отключение DPF/FAP</li>
                     <li>Отключение EGR</li>
                     <li>Удаление AdBlue</li>
-                    <li>Отключение катализатора</li>
-                    <li>Комплексное решение</li>
                     <li>Гарантия на работу</li>
                 </ul>
                 <a href="#contact" class="btn" style="width: 100%;" data-goal="order_click">Заказать</a>
             </article>
             <article class="pricing-card fade-in">
-                <h3 class="pricing-title">Чип-тюнинг грузовых</h3>
-                <div class="pricing-price">от 5000 <span>₽</span></div>
+                <h3 class="pricing-title">Грузовые (Китай)</h3>
+                <div class="pricing-price">от 3000 <span>₽</span></div>
                 <ul class="pricing-features">
-                    <li>Увеличение мощности и тяги</li>
-                    <li>Снижение расхода топлива</li>
-                    <li>Отключение DPF/EGR/AdBlue</li>
-                    <li>Работа с любыми грузовиками</li>
-                    <li>Гарантия 1 год</li>
+                    <li>Sitrak, Howo, Shacman, FAW</li>
+                    <li>Отключение AdBlue / DPF</li>
+                    <li>Увеличение тяги</li>
                     <li>Приоритетная обработка</li>
                 </ul>
                 <a href="#contact" class="btn" style="width: 100%;" data-goal="order_click">Заказать</a>
@@ -629,7 +316,6 @@
     </div>
 </section>
 
-<!-- Преимущества -->
 <section class="section section-light" id="advantages" aria-labelledby="advantages-title">
     <div class="container">
         <div class="section-header fade-in">
@@ -640,7 +326,7 @@
             <article class="advantage-item fade-in">
                 <div class="advantage-number">01</div>
                 <h3>Индивидуальная настройка</h3>
-                <p>Не используем готовые прошивки. Калибруем каждый автомобиль под стиль езды владельца.</p>
+                <p>Не используем готовые прошивки. Калибруем каждый автомобиль индивидуально.</p>
             </article>
             <article class="advantage-item fade-in">
                 <div class="advantage-number">02</div>
@@ -654,100 +340,44 @@
             </article>
             <article class="advantage-item fade-in">
                 <div class="advantage-number">04</div>
-                <h3>Грузовые и легковые</h3>
-                <p>Работаем с обоими типами транспорта. Опыт с MAN, Volvo, Scania, DAF, Kamaz и другими.</p>
+                <h3>Эксперты по грузовикам</h3>
+                <p>Глубокое знание прошивок китайских грузовиков (Bosch, Denso, Delphi).</p>
             </article>
         </div>
     </div>
 </section>
 
-<!-- Процесс работы -->
 <section class="section section-dark" id="process" aria-labelledby="process-title">
     <div class="container">
         <div class="section-header fade-in">
             <h2 class="section-title" id="process-title">Как мы работаем</h2>
-            <p class="section-subtitle">Удаленная калибровка в 4 простых шага — без визита в сервис</p>
+            <p class="section-subtitle">Удаленная калибровка в 4 простых шага</p>
         </div>
         <div class="process-steps">
             <article class="step fade-in">
                 <div class="step-number">1</div>
                 <h3>Присылаете прошивку</h3>
-                <p>Считываете стоковую прошивку с вашего ЭБУ и отправляете её нам любым удобным способом.</p>
+                <p>Считываете стоковую прошивку с вашего ЭБУ и отправляете её нам.</p>
             </article>
             <article class="step fade-in">
                 <div class="step-number">2</div>
                 <h3>Анализируем</h3>
-                <p>Проверяем файл, определяем версию ПО и согласуем с вами все детали калибровки.</p>
+                <p>Проверяем файл, определяем версию ПО и согласуем детали.</p>
             </article>
             <article class="step fade-in">
                 <div class="step-number">3</div>
                 <h3>Вносим изменения</h3>
-                <p>Вносим изменения в программный код под ваши задачи. Время работы — от 15 минут до нескольких часов.</p>
+                <p>Вносим изменения в программный код под ваши задачи.</p>
             </article>
             <article class="step fade-in">
                 <div class="step-number">4</div>
                 <h3>Присылаем результат</h3>
-                <p>Отправляем готовую прошивку с подробной инструкцией по установке. Поддержка 24/7.</p>
+                <p>Отправляем готовую прошивку с подробной инструкцией. Поддержка 24/7.</p>
             </article>
         </div>
     </div>
 </section>
 
-<!-- FAQ БЛОК -->
-<section class="section section-light" id="faq" aria-labelledby="faq-title">
-    <div class="container">
-        <div class="section-header fade-in">
-            <h2 class="section-title" id="faq-title">Частые вопросы</h2>
-            <p class="section-subtitle">Ответы на популярные вопросы о чип-тюнинге</p>
-        </div>
-        <div class="faq-grid" style="max-width: 900px; margin: 0 auto;">
-            <details class="faq-item fade-in" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;">
-                <summary style="font-size: 18px; font-weight: 600; color: var(--text-white); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    Безопасен ли чип-тюнинг для двигателя? <span style="color: var(--accent-light); font-size: 24px;">+</span>
-                </summary>
-                <p style="margin-top: 16px; color: var(--text-gray); line-height: 1.7;">Да, мы работаем в рамках заводского запаса прочности двигателя. Прирост мощности составляет до 30% без снижения ресурса. Все калибровки тестируются на диностенде. Даём гарантию 1 год на ПО.</p>
-            </details>
-            <details class="faq-item fade-in" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;">
-                <summary style="font-size: 18px; font-weight: 600; color: var(--text-white); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    Как происходит удалённая калибровка? <span style="color: var(--accent-light); font-size: 24px;">+</span>
-                </summary>
-                <p style="margin-top: 16px; color: var(--text-gray); line-height: 1.7;">Вы считываете стоковую прошивку через OBD2-адаптер (мы даём инструкцию), присылаете нам файл. Мы калибруем и отправляем готовую прошивку обратно. Весь процесс занимает до 24 часов. Поддерживаем на каждом этапе.</p>
-            </details>
-            <details class="faq-item fade-in" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;">
-                <summary style="font-size: 18px; font-weight: 600; color: var(--text-white); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    Работаете ли вы с грузовыми автомобилями? <span style="color: var(--accent-light); font-size: 24px;">+</span>
-                </summary>
-                <p style="margin-top: 16px; color: var(--text-gray); line-height: 1.7;">Да! Мы специализируемся на чип-тюнинге грузовых автомобилей: MAN, Volvo, Scania, DAF, Mercedes Trucks, Kamaz, МАЗ, Iveco, Renault Trucks и других. Увеличиваем мощность, отключаем экологию (DPF, EGR, AdBlue), снижаем расход топлива.</p>
-            </details>
-            <details class="faq-item fade-in" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;">
-                <summary style="font-size: 18px; font-weight: 600; color: var(--text-white); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    Можно ли вернуть заводскую прошивку? <span style="color: var(--accent-light); font-size: 24px;">+</span>
-                </summary>
-                <p style="margin-top: 16px; color: var(--text-gray); line-height: 1.7;">Да! Мы бесплатно предоставляем возврат к заводской версии (стоку) в любой момент по вашему запросу. Это наше уникальное преимущество — вы ничем не рискуете.</p>
-            </details>
-            <details class="faq-item fade-in" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;">
-                <summary style="font-size: 18px; font-weight: 600; color: var(--text-white); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    С какими марками автомобилей вы работаете? <span style="color: var(--accent-light); font-size: 24px;">+</span>
-                </summary>
-                <p style="margin-top: 16px; color: var(--text-gray); line-height: 1.7;">Мы прошиваем более 95% марок: BMW, Mercedes, Audi, Volkswagen, Skoda, Kia, Hyundai, Toyota, Lexus, Mazda, Nissan, Ford, Opel, Honda и многие другие. Для грузовых: MAN, Volvo, Scania, DAF, Mercedes Trucks, Kamaz, МАЗ, Iveco, Renault Trucks и другие.</p>
-            </details>
-            <details class="faq-item fade-in" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;">
-                <summary style="font-size: 18px; font-weight: 600; color: var(--text-white); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    Сколько стоит чип-тюнинг? <span style="color: var(--accent-light); font-size: 24px;">+</span>
-                </summary>
-                <p style="margin-top: 16px; color: var(--text-gray); line-height: 1.7;">Чип-тюнинг легковых — от 3000₽, отключение экологии (DPF/EGR/AdBlue) — от 2500₽, чип-тюнинг грузовых — от 5000₽. Точная стоимость зависит от марки и модели авто. Оставьте заявку — рассчитаем за 15 минут.</p>
-            </details>
-        </div>
-    </div>
-</section>
-
-<style>
-    details[open] summary span { transform: rotate(45deg); transition: transform 0.3s; }
-    details summary span { transition: transform 0.3s; }
-    .faq-item:hover { border-color: var(--accent-blue) !important; background: rgba(0,102,255,0.05) !important; }
-</style>
-
-<!-- ОТЗЫВЫ -->
 <section class="section section-light" id="reviews" aria-labelledby="reviews-title">
     <div class="container">
         <div class="section-header fade-in">
@@ -757,76 +387,71 @@
         <div class="reviews-grid">
             <article class="review-card fade-in">
                 <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                <p class="review-text">"Прошивал BMW X5 3.0d удаленно. Прислал файл, через сутки получил готовую прошивку. Расход упал на 2 литра, динамика значительно улучшилась. Рекомендую!"</p>
+                <p class="review-text">"Отключали AdBlue и DPF на Sitrak C7H. Всё сделали удаленно за пару часов. Машина перестала тупить и уходить в аварийку. Спасибо!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">И</div>
+                    <div class="review-info"><h4>Игорь</h4><p>Sitrak C7H, 2021</p></div>
+                </div>
+            </article>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"Прошивал Howo T7H. Увеличили мощность и отключили всю экологию. Расход упал, тяга на подъемах стала намного увереннее."</p>
                 <div class="review-author">
                     <div class="review-avatar">А</div>
-                    <div class="review-info"><h4>Александр</h4><p>BMW X5 3.0d, 2018</p></div>
+                    <div class="review-info"><h4>Алексей</h4><p>Howo T7H, 2020</p></div>
                 </div>
             </article>
             <article class="review-card fade-in">
                 <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                <p class="review-text">"Отключали DPF и EGR на Kia Sportage. Всё сделали удаленно, прислали файл с инструкцией. Уже полгода проблем нет, машина работает как часы."</p>
+                <p class="review-text">"Отключали DPF и EGR на Kia Sportage. Всё сделали удаленно, прислали файл с инструкцией. Уже полгода проблем нет."</p>
                 <div class="review-author">
                     <div class="review-avatar">Д</div>
-                    <div class="review-info"><h4>Дмитрий</h4><p>Kia Sportage 2.0 CRDi, 2016</p></div>
-                </div>
-            </article>
-            <article class="review-card fade-in">
-                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                <p class="review-text">"Делал чип-тюнинг на Sitrak 2019 года. Мощность выросла, расход снизился на 3 литра на 100 км. Отключили AdBlue — забыл про проблемы с мочевиной. Отличная работа!"</p>
-                <div class="review-author">
-                    <div class="review-avatar">С</div>
-                    <div class="review-info"><h4>Сергей</h4><p>MAN Sitrak, 2019</p></div>
+                    <div class="review-info"><h4>Дмитрий</h4><p>Kia Sportage, 2016</p></div>
                 </div>
             </article>
         </div>
     </div>
 </section>
 
-<!-- Форма заявки со СКИДКОЙ -->
 <section class="cta" id="contact" aria-labelledby="contact-title">
     <div class="container">
         <div class="cta-content">
             <div class="discount-badge">Скидка <span>10%</span> на первую калибровку</div>
             <h2 class="fade-in" id="contact-title">Получите бесплатную консультацию</h2>
-            <p class="fade-in">Оставьте заявку и мы рассчитаем стоимость чип-тюнинга для вашего автомобиля в течение 15 минут. Скидка 10% действует при первом обращении!</p>
+            <p class="fade-in">Оставьте заявку и мы рассчитаем стоимость чип-тюнинга для вашего автомобиля в течение 15 минут.</p>
             
             <form class="form-group fade-in" onsubmit="handleSubmit(event)" aria-label="Форма заявки" id="leadForm">
-                <input type="text" class="form-input" id="clientName" placeholder="Ваше имя" required aria-label="Ваше имя">
-                <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required aria-label="Номер телефона">
-                <input type="text" class="form-input" id="carModel" placeholder="Марка и модель авто (например: BMW X5 3.0d или MAN TGS)" required aria-label="Марка и модель автомобиля">
+                <input type="text" class="form-input" id="clientName" placeholder="Ваше имя" required>
+                <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required>
+                <input type="text" class="form-input" id="carModel" placeholder="Марка и модель авто (например: Sitrak C7H)" required>
                 
-                <!-- Скрытые поля для UTM-меток (для Яндекс.Директа) -->
                 <input type="hidden" id="utm_source" name="utm_source" value="">
                 <input type="hidden" id="utm_medium" name="utm_medium" value="">
                 <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
-                <input type="hidden" id="utm_content" name="utm_content" value="">
-                <input type="hidden" id="utm_term" name="utm_term" value="">
-                <input type="hidden" id="yclid" name="yclid" value="">
-                <input type="hidden" id="gclid" name="gclid" value="">
                 
                 <button type="submit" class="btn" id="submitBtn">🚀 Получить расчет со скидкой 10%</button>
-                <!-- ✅ ССЫЛКА НА ПОЛИТИКУ КОНФИДЕНЦИАЛЬНОСТИ -->
-                <p class="form-note">🔒 Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a> и даёте согласие на обработку персональных данных.</p>
+                <p class="form-note">🔒 Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>.</p>
             </form>
         </div>
     </div>
 </section>
 
-<!-- Плавающая кнопка WhatsApp (для Директа) -->
 <a href="https://wa.me/79000978031" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" data-goal="whatsapp_click" title="Написать в WhatsApp">💬</a>
 
-<!-- Подвал -->
 <footer class="footer" role="contentinfo">
     <div class="container">
         <div class="footer-content">
             <div class="footer-col">
-    <h4>Услуги</h4>
-    <a href="adblue.html">Отключение мочевины (AdBlue)</a>
-    <a href="eco-tuning.html">Эко-тюнинг (DPF, EGR)</a>
-    <a href="chiptuning.html">Чип-тюнинг</a>
-    <a href="sitrak.html">Чип-тюнинг Sitrak</a>
-    <a href="howo.html">Чип-тюнинг Howo</a>
+                <h4>О компании</h4>
+                <p>Профессиональная удаленная калибровка и чип-тюнинг ЭБУ. Работаем по всей России с 2015 года.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Услуги</h4>
+                <a href="adblue.html">Отключение мочевины (AdBlue)</a>
+                <a href="#">Эко-тюнинг (DPF, EGR)</a>
+                <a href="#">Чип-тюнинг</a>
+                <a href="sitrak.html">Чип-тюнинг Sitrak</a>
+                <a href="howo.html">Чип-тюнинг Howo</a>
             </div>
             <div class="footer-col">
                 <h4>Контакты</h4>
@@ -834,39 +459,22 @@
                 <a href="mailto:aleks_moroz84@mail.ru">📧 aleks_moroz84@mail.ru</a>
                 <p style="margin-top: 10px;">🌍 Работаем удаленно по всей России</p>
             </div>
-            <address class="footer-col">
-                <h4>Режим работы</h4>
-                <p>Пн-Пт: 9:00 - 20:00<br>Сб: 10:00 - 18:00<br>Вс: выходной</p>
-            </address>
-            <div class="footer-col">
-                <h4>Соцсети</h4>
-                <a href="https://wa.me/79000978031" target="_blank" rel="noopener">💬 WhatsApp</a>
-                <a href="https://t.me/kalibr_compass" target="_blank" rel="noopener">✈️ Telegram</a>
-                <a href="https://vk.com/kalibr_compass" target="_blank" rel="noopener">💠 ВКонтакте</a>
-            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024-2026 Kalibr-ECU. Все права защищены.</p>
-            <!-- ✅ ССЫЛКА НА ПОЛИТИКУ В ПОДВАЛЕ -->
             <a href="privacy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>
         </div>
     </div>
 </footer>
 
 <script>
-    // ============================================
-    // ⚙️ НАСТРОЙКИ
-    // ============================================
     const TELEGRAM_BOT_TOKEN = '8620925258:AAEEApK9ea6nNaTAyBCioOzscnHZh9quGlc';
     const TELEGRAM_CHAT_ID = '802893584';
     const METRIKA_ID = 109753043;
-    // ============================================
 
-    // Захват UTM-меток из URL при загрузке страницы (для Директа)
     (function captureUTM() {
         const urlParams = new URLSearchParams(window.location.search);
-        const utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'yclid', 'gclid'];
-        utmFields.forEach(field => {
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(field => {
             const value = urlParams.get(field);
             if (value) {
                 const input = document.getElementById(field);
@@ -880,7 +488,6 @@
         });
     })();
 
-    // Маска для телефона
     const phoneInput = document.getElementById('phone');
     phoneInput.addEventListener('input', function(e) {
         let value = e.target.value.replace(/\D/g, '');
@@ -895,14 +502,12 @@
         }
     });
 
-    // Функция экранирования HTML-спецсимволов
     function escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
     }
 
-    // Универсальная функция отправки цели в Метрику
     function reachGoal(goalName) {
         if (typeof ym !== 'undefined') {
             ym(METRIKA_ID, 'reachGoal', goalName);
@@ -910,7 +515,6 @@
         }
     }
 
-    // Обработка отправки формы в Telegram
     async function handleSubmit(e) {
         e.preventDefault();
         const btn = document.getElementById('submitBtn');
@@ -918,11 +522,6 @@
         const name = document.getElementById('clientName').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const car = document.getElementById('carModel').value.trim();
-        
-        const utmSource = document.getElementById('utm_source').value || 'direct';
-        const utmMedium = document.getElementById('utm_medium').value || 'none';
-        const utmCampaign = document.getElementById('utm_campaign').value || 'none';
-        const utmTerm = document.getElementById('utm_term').value || 'none';
         
         btn.disabled = true;
         btn.innerHTML = '⏳ Отправка...';
@@ -932,14 +531,7 @@
         const safeCar = escapeHtml(car);
         const dateStr = escapeHtml(new Date().toLocaleString('ru-RU'));
         
-        const message = `🚗 <b>НОВАЯ ЗАЯВКА НА САЙТЕ</b>\n\n` +
-                        `👤 <b>Имя:</b> ${safeName}\n` +
-                        `📞 <b>Телефон:</b> ${safePhone}\n` +
-                        `🚙 <b>Авто:</b> ${safeCar}\n\n` +
-                        `📊 <b>Источник:</b> ${utmSource} / ${utmMedium}\n` +
-                        `📊 <b>Кампания:</b> ${utmCampaign}\n` +
-                        `📊 <b>Ключ:</b> ${utmTerm}\n\n` +
-                        `📅 <b>Дата:</b> ${dateStr}`;
+        const message = `🚗 <b>НОВАЯ ЗАЯВКА НА САЙТЕ</b>\n\n👤 <b>Имя:</b> ${safeName}\n📞 <b>Телефон:</b> ${safePhone}\n🚙 <b>Авто:</b> ${safeCar}\n📅 <b>Дата:</b> ${dateStr}`;
         
         try {
             const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
@@ -952,34 +544,23 @@
             if (result.ok) {
                 btn.innerHTML = '✅ Заявка успешно отправлена!';
                 btn.style.background = 'linear-gradient(135deg, #10B981 0%, #34D399 100%)';
-                reachGoal('form_submit'); // ✅ ОТПРАВКА ЦЕЛИ
-                
+                reachGoal('form_submit');
                 setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.background = '';
-                    btn.disabled = false;
-                    e.target.reset();
+                    btn.innerHTML = originalText; btn.style.background = ''; btn.disabled = false; e.target.reset();
                 }, 4000);
-            } else {
-                throw new Error(`Telegram API: ${result.description || 'неизвестная ошибка'}`);
-            }
+            } else { throw new Error(`Telegram API: ${result.description}`); }
         } catch (error) {
-            console.error('❌ Ошибка отправки в Telegram:', error);
             btn.innerHTML = '❌ Ошибка. Напишите нам в Telegram!';
             btn.style.background = 'linear-gradient(135deg, #EF4444 0%, #F87171 100%)';
             setTimeout(() => {
-                const fallbackMsg = `Заявка с сайта:%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AАвто: ${encodeURIComponent(car)}`;
                 if (confirm('Не удалось отправить форму. Открыть Telegram?')) {
-                    window.open(`https://t.me/kalibr_compass?text=${fallbackMsg}`, '_blank');
+                    window.open(`https://t.me/kalibr_compass?text=Заявка:%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AАвто: ${encodeURIComponent(car)}`, '_blank');
                 }
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-                btn.disabled = false;
+                btn.innerHTML = originalText; btn.style.background = ''; btn.disabled = false;
             }, 2000);
         }
     }
 
-    // Плавный скролл
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -988,19 +569,16 @@
         });
     });
 
-    // ✅ ОТСЛЕЖИВАНИЕ КЛИКОВ (ЦЕЛИ МЕТРИКИ)
     document.querySelectorAll('[data-goal="order_click"]').forEach(el => el.addEventListener('click', () => reachGoal('order_click')));
     document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('click', () => reachGoal('phone_click')));
     document.querySelectorAll('a[href*="wa.me"]').forEach(el => el.addEventListener('click', () => reachGoal('whatsapp_click')));
     document.querySelectorAll('a[href*="t.me"]').forEach(el => el.addEventListener('click', () => reachGoal('telegram_click')));
 
-    // Анимация появления
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Эффект шапки
     window.addEventListener('scroll', () => {
         const header = document.querySelector('.header');
         if (window.scrollY > 50) {
