@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /*?utm_
+Disallow: /*?yclid=
+Disallow: /*?gclid=
+
+Sitemap: https://kalibr-ecu.ru/sitemap.xml
+Host: kalibr-ecu.ru
