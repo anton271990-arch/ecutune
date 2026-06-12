@@ -116,20 +116,6 @@
         .review-info h4 { font-size: 16px; margin-bottom: 4px; }
         .review-info p { color: var(--text-gray); font-size: 13px; }
         
-        /* Каталог ЭБУ */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .ecu-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 16px; padding: 28px; transition: all 0.3s; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; }
-        .ecu-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent-blue), var(--accent-light)); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
-        .ecu-card:hover { transform: translateY(-5px); border-color: rgba(0,102,255,0.5); box-shadow: 0 15px 40px rgba(0,102,255,0.1); }
-        .ecu-card:hover::before { transform: scaleX(1); }
-        .ecu-card h3 { font-size: 20px; margin-bottom: 8px; color: var(--accent-light); }
-        .ecu-card .ecu-sw { font-size: 13px; color: var(--text-gray); margin-bottom: 12px; font-family: monospace; }
-        .ecu-card p { color: var(--text-gray); font-size: 14px; line-height: 1.6; }
-        .ecu-card-placeholder { border-style: dashed; }
-        .ecu-search-wrapper { max-width: 600px; margin: 0 auto 40px; position: relative; }
-        .ecu-search-wrapper::before { content: '🔍'; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; pointer-events: none; }
-        .ecu-search-wrapper .form-input { padding-left: 50px; text-align: center; font-size: 17px; }
-        
         /* Таймер */
         .timer-block { display: flex; gap: 15px; justify-content: center; margin: 24px 0; flex-wrap: wrap; }
         .timer-item { background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 18px; min-width: 80px; text-align: center; }
@@ -209,7 +195,6 @@
         <div class="header-content">
             <nav class="nav" aria-label="Основная навигация">
                 <a href="#services">Услуги</a>
-                <a href="#ecu-catalog">Каталог ЭБУ</a>
                 <a href="#pricing">Цены</a>
                 <a href="#advantages">Преимущества</a>
                 <a href="#process">Как работаем</a>
@@ -298,46 +283,6 @@
                 <div class="service-icon" aria-hidden="true">🚛</div>
                 <h3>Комплекс для грузовых</h3>
                 <p>Увеличение мощности, снижение расхода топлива и полное отключение экологии для Sitrak, Howo, Shacman, КАМАЗ, МАЗ, ГАЗ.</p>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- КАТАЛОГ ЭБУ — НОВАЯ СЕКЦИЯ -->
-<section class="section section-dark" id="ecu-catalog" aria-labelledby="ecu-catalog-title">
-    <div class="container">
-        <div class="section-header fade-in">
-            <h2 class="section-title" id="ecu-catalog-title">Каталог поддерживаемых ЭБУ</h2>
-            <p class="section-subtitle">Найдите свой блок управления по названию или номеру прошивки (Software)</p>
-        </div>
-        
-        <div class="ecu-search-wrapper fade-in">
-            <input type="text" id="ecuSearch" class="form-input" placeholder="Введите номер или название (например: 03C906022 или Cummins)">
-        </div>
-
-        <div class="grid-3" id="ecuGrid">
-            <a href="ecu-bosch-edc17c46.html" class="ecu-card ecu-link fade-in" data-search="Bosch EDC17C46 03L906022AS 03L906022AT 03L906022BA 03L906022BB 0281018228 VAG 2.0 TDI Passat Octavia Audi Tiguan Golf EA189 CFFB CFGB">
-                <h3>Bosch EDC17C46</h3>
-                <p class="ecu-sw">SW: 03L906022AS, 03L906022AT, 03L906022BA</p>
-                <p>VAG 2.0 TDI (Passat, Octavia, Audi, Tiguan). Отключение AdBlue, DPF, чип-тюнинг.</p>
-            </a>
-
-            <a href="ecu-bosch-med17-5-25.html" class="ecu-card ecu-link fade-in" data-search="Bosch MED17.5.25 03C906022 03C906022C 03C906022M 0261S18088 VAG 1.4 TSI Polo Rapid Audi A1 A3 Seat Ibiza Leon EA211 CAXA CPTA">
-                <h3>Bosch MED17.5.25</h3>
-                <p class="ecu-sw">SW: 03C906022, 03C906022C, 03C906022M</p>
-                <p>VAG 1.4 TSI EA211 (Polo, Rapid, Audi A1). Отключение катализатора, Stage 1.</p>
-            </a>
-
-            <a href="ecu-bosch-edc16c39.html" class="ecu-card ecu-link fade-in" data-search="Bosch EDC16C39 0442000010 0442000020 0281012731 ГАЗель Газель NEXT Соболь Cummins ISF 2.8 Foton УАЗ EGR DPF">
-                <h3>Bosch EDC16C39</h3>
-                <p class="ecu-sw">SW: 0442000010, 0442000020</p>
-                <p>ГАЗель NEXT, Соболь с двигателем Cummins ISF 2.8. Отключение EGR, DPF.</p>
-            </a>
-            
-            <a href="#contact" class="ecu-card ecu-card-placeholder ecu-link fade-in" data-search="Другие ЭБУ Bosch Siemens Delphi Denso Continental BMW Mercedes Ford Renault Peugeot Citroen Toyota Nissan">
-                <h3>Не нашли свой ЭБУ?</h3>
-                <p class="ecu-sw">Siemens, Delphi, Denso, Continental, Keihin</p>
-                <p>Мы работаем с 95% блоков на рынке. Напишите нам — решим задачу под ваш автомобиль.</p>
             </a>
         </div>
     </div>
@@ -606,13 +551,6 @@
                 <a href="gaz.html">Чип-тюнинг ГАЗ</a>
             </div>
             <div class="footer-col">
-                <h4>Каталог ЭБУ</h4>
-                <a href="ecu-bosch-edc17c46.html">Bosch EDC17C46 (VAG 2.0 TDI)</a>
-                <a href="ecu-bosch-med17-5-25.html">Bosch MED17.5.25 (VAG 1.4 TSI)</a>
-                <a href="ecu-bosch-edc16c39.html">Bosch EDC16C39 (ГАЗель Cummins)</a>
-                <a href="#ecu-catalog">Все поддерживаемые ЭБУ</a>
-            </div>
-            <div class="footer-col">
                 <h4>Контакты</h4>
                 <a href="tel:+79000978031">📞 +7 (900) 097-80-31</a>
                 <a href="mailto:aleks_moroz84@mail.ru">📧 aleks_moroz84@mail.ru</a>
@@ -702,22 +640,6 @@
         });
     });
 
-    // Живой поиск по каталогу ЭБУ
-    const ecuSearchInput = document.getElementById('ecuSearch');
-    if (ecuSearchInput) {
-        ecuSearchInput.addEventListener('input', function(e) {
-            const query = e.target.value.toLowerCase().trim();
-            document.querySelectorAll('.ecu-link').forEach(item => {
-                const searchData = (item.dataset.search + ' ' + item.textContent).toLowerCase();
-                if (!query) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = searchData.includes(query) ? 'block' : 'none';
-                }
-            });
-        });
-    }
-
     // Form submit
     async function handleSubmit(e) {
         e.preventDefault();
@@ -778,11 +700,9 @@
 
     // Goal tracking
     document.querySelectorAll('[data-goal="order_click"]').forEach(el => el.addEventListener('click', () => reachGoal('order_click')));
-    document.querySelectorAll('[data-goal="ecu_click"]').forEach(el => el.addEventListener('click', () => reachGoal('ecu_click')));
     document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('click', () => reachGoal('phone_click')));
     document.querySelectorAll('a[href*="wa.me"]').forEach(el => el.addEventListener('click', () => reachGoal('whatsapp_click')));
     document.querySelectorAll('a[href*="t.me"]').forEach(el => el.addEventListener('click', () => reachGoal('telegram_click')));
-    document.querySelectorAll('.ecu-link').forEach(el => el.addEventListener('click', () => reachGoal('ecu_catalog_click')));
 
     // Fade-in observer
     const observer = new IntersectionObserver((entries) => {
