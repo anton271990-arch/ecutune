@@ -26,6 +26,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Яндекс.Метрика -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(109753043, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109753043" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Яндекс.Метрика -->
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -167,16 +185,6 @@
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "AutoRepair", "name": "Kalibr-ECU", "description": "Профессиональная удалённая калибровка прошивок ЭБУ и чип-тюнинг для легковых и грузовых автомобилей", "url": "https://kalibr-ecu.ru", "telephone": "+7-900-097-80-31", "email": "aleks_moroz84@mail.ru", "address": { "@type": "PostalAddress", "addressCountry": "RU" }, "priceRange": "от 2500 ₽", "areaServed": { "@type": "Country", "name": "Россия" } }
     </script>
-
-    <script type="text/javascript">
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-       ym(109753043, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer", triggerEvent:true });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/109753043" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </head>
 <body>
 
@@ -610,9 +618,15 @@
     }
 
     function reachGoal(goalName) {
-        if (typeof ym !== 'undefined') {
-            ym(METRIKA_ID, 'reachGoal', goalName);
-            console.log('🎯 Цель отправлена:', goalName);
+        try {
+            if (typeof ym !== 'undefined') {
+                ym(METRIKA_ID, 'reachGoal', goalName);
+                console.log('🎯 Цель отправлена в Метрику:', goalName);
+            } else {
+                console.warn('⚠️ Яндекс.Метрика ещё не загружена');
+            }
+        } catch (err) {
+            console.error('Ошибка отправки цели:', err);
         }
     }
 
