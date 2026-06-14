@@ -166,7 +166,7 @@
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
         @media (max-width: 992px) { .hero h1 { font-size: 42px; } .section-title, .cta h2 { font-size: 32px; } .nav { display: none; } .header-top { flex-direction: column; gap: 15px; } }
-        @media (max-width: 768px) { .hero { min-height: auto; padding: 60px 0; margin-top: 140px; } .hero h1 { font-size: 32px; } .hero-subtitle { font-size: 16px; } .section { padding: 50px 0; } .section-title, .cta h2 { font-size: 26px; } .hero-features { flex-direction: column; align-items: flex-start; } .hero-buttons { flex-direction: column; } .btn { width: 100%; } .pricing-card.popular { transform: scale(1); } .pricing-card.popular:hover { transform: translateY(-8px); } .floating-whatsapp { width: 56px; height: 56px; bottom: 20px; right: 20px; font-size: 28px; } .timer-value { font-size: 24px; } }
+        @media (max-width: 768px) { .hero { min-height: auto; padding: 60px 0; margin-top: 140px; } .hero h1 { font-size: 32px; } .hero-subtitle { font-size: 16px; } .section { padding: 50px 0; } .section-title, .cta h2 { font-size: 26px; } .hero-features { flex-direction: column; align-items: flex-start; } .hero-buttons { flex-direction: column; } .btn { width: 100%; } .services-grid, .pricing-grid, .advantages-grid, .process-steps, .reviews-grid { grid-template-columns: 1fr; } .pricing-card, .review-card { min-width: 0; } .pricing-card.popular { transform: scale(1); } .pricing-card.popular:hover { transform: translateY(-8px); } .floating-whatsapp { width: 56px; height: 56px; bottom: 20px; right: 20px; font-size: 28px; } .timer-value { font-size: 24px; } }
         ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: var(--primary-dark); } ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 4px; }
     </style>
 
@@ -509,7 +509,7 @@
             <h2 class="fade-in" id="contact-title">Получите бесплатную консультацию</h2>
             <p class="fade-in">Оставьте заявку и мы рассчитаем стоимость чип-тюнинга для вашего автомобиля в течение 15 минут.</p>
             
-            <form class="form-group fade-in" onsubmit="handleSubmit(event)" aria-label="Форма заявки" id="leadForm">
+            <form class="form-group fade-in" aria-label="Форма заявки" id="leadForm">
                 <input type="text" class="form-input" id="clientName" placeholder="Ваше имя" required>
                 <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required>
                 <input type="text" class="form-input" id="carModel" placeholder="Марка и модель авто (например: КАМАЗ-5490)" required>
@@ -548,8 +548,8 @@
                 <h4>Контакты</h4>
                 <a href="tel:+79000978031">📞 +7 (900) 097-80-31</a>
                 <a href="mailto:aleks_moroz84@mail.ru">📧 aleks_moroz84@mail.ru</a>
-                <a href="https://wa.me/79000978031" target="_blank">💬 WhatsApp</a>
-                <a href="https://t.me/kalibr_compass" target="_blank">✈️ Telegram</a>
+                <a href="https://wa.me/79000978031" target="_blank" rel="noopener">💬 WhatsApp</a>
+                <a href="https://t.me/kalibr_compass" target="_blank" rel="noopener">✈️ Telegram</a>
                 <p style="margin-top: 10px;">🌍 Работаем удаленно по всей России</p>
             </div>
         </div>
@@ -561,8 +561,6 @@
 </footer>
 
 <script>
-    const TELEGRAM_BOT_TOKEN = '8620925258:AAEEApK9ea6nNaTAyBCioOzscnHZh9quGlc';
-    const TELEGRAM_CHAT_ID = '802893584';
     const METRIKA_ID = 109753043;
 
     (function captureUTM() {
@@ -634,7 +632,7 @@
         });
     });
 
-    async function handleSubmit(e) {
+    function handleSubmit(e) {
         e.preventDefault();
         const btn = document.getElementById('submitBtn');
         const originalText = btn.innerHTML;
@@ -643,42 +641,23 @@
         const car = document.getElementById('carModel').value.trim();
         
         btn.disabled = true;
-        btn.innerHTML = '⏳ Отправка...';
+        btn.innerHTML = '✅ Открываем Telegram...';
+        btn.style.background = 'linear-gradient(135deg, #10B981 0%, #34D399 100%)';
         
-        const safeName = escapeHtml(name);
-        const safePhone = escapeHtml(phone);
-        const safeCar = escapeHtml(car);
-        const dateStr = escapeHtml(new Date().toLocaleString('ru-RU'));
-        
-        const message = `🚗 <b>НОВАЯ ЗАЯВКА НА САЙТЕ</b>\n\n👤 <b>Имя:</b> ${safeName}\n📞 <b>Телефон:</b> ${safePhone}\n🚙 <b>Авто:</b> ${safeCar}\n📅 <b>Дата:</b> ${dateStr}`;
-        
-        try {
-            const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message, parse_mode: 'HTML' })
-            });
-            const result = await response.json();
-            
-            if (result.ok) {
-                btn.innerHTML = '✅ Заявка успешно отправлена!';
-                btn.style.background = 'linear-gradient(135deg, #10B981 0%, #34D399 100%)';
-                reachGoal('form_submit');
-                setTimeout(() => {
-                    btn.innerHTML = originalText; btn.style.background = ''; btn.disabled = false; e.target.reset();
-                }, 4000);
-            } else { throw new Error(`Telegram API: ${result.description}`); }
-        } catch (error) {
-            btn.innerHTML = '❌ Ошибка. Напишите нам в Telegram!';
-            btn.style.background = 'linear-gradient(135deg, #EF4444 0%, #F87171 100%)';
-            setTimeout(() => {
-                if (confirm('Не удалось отправить форму. Открыть Telegram?')) {
-                    window.open(`https://t.me/kalibr_compass?text=Заявка:%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AАвто: ${encodeURIComponent(car)}`, '_blank');
-                }
-                btn.innerHTML = originalText; btn.style.background = ''; btn.disabled = false;
-            }, 2000);
-        }
+        const message = `Заявка с сайта Kalibr-ECU\n\nИмя: ${name}\nТелефон: ${phone}\nАвто: ${car}\nДата: ${new Date().toLocaleString('ru-RU')}`;
+        const telegramUrl = `https://t.me/kalibr_compass?text=${encodeURIComponent(message)}`;
+        window.open(telegramUrl, '_blank', 'noopener');
+        reachGoal('form_submit');
+
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+            e.target.reset();
+        }, 3000);
     }
+
+    document.getElementById('leadForm').addEventListener('submit', handleSubmit);
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -713,3 +692,4 @@
 </script>
 </body>
 </html>
+
