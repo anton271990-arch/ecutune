@@ -1,8 +1,81 @@
+# robots.txt для https://kalibr-ecu.ru
+# Обновлено: 2026-06-18
+
+# Общие правила для всех поисковых систем
 User-agent: *
 Allow: /
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.ico
+Allow: *.woff
+Allow: *.woff2
+
+# Запрет индексации технических параметров
 Disallow: /*?utm_
-Disallow: /*?yclid=
-Disallow: /*?gclid=
+Disallow: /*?yclid
+Disallow: /*?gclid
+Disallow: /*?fbclid
+Disallow: /*?from=
+Disallow: /*?ref=
+
+# Запрет индексации служебных файлов
+Disallow: /cars.json
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Указание главного зеркала
+Host: kalibr-ecu.ru
+
+# Путь к карте сайта
+Sitemap: https://kalibr-ecu.ru/sitemap.xml
+
+# Отдельные правила для Яндекса
+User-agent: Yandex
+Allow: /
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.ico
+
+Disallow: /*?utm_
+Disallow: /*?yclid
+Disallow: /*?gclid
+Disallow: /*?fbclid
+Disallow: /cars.json
+
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
+Clean-param: yclid
+Clean-param: gclid
+Clean-param: fbclid
+
+Host: kalibr-ecu.ru
+Sitemap: https://kalibr-ecu.ru/sitemap.xml
+
+# Отдельные правила для Google
+User-agent: Googlebot
+Allow: /
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.ico
+
+Disallow: /*?utm_
+Disallow: /*?gclid
+Disallow: /*?fbclid
+Disallow: /cars.json
 
 Sitemap: https://kalibr-ecu.ru/sitemap.xml
-Host: kalibr-ecu.ru
