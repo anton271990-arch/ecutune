@@ -145,18 +145,45 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .service-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px; }
 .service-card h3 { font-size: 22px; margin-bottom: 16px; }
 .service-card p { color: var(--text-gray); font-size: 15px; line-height: 1.7; }
+
+/* PRICING — ИСПРАВЛЕНО: кнопки на одном уровне */
 .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-.pricing-card { background: rgba(255,255,255,0.03); border: 2px solid var(--border-color); border-radius: 20px; padding: 40px 30px; text-align: center; transition: all 0.3s; position: relative; }
+.pricing-card { 
+    background: rgba(255,255,255,0.03); 
+    border: 2px solid var(--border-color); 
+    border-radius: 20px; 
+    padding: 40px 30px; 
+    text-align: center; 
+    transition: all 0.3s; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 .pricing-card.popular { border-color: var(--accent-blue); background: rgba(0,102,255,0.05); transform: scale(1.05); }
 .pricing-card.popular::before { content: 'ПОПУЛЯРНО'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); padding: 6px 20px; border-radius: 20px; font-size: 12px; font-weight: 700; }
 .pricing-card:hover { transform: translateY(-8px); border-color: var(--accent-blue); }
 .pricing-card.popular:hover { transform: scale(1.05) translateY(-8px); }
-.pricing-title { font-size: 24px; margin-bottom: 20px; font-weight: 700; }
+.pricing-title { 
+    font-size: 24px; 
+    margin-bottom: 20px; 
+    font-weight: 700;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .pricing-price { font-size: 48px; font-weight: 800; color: var(--accent-light); margin: 20px 0; }
 .pricing-price span { font-size: 18px; color: var(--text-gray); font-weight: 400; }
-.pricing-features { list-style: none; margin: 30px 0; text-align: left; }
+.pricing-features { 
+    list-style: none; 
+    margin: 30px 0; 
+    text-align: left;
+    flex-grow: 1;
+}
 .pricing-features li { padding: 10px 0; border-bottom: 1px solid var(--border-color); color: var(--text-gray); display: flex; align-items: center; gap: 10px; }
 .pricing-features li::before { content: '✓'; color: var(--accent-light); font-weight: bold; }
+.pricing-card .btn { margin-top: auto; }
+
 .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
 .advantage-item { text-align: center; padding: 32px 24px; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 20px; transition: all 0.3s ease; }
 .advantage-item:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
@@ -371,9 +398,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     </div>
 </section>
 
-<!-- ============================================ -->
-<!-- СЕКЦИЯ С МАРКАМИ — ПЕРЕЛИНКОВКА ОБНОВЛЕНА -->
-<!-- ============================================ -->
 <section class="section section-dark" aria-labelledby="brands-title">
     <div class="container">
         <div class="section-header fade-in">
@@ -381,8 +405,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
             <p class="section-subtitle">Прошиваем более 95% марок легковых и грузовых автомобилей</p>
         </div>
         <div class="brands-grid">
-            
-            <!-- ЛЕГКОВЫЕ АВТОМОБИЛИ -->
             <div class="brand-category">🚗 Легковые автомобили</div>
             <a href="bmw.html" class="brand-item fade-in">BMW</a>
             <a href="mercedes.html" class="brand-item fade-in">Mercedes</a>
@@ -392,8 +414,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
             <a href="kia.html" class="brand-item fade-in">Kia</a>
             <a href="hyundai.html" class="brand-item fade-in">Hyundai</a>
             <a href="#calculator" class="brand-item fade-in">И другие</a>
-            
-            <!-- ГРУЗОВЫЕ АВТОМОБИЛИ -->
             <div class="brand-category">🚛 Грузовые автомобили</div>
             <a href="kamaz.html" class="brand-item fade-in">КАМАЗ</a>
             <a href="maz.html" class="brand-item fade-in">МАЗ</a>
@@ -403,7 +423,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
             <a href="shacman.html" class="brand-item fade-in">Shacman</a>
             <a href="faw.html" class="brand-item fade-in">FAW</a>
             <a href="jac.html" class="brand-item fade-in">JAC</a>
-            
         </div>
     </div>
 </section>
@@ -664,9 +683,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 <a href="https://wa.me/79000978031" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" data-goal="whatsapp_click" title="Написать в WhatsApp">💬</a>
 
-<!-- ============================================ -->
-<!-- ФУТЕР — ПЕРЕЛИНКОВКА ОБНОВЛЕНА -->
-<!-- ============================================ -->
 <footer class="footer" role="contentinfo">
     <div class="container">
         <div class="footer-content">
