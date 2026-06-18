@@ -335,7 +335,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
                     </select>
                 </div>
                 <div class="calc-field">
-                    <label for="calcYear">Год выпуска</label>
+                    <label for="calcYear">Поколение</label>
                     <select id="calcYear" class="calc-select" onchange="calcUpdateEngines()" disabled>
                         <option value="">— Сначала выберите модель —</option>
                     </select>
@@ -343,7 +343,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
                 <div class="calc-field">
                     <label for="calcEngine">Двигатель</label>
                     <select id="calcEngine" class="calc-select" onchange="calcCheckReady()" disabled>
-                        <option value="">— Сначала выберите год —</option>
+                        <option value="">— Сначала выберите поколение —</option>
                     </select>
                 </div>
             </div>
@@ -834,26 +834,18 @@ window.addEventListener('scroll', () => {
 /* ========== КАЛЬКУЛЯТОР ========== */
 function calcIsTruck(make) { return TRUCK_MAKES.includes(make); }
 
+// Единый плоский список марок (без разделителей на грузовые/легковые)
 function initCalcMakes() {
     const makeSelect = document.getElementById('calcMake');
     if (!makeSelect) return;
     makeSelect.innerHTML = '<option value="">— Выберите марку —</option>';
-    const truckMakes = TRUCK_MAKES.filter(m => carDatabase[m]);
-    const carMakes = Object.keys(carDatabase).filter(m => !TRUCK_MAKES.includes(m)).sort();
-    const addOptGroup = (label, list) => {
-        if (!list.length) return;
-        const grp = document.createElement('optgroup');
-        grp.label = label;
-        list.forEach(make => {
-            const opt = document.createElement('option');
-            opt.value = make;
-            opt.textContent = make;
-            grp.appendChild(opt);
-        });
-        makeSelect.appendChild(grp);
-    };
-    addOptGroup('🚛 Грузовые', truckMakes);
-    addOptGroup('🚗 Легковые', carMakes);
+    const allMakes = Object.keys(carDatabase).sort((a, b) => a.localeCompare(b, 'ru'));
+    allMakes.forEach(make => {
+        const opt = document.createElement('option');
+        opt.value = make;
+        opt.textContent = make;
+        makeSelect.appendChild(opt);
+    });
 }
 
 function calcResetSelect(id, placeholder) {
@@ -867,7 +859,7 @@ function calcUpdateModels() {
     const modelSel = document.getElementById('calcModel');
     calcResetSelect('calcModel', '— Выберите модель —');
     calcResetSelect('calcYear', '— Сначала выберите модель —');
-    calcResetSelect('calcEngine', '— Сначала выберите год —');
+    calcResetSelect('calcEngine', '— Сначала выберите поколение —');
     document.getElementById('calcResult').classList.remove('visible');
     document.getElementById('calcBtn').disabled = true;
     if (make && carDatabase[make]) {
@@ -885,16 +877,16 @@ function calcUpdateYears() {
     const make = document.getElementById('calcMake').value;
     const model = document.getElementById('calcModel').value;
     const yearSel = document.getElementById('calcYear');
-    calcResetSelect('calcYear', '— Выберите год —');
-    calcResetSelect('calcEngine', '— Сначала выберите год —');
+    calcResetSelect('calcYear', '— Выберите поколение —');
+    calcResetSelect('calcEngine', '— Сначала выберите поколение —');
     document.getElementById('calcResult').classList.remove('visible');
     document.getElementById('calcBtn').disabled = true;
     if (make && model) {
         yearSel.disabled = false;
-        Object.keys(carDatabase[make][model]).sort((a,b) => b-a).forEach(year => {
+        Object.keys(carDatabase[make][model]).forEach(gen => {
             const opt = document.createElement('option');
-            opt.value = year;
-            opt.textContent = year;
+            opt.value = gen;
+            opt.textContent = gen;
             yearSel.appendChild(opt);
         });
     }
@@ -903,14 +895,14 @@ function calcUpdateYears() {
 function calcUpdateEngines() {
     const make = document.getElementById('calcMake').value;
     const model = document.getElementById('calcModel').value;
-    const year = document.getElementById('calcYear').value;
+    const gen = document.getElementById('calcYear').value;
     const engSel = document.getElementById('calcEngine');
     calcResetSelect('calcEngine', '— Выберите двигатель —');
     document.getElementById('calcResult').classList.remove('visible');
     document.getElementById('calcBtn').disabled = true;
-    if (make && model && year) {
+    if (make && model && gen) {
         engSel.disabled = false;
-        carDatabase[make][model][year].forEach(eng => {
+        carDatabase[make][model][gen].forEach(eng => {
             const opt = document.createElement('option');
             opt.value = eng;
             opt.textContent = eng;
@@ -926,9 +918,9 @@ function calcCheckReady() {
 function calcRun() {
     const make = document.getElementById('calcMake').value;
     const model = document.getElementById('calcModel').value;
-    const year = document.getElementById('calcYear').value;
+    const gen = document.getElementById('calcYear').value;
     const engine = document.getElementById('calcEngine').value;
-    if (!make || !model || !year || !engine) return;
+    if (!make || !model || !gen || !engine) return;
 
     const hpMatch = engine.match(/(\d+)\s*л\.с\./);
     const hp = hpMatch ? parseInt(hpMatch[1]) : 200;
@@ -957,7 +949,7 @@ function calcRun() {
     }
     const oldPrice = Math.round(basePrice * 1.1);
 
-    document.getElementById('calcResTitle').textContent = `${make} ${model} ${year} — ${engine}`;
+    document.getElementById('calcResTitle').textContent = `${make} ${model} (${gen}) — ${engine}`;
     document.getElementById('calcHpBefore').innerHTML = `${hp} <small>л.с.</small>`;
     document.getElementById('calcHpAfter').innerHTML = `${newHp} <small>л.с.</small>`;
     document.getElementById('calcTorque').innerHTML = `+${torqueGain} <small>Нм</small>`;
@@ -973,10 +965,10 @@ function calcRun() {
 function calcOrder() {
     const make = document.getElementById('calcMake').value;
     const model = document.getElementById('calcModel').value;
-    const year = document.getElementById('calcYear').value;
+    const gen = document.getElementById('calcYear').value;
     const engine = document.getElementById('calcEngine').value;
     const carInput = document.getElementById('carModel');
-    if (carInput) carInput.value = `${make} ${model} ${year}, ${engine}`;
+    if (carInput) carInput.value = `${make} ${model} (${gen}), ${engine}`;
     const contactSection = document.getElementById('contact');
     if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     setTimeout(() => {
