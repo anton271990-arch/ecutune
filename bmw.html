@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чип-тюнинг BMW удалённо по всей России | 3, 5, X3, X5, M-серия | Kalibr-ECU</title>
+    <meta name="description" content="Профессиональный чип-тюнинг BMW с гарантией 1 год. BMW 3 (F30/G20), 5 (G30), X3 (G01), X5 (G05), X6 (G06), M3, M5 с двигателями B47, B57, B58, N57, S58. Stage 1/2. Увеличение мощности до 30%, снижение расхода. Удалённо по всей России. Цены от 5000₽.">
+    <meta name="keywords" content="чип тюнинг bmw, прошивка bmw, stage 1 bmw, bmw x5 чип тюнинг, bmw m3 прошивка, bmw 320d тюнинг, bmw 530d stage 1, отключение adblue bmw, увеличение мощности bmw">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Russian">
+    <meta name="author" content="Kalibr-ECU">
+    <link rel="canonical" href="https://kalibr-ecu.ru/bmw.html">
+    
+    <meta property="og:title" content="Чип-тюнинг BMW удалённо | Stage 1/2 | Kalibr-ECU">
+    <meta property="og:description" content="BMW 3, 5, X3, X5, M3, M5. Stage 1/2. Увеличение мощности до 30%. Гарантия 1 год. Удалённо по всей России.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kalibr-ecu.ru/bmw.html">
+    <meta property="og:locale" content="ru_RU">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary-dark: #0A0E1A; --secondary-dark: #0D1117; --accent-blue: #0066FF; --accent-light: #0099FF; --text-white: #FFFFFF; --text-gray: #8899A6; --border-color: #1E2A3A; --accent-green: #10B981; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--primary-dark); color: var(--text-white); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; line-height: 1.2; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { position: fixed; top: 0; width: 100%; background: rgba(10, 14, 26, 0.95); backdrop-filter: blur(12px); z-index: 1000; padding: 15px 0; border-bottom: 1px solid var(--border-color); }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--border-color); }
+        .header-contacts { display: flex; align-items: center; gap: 20px; }
+        .header-phone { font-size: 20px; font-weight: 700; color: var(--text-white); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .header-phone:hover { color: var(--accent-light); }
+        .header-messengers { display: flex; gap: 10px; }
+        .messenger-icon { width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; transition: all 0.3s; }
+        .messenger-icon:hover { background: var(--accent-blue); transform: translateY(-2px); }
+        .header-address { color: var(--text-gray); font-size: 14px; display: flex; align-items: center; gap: 6px; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .nav { display: flex; gap: 30px; }
+        .nav a { color: var(--text-white); text-decoration: none; font-weight: 500; font-size: 14px; transition: color 0.3s; }
+        .nav a:hover { color: var(--accent-light); }
+        .header-cta { background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%) !important; color: #FFFFFF !important; padding: 10px 24px; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 14px; transition: all 0.3s; }
+        .header-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,102,255,0.3); }
+        .hero { margin-top: 110px; min-height: 70vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(10,14,26,0.92) 0%, rgba(13,17,23,0.85) 100%), url('https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1600') center/cover no-repeat; border-bottom: 1px solid var(--border-color); }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(0,102,255,0.15) 0%, transparent 50%); pointer-events: none; }
+        .hero-content { position: relative; z-index: 2; max-width: 850px; padding: 60px 0; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; background: rgba(0,102,255,0.1); border: 1px solid rgba(0,102,255,0.3); border-radius: 30px; font-size: 14px; color: var(--accent-light); font-weight: 600; margin-bottom: 24px; animation: fadeInDown 0.8s ease; }
+        .hero h1 { font-size: 48px; margin-bottom: 24px; font-weight: 800; line-height: 1.1; animation: fadeInUp 0.8s ease 0.2s backwards; }
+        .hero h1 span { background: linear-gradient(135deg, #FFFFFF 0%, #0099FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-subtitle { font-size: 19px; color: var(--text-gray); margin-bottom: 32px; line-height: 1.6; max-width: 700px; animation: fadeInUp 0.8s ease 0.4s backwards; }
+        .hero-features { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.6s backwards; }
+        .feature-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-white); background: rgba(255,255,255,0.03); padding: 10px 18px; border-radius: 8px; border: 1px solid var(--border-color); }
+        .feature-item::before { content: '✓'; color: var(--accent-light); font-weight: bold; font-size: 16px; }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.8s backwards; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 36px; background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%) !important; color: #FFFFFF !important; text-decoration: none !important; border-radius: 10px; font-weight: 600; font-size: 16px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,102,255,0.25); font-family: 'Inter', sans-serif; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(0,102,255,0.4); background: linear-gradient(135deg, #0077FF 0%, #00AAFF 100%) !important; }
+        .btn-secondary { background: transparent !important; border: 1px solid #1E2A3A; box-shadow: none; color: #FFFFFF !important; }
+        .btn-secondary:hover { background: rgba(255,255,255,0.05) !important; border-color: #0066FF; }
+        .section { padding: 80px 0; }
+        .section-dark { background: var(--secondary-dark); }
+        .section-light { background: var(--primary-dark); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-title { font-size: 36px; margin-bottom: 16px; font-weight: 700; }
+        .section-subtitle { color: var(--text-gray); font-size: 17px; max-width: 600px; margin: 0 auto; }
+        .models-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 40px; }
+        .model-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 16px; padding: 30px; transition: all 0.3s; }
+        .model-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+        .model-card h3 { font-size: 22px; margin-bottom: 12px; color: var(--accent-light); }
+        .model-card .engine { color: var(--text-gray); font-size: 14px; margin-bottom: 15px; font-style: italic; }
+        .model-card p { color: var(--text-gray); font-size: 15px; line-height: 1.7; margin-bottom: 15px; }
+        .model-card ul { list-style: none; margin-top: 15px; }
+        .model-card li { padding: 8px 0; border-bottom: 1px solid var(--border-color); color: #ccc; font-size: 14px; display: flex; align-items: flex-start; gap: 10px; }
+        .model-card li::before { content: '✓'; color: var(--accent-green); font-weight: bold; flex-shrink: 0; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+        .benefit { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 16px; padding: 30px; text-align: center; transition: all 0.3s; }
+        .benefit:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+        .benefit-icon { font-size: 48px; margin-bottom: 15px; }
+        .benefit h3 { font-size: 18px; margin-bottom: 10px; color: var(--text-white); }
+        .benefit p { font-size: 14px; color: var(--text-gray); line-height: 1.6; }
+        .problems-list { list-style: none; margin: 30px 0; }
+        .problems-list li { padding: 16px 0; border-bottom: 1px solid var(--border-color); color: var(--text-white); font-size: 16px; display: flex; align-items: flex-start; gap: 12px; }
+        .problems-list li::before { content: '⚠️'; font-size: 20px; flex-shrink: 0; }
+        .problems-list li strong { color: var(--accent-light); display: block; margin-bottom: 4px; }
+        .savings-box { background: linear-gradient(135deg, rgba(0,102,255,0.1), rgba(0,153,255,0.05)); border: 2px solid var(--accent-blue); border-radius: 20px; padding: 40px; margin-top: 40px; }
+        .savings-box h3 { color: var(--accent-light); font-size: 24px; margin-bottom: 20px; }
+        .savings-list { list-style: none; margin: 20px 0; }
+        .savings-list li { padding: 12px 0; color: #ccc; font-size: 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); }
+        .savings-list li strong { color: var(--accent-green); font-size: 18px; }
+        .savings-total { margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.3); border-radius: 12px; text-align: center; }
+        .savings-total .big { font-size: 32px; font-weight: 800; color: var(--accent-green); display: block; margin-top: 5px; }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 40px; }
+        .step-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 16px; padding: 30px; text-align: center; position: relative; transition: all 0.3s; }
+        .step-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+        .step-num { width: 50px; height: 50px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; margin: 0 auto 20px; }
+        .step-card h3 { font-size: 18px; margin-bottom: 10px; }
+        .step-card p { color: var(--text-gray); font-size: 14px; line-height: 1.6; }
+        .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 40px; }
+        .case-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 16px; padding: 30px; transition: all 0.3s; }
+        .case-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+        .case-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--border-color); }
+        .case-header h3 { color: var(--accent-light); font-size: 20px; margin-bottom: 5px; }
+        .case-header .specs { color: var(--text-gray); font-size: 13px; }
+        .case-results { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .case-result { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; text-align: center; }
+        .case-result .label { font-size: 12px; color: var(--text-gray); text-transform: uppercase; margin-bottom: 5px; }
+        .case-result .value { font-size: 20px; font-weight: 700; color: var(--accent-green); }
+        .case-result .value.before { color: var(--text-gray); }
+        .case-text { color: #ccc; font-size: 14px; line-height: 1.7; margin-top: 15px; font-style: italic; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 40px; }
+        .review-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 16px; padding: 30px; transition: all 0.3s; }
+        .review-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+        .review-stars { color: #FFD700; font-size: 20px; margin-bottom: 15px; }
+        .review-text { color: var(--text-white); font-size: 15px; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+        .review-author { display: flex; align-items: center; gap: 15px; padding-top: 15px; border-top: 1px solid var(--border-color); }
+        .review-avatar { width: 50px; height: 50px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; flex-shrink: 0; }
+        .review-info h4 { font-size: 16px; margin-bottom: 4px; color: var(--text-white); }
+        .review-info p { color: var(--text-gray); font-size: 13px; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+        .why-item { background: rgba(0,102,255,0.05); border: 1px solid var(--border-color); border-radius: 16px; padding: 30px; transition: all 0.3s; }
+        .why-item:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+        .why-item .icon { font-size: 40px; margin-bottom: 15px; }
+        .why-item h3 { font-size: 18px; margin-bottom: 10px; color: var(--accent-light); }
+        .why-item p { color: var(--text-gray); font-size: 14px; line-height: 1.6; }
+        .pricing-box { background: rgba(0,102,255,0.05); border: 2px solid var(--accent-blue); border-radius: 20px; padding: 40px; margin-top: 40px; }
+        .pricing-item { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
+        .pricing-item:last-child { border-bottom: none; }
+        .pricing-item h4 { font-size: 18px; margin-bottom: 4px; }
+        .pricing-item p { color: var(--text-gray); font-size: 14px; }
+        .pricing-item .price { font-size: 24px; font-weight: 700; color: var(--accent-light); white-space: nowrap; }
+        .faq-list { max-width: 900px; margin: 40px auto 0; }
+        .faq-item { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 15px; overflow: hidden; transition: all 0.3s; }
+        .faq-item:hover { border-color: var(--accent-blue); }
+        .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 17px; color: var(--text-white); }
+        .faq-question::after { content: '+'; font-size: 28px; color: var(--accent-light); transition: transform 0.3s; }
+        .faq-item.open .faq-question::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; color: var(--text-gray); font-size: 15px; line-height: 1.7; }
+        .faq-item.open .faq-answer { max-height: 500px; padding: 0 25px 20px; }
+        .cta { padding: 80px 0; background: linear-gradient(180deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); text-align: center; }
+        .cta-content { max-width: 650px; margin: 0 auto; }
+        .cta h2 { font-size: 36px; margin-bottom: 20px; }
+        .cta p { font-size: 17px; color: var(--text-gray); margin-bottom: 30px; }
+        .form-group { display: flex; flex-direction: column; gap: 16px; max-width: 500px; margin: 0 auto; }
+        .form-input { padding: 18px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 12px; color: white; font-size: 16px; font-family: 'Inter', sans-serif; transition: all 0.3s ease; }
+        .form-input:focus { outline: none; border-color: var(--accent-blue); background: rgba(255,255,255,0.06); }
+        .form-input::placeholder { color: var(--text-gray); }
+        .form-note { color: var(--text-gray); font-size: 13px; margin-top: 16px; opacity: 0.7; }
+        .form-note a { color: var(--accent-light); text-decoration: underline; }
+        .cta-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+        .cta-buttons .btn { padding: 14px 28px; font-size: 15px; }
+        .footer { background: #05070A; padding: 60px 0 30px; border-top: 1px solid var(--border-color); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { font-size: 18px; margin-bottom: 24px; color: var(--text-white); }
+        .footer-col p, .footer-col a { color: var(--text-gray); text-decoration: none; line-height: 1.9; font-size: 15px; transition: color 0.3s; display: block; }
+        .footer-col a:hover { color: var(--accent-light); }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid var(--border-color); color: var(--text-gray); font-size: 14px; }
+        .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; width: 64px; height: 64px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); z-index: 999; transition: all 0.3s ease; animation: pulse 2s infinite; }
+        .floating-whatsapp:hover { transform: scale(1.1); }
+        @keyframes pulse { 0% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7); } 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        @media (max-width: 992px) { .hero h1 { font-size: 36px; } .section-title, .cta h2 { font-size: 30px; } .nav { display: none; } .header-top { flex-direction: column; gap: 15px; } .case-results { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .hero { min-height: auto; padding: 60px 0; margin-top: 140px; } .hero h1 { font-size: 28px; } .section { padding: 60px 0; } .pricing-item { flex-direction: column; align-items: flex-start; gap: 10px; } .savings-box { padding: 25px; } .savings-total .big { font-size: 24px; } }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Kalibr-ECU - Чип-тюнинг BMW",
+        "description": "Профессиональный чип-тюнинг BMW 3, 5, X3, X5, M3, M5 с двигателями B47, B57, B58, N57, S58. Stage 1/2. Удалённо по всей России.",
+        "url": "https://kalibr-ecu.ru/bmw.html",
+        "telephone": "+7-900-097-80-31",
+        "email": "aleks_moroz84@mail.ru",
+        "priceRange": "от 5000 ₽",
+        "areaServed": { "@type": "Country", "name": "Россия" },
+        "openingHours": "Mo-Su 09:00-21:00"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Слетит ли гарантия BMW после чип-тюнинга?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Нет, если мы сохраняем оригинальные идентификаторы прошивки. Дилерское оборудование BMW (ISTA/ISID) не увидит изменений. Также мы бесплатно возвращаем сток в любой момент — например, перед плановым ТО или продажей автомобиля."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Не навредит ли Stage 1 двигателю BMW?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Нет. Двигатели BMW (B47, B57, B58, N57) имеют огромный запас прочности — они рассчитаны на европейские нагрузки. Мы работаем в пределах заводского запаса прочности, не превышаем допустимые температуры и давления. За 9 лет работы ни один двигатель BMW не пострадал из-за нашей прошивки."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Что такое Stage 1 и Stage 2 для BMW?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Stage 1 — это чип-тюнинг без физических модификаций: только калибровка ЭБУ. Прибавка 20-30% мощности. Stage 2 — это Stage 1 + даунпайп, интеркулер или впуск. Прибавка 30-45% мощности. Для M-серии доступен Stage 3 с турбо-апгрейдом."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Сколько времени занимает прошивка BMW?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "От момента получения файла прошивки до отправки готового результата — от 2 до 6 часов. В среднем — 3-4 часа. Двигатели B-серии (B47, B57, B58) — хорошо изученные блоки Bosch MG1 и MD1, работаем быстро."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Как происходит удалённая прошивка BMW?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Вы или ваш мастер считываете стоковую прошивку через OBD-II разъём (инструменты KESS, KTAG, Flex) и отправляете файл нам в мессенджер. Мы калибруем прошивку и присылаем готовый файл обратно. Вы загружаете его в ЭБУ. Весь процесс занимает от 2 до 6 часов."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Увеличится ли расход после чип-тюнинга?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Нет, при спокойной езде расход даже снизится на 0.5-1.5 литра благодаря оптимизации карт впрыска. Расход увеличивается только при агрессивной езде — но вы же и получаете прибавку мощности для этого."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Можно ли прошить BMW M3/M5?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Да, мы специализируемся на M-серии. Для M3/M4 (S58) доступен Stage 1 (480→550 л.с.), Stage 2 (до 620 л.с.) и Stage 3 (с турбо-апгрейдом до 750+ л.с.). Для M5 (S63) — Stage 1 (600→700 л.с.), Stage 2 (до 800 л.с.)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Сколько стоит чип-тюнинг BMW?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Stage 1 для обычных моделей — от 5000₽, для M-серии — от 15000₽. Отключение AdBlue/DPF/EGR — от 4000₽. Комплекс — от 8000₽. Точную цену назовём после получения файла прошивки."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+       ym(109753043, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header-top">
+            <div class="header-contacts">
+                <a href="tel:+79000978031" class="header-phone">📞 +7 (900) 097-80-31</a>
+                <div class="header-messengers">
+                    <a href="https://wa.me/79000978031" class="messenger-icon" title="WhatsApp" target="_blank">💬</a>
+                    <a href="https://t.me/kalibr_compass" class="messenger-icon" title="Telegram" target="_blank">✈️</a>
+                </div>
+            </div>
+            <div class="header-address">🌍 Работаем по всей России</div>
+        </div>
+        <div class="header-content">
+            <nav class="nav">
+                <a href="/">Главная</a>
+                <a href="/#services">Услуги</a>
+                <a href="/#pricing">Цены</a>
+                <a href="/#contact">Контакты</a>
+            </nav>
+            <a href="#contact" class="header-cta">Рассчитать стоимость</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">🏁 Эксперты по BMW с 2015 года</div>
+            <h1><span>Чип-тюнинг BMW</span><br>Stage 1 / Stage 2 / M-Performance</h1>
+            <p class="hero-subtitle">
+                Профессиональная калибровка ЭБУ с гарантией 1 год. BMW 3, 5, 7 Series, X3, X5, X6, X7, M3, M5 с двигателями B47, B57, B58, N57, S58, S63. Сохраняем гарантию дилера. Отключим AdBlue, DPF, EGR. Увеличим мощность до 30% и снизим расход.
+            </p>
+            <div class="hero-features">
+                <div class="feature-item">Гарантия 1 год</div>
+                <div class="feature-item">Сохраняем гарантию дилера</div>
+                <div class="feature-item">Результат за 3-4 часа</div>
+                <div class="feature-item">Stage 1/2/3 для M-серии</div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">🚀 Рассчитать стоимость</a>
+                <a href="https://t.me/kalibr_compass" class="btn btn-secondary" target="_blank">✈️ Отправить прошивку</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">С какими моделями BMW мы работаем</h2>
+            <p class="section-subtitle">Прошиваем все современные модели с двигателями B-серии, N-серии и M-Performance</p>
+        </div>
+        <div class="models-grid">
+            <article class="model-card fade-in">
+                <h3>BMW 3 Series (F30 / G20)</h3>
+                <div class="engine">Двигатели: B47 2.0D (190 л.с.), B58 3.0T (326-382 л.с.), B48 2.0T (184-258 л.с.)</div>
+                <p>Легендарная "трёшка" — эталон спортивного седана. Прошиваем все поколения: F30 (2012-2019) и G20 (2019-наши дни). Двигатели B47 и B58 — одни из самых тюнингуемых в мире. ЭБУ — Bosch MG1 и MD1.</p>
+                <ul>
+                    <li>320d F30: 184 → 225 л.с. (+22%)</li>
+                    <li>330i G20: 258 → 310 л.с. (+20%)</li>
+                    <li>M340i G20: 374 → 450 л.с. (+20%)</li>
+                    <li>Снижение расхода: -1-1.5 л/100 км</li>
+                </ul>
+            </article>
+            
+            <article class="model-card fade-in">
+                <h3>BMW 5 Series (G30 / G60)</h3>
+                <div class="engine">Двигатели: B57 3.0D (286 л.с.), B58 3.0T (340 л.с.), S63 4.4T (625 л.с.)</div>
+                <p>Бизнес-седан премиум-класса. G30 (2017-2023) и новое поколение G60. Двигатели B57 — самые экономичные дизели BMW. M550i и M5 — для тех, кому мало стандартной мощности.</p>
+                <ul>
+                    <li>530d G30: 265 → 320 л.с. (+21%)</li>
+                    <li>540i G30: 340 → 410 л.с. (+21%)</li>
+                    <li>M550i G30: 530 → 630 л.с. (+19%)</li>
+                    <li>Снижение расхода: -1-2 л/100 км</li>
+                </ul>
+            </article>
+            
+            <article class="model-card fade-in">
+                <h3>BMW X3 (G01) / X4 (G02)</h3>
+                <div class="engine">Двигатели: B47 2.0D (190 л.с.), B58 3.0T (360 л.с.), S58 3.0T (510 л.с.)</div>
+                <p>Среднеразмерные кроссоверы на платформе CLAR. G01/G02 (2017-наши дни). X3 M и X4 M — самые мощные в классе. Прошиваем с сохранением xDrive и всех систем безопасности.</p>
+                <ul>
+                    <li>X3 20d G01: 190 → 230 л.с. (+21%)</li>
+                    <li>X3 M40i G01: 360 → 430 л.с. (+19%)</li>
+                    <li>X3 M G01: 480 → 570 л.с. (+19%)</li>
+                    <li>Снижение расхода: -1-1.5 л/100 км</li>
+                </ul>
+            </article>
+            
+            <article class="model-card fade-in">
+                <h3>BMW X5 (G05) / X6 (G06)</h3>
+                <div class="engine">Двигатели: B57 3.0D (265-340 л.с.), B58 3.0T (340 л.с.), S63 4.4T (530-625 л.с.)</div>
+                <p>Флагманские SAV и SAC. G05/G06 (2018-наши дни). Самые популярные модели для чип-тюнинга в России. X5 M и X6 M Competition — настоящие монстры мощности.</p>
+                <ul>
+                    <li>X5 30d G05: 265 → 320 л.с. (+21%)</li>
+                    <li>X5 40i G05: 340 → 410 л.с. (+21%)</li>
+                    <li>X5 M50i G05: 530 → 630 л.с. (+19%)</li>
+                    <li>X5 M Competition: 625 → 740 л.с. (+18%)</li>
+                </ul>
+            </article>
+            
+            <article class="model-card fade-in">
+                <h3>BMW X7 (G07)</h3>
+                <div class="engine">Двигатели: B57 3.0D (340 л.с.), B58 3.0T (381 л.с.), S63 4.4T (530 л.с.)</div>
+                <p>Флагманский полноразмерный SUV. G07 (2019-наши дни). Самый большой и роскошный BMW. Прошиваем с сохранением всех систем комфорта и безопасности.</p>
+                <ul>
+                    <li>X7 40d G07: 340 → 410 л.с. (+21%)</li>
+                    <li>X7 40i G07: 381 → 460 л.с. (+21%)</li>
+                    <li>X7 M50i G07: 530 → 630 л.с. (+19%)</li>
+                    <li>Снижение расхода: -1.5-2 л/100 км</li>
+                </ul>
+            </article>
+            
+            <article class="model-card fade-in">
+                <h3>BMW M3 / M4 (G80/G82)</h3>
+                <div class="engine">Двигатели: S58 3.0T (480-510 л.с.)</div>
+                <p>Легендарные M-машины нового поколения. G80/G82 (2021-наши дни). Двигатель S58 — один из самых мощных и надёжных в мире. Доступны Stage 1, Stage 2 и Stage 3 с турбо-апгрейдом.</p>
+                <ul>
+                    <li>Stage 1: 480 → 550 л.с. (+15%)</li>
+                    <li>Stage 1 Comp: 510 → 580 л.с. (+14%)</li>
+                    <li>Stage 2: до 620 л.с. (+29%)</li>
+                    <li>Stage 3: до 750+ л.с. (с турбо-апгрейдом)</li>
+                </ul>
+            </article>
+            
+            <article class="model-card fade-in">
+                <h3>BMW M5 (F90 / G90)</h3>
+                <div class="engine">Двигатели: S63 4.4T (600-635 л.с.)</div>
+                <p>Суперседан с полным приводом M xDrive. F90 (2018-2023) и новое поколение G90 (2023-наши дни). Двигатель S63 — один из самых тюнингуемых V8 в мире.</p>
+                <ul>
+                    <li>Stage 1: 600 → 700 л.с. (+17%)</li>
+                    <li>Stage 1 Comp: 625 → 730 л.с. (+17%)</li>
+                    <li>Stage 1 CS: 635 → 740 л.с. (+17%)</li>
+                    <li>Stage 2: до 800+ л.с. (с даунпайпом)</li>
+                </ul>
+            </article>
+        </div>
+        
+        <p style="text-align: center; margin-top: 40px; color: var(--text-gray); font-size: 16px;">
+            <strong style="color: var(--text-white);">Не нашли свою модель?</strong> Мы прошиваем все BMW: 1, 2, 4, 7 Series, Z4, i4, iX, M2, M8 и другие. Напишите нам — рассчитаем стоимость за 15 минут.
+        </p>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="#contact" class="btn">📞 Узнать про свою модель</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Что даёт чип-тюнинг BMW</h2>
+            <p class="section-subtitle">Реальные результаты, которые вы получите после прошивки</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit fade-in">
+                <div class="benefit-icon">🏁</div>
+                <h3>Прибавка мощности</h3>
+                <p>До +30% для Stage 1, до +45% для Stage 2. BMW 320d со 184 л.с. становится 225 л.с. — это уровень 330i с завода. Разгон 0-100 км/ч сокращается на 0.5-1 секунду.</p>
+            </div>
+            <div class="benefit fade-in">
+                <div class="benefit-icon">⚡</div>
+                <h3>Мгновенный отклик</h3>
+                <p>Педаль газа становится отзывчивее, турбо-яма исчезает. Машина разгоняется ровно и уверенно на любых оборотах. Ощущение совсем другой машины.</p>
+            </div>
+            <div class="benefit fade-in">
+                <div class="benefit-icon">⛽</div>
+                <h3>Снижение расхода</h3>
+                <p>При спокойной езде расход снижается на 0.5-1.5 литра благодаря оптимизации карт впрыска. На BMW 530d с 8 до 7 л/100 км на трассе.</p>
+            </div>
+            <div class="benefit fade-in">
+                <div class="benefit-icon">🛡️</div>
+                <h3>Сохранение гарантии</h3>
+                <p>Мы сохраняем оригинальные идентификаторы прошивки (VIN, индекс калибровки). Дилерское оборудование ISTA/ISID не видит изменений. Гарантия дилера сохраняется.</p>
+            </div>
+            <div class="benefit fade-in">
+                <div class="benefit-icon">🚫</div>
+                <h3>Отключение AdBlue/DPF/EGR</h3>
+                <p>Полное программное отключение без ошибок. Забудете о проблемах с мочевиной, сажевым фильтром и клапаном EGR. Все системы диагностики остаются рабочими.</p>
+            </div>
+            <div class="benefit fade-in">
+                <div class="benefit-icon">🔧</div>
+                <h3>Гарантия 1 год</h3>
+                <p>Даём официальную гарантию на все работы. При необходимости бесплатно откатим до стока. За 9 лет работы ни один двигатель BMW не пострадал из-за нашей прошивки.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Почему владельцы BMW делают чип-тюнинг?</h2>
+            <p class="section-subtitle">Типичные причины обращения к нам</p>
+        </div>
+        <ul class="problems-list">
+            <li class="fade-in">
+                <div>
+                    <strong>Заводская "задушенность" двигателя</strong>
+                    BMW намеренно ограничивает мощность для разных рынков и страховых классов. Один и тот же двигатель B58 в 340i выдаёт 326 л.с., а в Z4 M40i — 340 л.с. Чип-тюнинг снимает эти искусственные ограничения.
+                </div>
+            </li>
+            <li class="fade-in">
+                <div>
+                    <strong>Проблемы с AdBlue на дизелях</strong>
+                    Ошибки SCR, засорённые форсунки, выход из строя насоса AdBlue — частая проблема на BMW 320d, 530d, X5 30d. Ремонт стоит от 50 000 до 150 000 рублей. Отключение решает проблему раз и навсегда.
+                </div>
+            </li>
+            <li class="fade-in">
+                <div>
+                    <strong>Забитый DPF на дизелях</strong>
+                    Сажевый фильтр забивается при городских поездках. Машина уходит в аварийный режим, теряет мощность. Замена DPF стоит от 80 000 до 200 000 рублей. Программное отключение — решение в 10 раз дешевле.
+                </div>
+            </li>
+            <li class="fade-in">
+                <div>
+                    <strong>Турбо-яма и задумчивость педали</strong>
+                    Заводские настройки ЭБУ делают педаль газа "ватной" для комфорта. После чип-тюнинга отклик становится мгновенным, турбо-яма исчезает — машина едет совсем иначе.
+                </div>
+            </li>
+            <li class="fade-in">
+                <div>
+                    <strong>Хочется больше мощности без замены машины</strong>
+                    Stage 1 на BMW 320d превращает её в 330i по мощности. Это дешевле, чем продавать машину и покупать версию мощнее. При этом можно вернуться в сток в любой момент.
+                </div>
+            </li>
+        </ul>
+        <p style="color: var(--text-gray); font-size: 16px; margin-top: 30px; line-height: 1.7;">
+            Мы вносим изменения в заводскую прошивку ЭБУ (Bosch MG1, MD1, MEVD17), полностью оптимизируя карты впрыска, наддува и зажигания. Двигатель работает стабильно, без ошибок и "задушенности". Все системы диагностики остаются рабочими.
+        </p>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Сколько вы получите?</h2>
+            <p class="section-subtitle">Реальный пример: BMW 530d G30 с пробегом 20 000 км/год</p>
+        </div>
+        
+        <div class="savings-box fade-in">
+            <h3>💰 Что вы получаете после Stage 1:</h3>
+            <ul class="savings-list">
+                <li>
+                    <span>Прибавка мощности: 265 → 320 л.с.</span>
+                    <strong>+55 л.с. (+21%)</strong>
+                </li>
+                <li>
+                    <span>Прибавка момента: 620 → 720 Нм</span>
+                    <strong>+100 Нм (+16%)</strong>
+                </li>
+                <li>
+                    <span>Разгон 0-100 км/ч: 5.6 → 5.1 сек</span>
+                    <strong>-0.5 сек</strong>
+                </li>
+                <li>
+                    <span>Снижение расхода на трассе</span>
+                    <strong>-1.2 л/100 км</strong>
+                </li>
+            </ul>
+            
+            <div class="savings-total">
+                <div style="color: var(--text-gray); font-size: 16px;">Экономия на топливе в год (20 000 км):</div>
+                <span class="big">~24 000 ₽/год</span>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px; padding: 25px; background: rgba(16,185,129,0.1); border: 1px solid var(--accent-green); border-radius: 12px;">
+                <div style="color: var(--accent-green); font-size: 18px; font-weight: 600;">Прошивка за 8 000₽ окупается за:</div>
+                <div style="font-size: 42px; font-weight: 800; color: var(--accent-green); margin-top: 10px;">4 МЕСЯЦА</div>
+                <div style="color: var(--text-gray); font-size: 14px; margin-top: 10px;">Плюс — совершенно другие ощущения от вождения</div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#contact" class="btn">💰 Рассчитать для моей BMW</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Как проходит удалённая работа</h2>
+            <p class="section-subtitle">Вам не нужно никуда ехать. Весь процесс занимает от 2 до 6 часов</p>
+        </div>
+        
+        <div class="steps-grid">
+            <div class="step-card fade-in">
+                <div class="step-num">1</div>
+                <h3>Связываетесь с нами</h3>
+                <p>Пишете в WhatsApp/Telegram или звоните. Называете модель BMW, год и двигатель (например: 530d G30, 2020, B57).</p>
+            </div>
+            <div class="step-card fade-in">
+                <div class="step-num">2</div>
+                <h3>Считываете прошивку</h3>
+                <p>Вы или ваш мастер считываете стоковую прошивку через OBD-II (инструменты KESS, KTAG, Flex). Занимает 15-30 минут.</p>
+            </div>
+            <div class="step-card fade-in">
+                <div class="step-num">3</div>
+                <h3>Отправляете файл</h3>
+                <p>Присылаете файл прошивки нам в мессенджер. Мы проверяем версию ЭБУ и согласуем детали (Stage 1/2, отключение AdBlue и т.д.).</p>
+            </div>
+            <div class="step-card fade-in">
+                <div class="step-num">4</div>
+                <h3>Мы калибруем</h3>
+                <p>Вносим изменения в прошивку. Занимает от 2 до 6 часов в зависимости от сложности (для M-серии — до 10 часов).</p>
+            </div>
+            <div class="step-card fade-in">
+                <div class="step-num">5</div>
+                <h3>Присылаем результат</h3>
+                <p>Отправляем готовую прошивку с подробной инструкцией по загрузке. При необходимости — консультация по Stage 2.</p>
+            </div>
+            <div class="step-card fade-in">
+                <div class="step-num">6</div>
+                <h3>Загружаете прошивку</h3>
+                <p>Вы или ваш мастер загружаете новую прошивку в ЭБУ. Машина готова! Можно наслаждаться новой мощностью.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding: 25px; background: rgba(0,102,255,0.05); border: 1px solid var(--border-color); border-radius: 12px;">
+            <p style="color: var(--text-white); font-size: 16px; margin-bottom: 10px;">
+                <strong>⏱️ Среднее время работы:</strong> 3-4 часа для обычных моделей, 6-10 часов для M-серии
+            </p>
+            <p style="color: var(--text-gray); font-size: 14px;">
+                📍 Работаем по всей России — от Калининграда до Владивостока. Также с клиентами из Казахстана и Беларуси.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Реальные кейсы наших клиентов</h2>
+            <p class="section-subtitle">Конкретные результаты на разных моделях BMW</p>
+        </div>
+        
+        <div class="cases-grid">
+            <div class="case-card fade-in">
+                <div class="case-header">
+                    <div>
+                        <h3>BMW 320d F30</h3>
+                        <div class="specs">B47 2.0D • 184 л.с. • пробег 95 000 км</div>
+                    </div>
+                </div>
+                <p style="color: #ccc; font-size: 14px; line-height: 1.6;">
+                    <strong>Задача:</strong> Клиент хотел динамики 330i, но не хотел продавать машину. Плюс были периодические ошибки AdBlue.
+                </p>
+                <p style="color: #ccc; font-size: 14px; line-height: 1.6; margin-top: 10px;">
+                    <strong>Решение:</strong> Stage 1 + отключение AdBlue. Калибровка карт впрыска и наддува под B47.
+                </p>
+                <div class="case-results">
+                    <div class="case-result">
+                        <div class="label">Мощность</div>
+                        <div class="value before">184 л.с.</div>
+                        <div style="color: var(--accent-green); font-size: 14px;">↓</div>
+                        <div class="value">225 л.с.</div>
+                    </div>
+                    <div class="case-result">
+                        <div class="label">Разгон 0-100</div>
+                        <div class="value before">7.5 сек</div>
+                        <div style="color: var(--accent-green); font-size: 14px;">↓</div>
+                        <div class="value">6.7 сек</div>
+                    </div>
+                </div>
+                <p class="case-text">"Машина поехала как новая 330i! Разгон стал совсем другим, турбо-яма исчезла. Ошибок AdBlue больше нет. Расход в смешанном цикле упал с 6.5 до 5.8 литров."</p>
+            </div>
+            
+            <div class="case-card fade-in">
+                <div class="case-header">
+                    <div>
+                        <h3>BMW X5 xDrive30d G05</h3>
+                        <div class="specs">B57 3.0D • 265 л.с. • пробег 75 000 км</div>
+                    </div>
+                </div>
+                <p style="color: #ccc; font-size: 14px; line-height: 1.6;">
+                    <strong>Задача:</strong> Клиент хотел больше тяги для обгонов на трассе и буксировки прицепа. Плюс отключить DPF.
+                </p>
+                <p style="color: #ccc; font-size: 14px; line-height: 1.6; margin-top: 10px;">
+                    <strong>Решение:</strong> Stage 1 + отключение DPF + EGR. Оптимизация карт наддува и впрыска под B57.
+                </p>
+                <div class="case-results">
+                    <div class="case-result">
+                        <div class="label">Мощность</div>
+                        <div class="value before">265 л.с.</div>
+                        <div style="color: var(--accent-green); font-size: 14px;">↓</div>
+                        <div class="value">320 л.с.</div>
+                    </div>
+                    <div class="case-result">
+                        <div class="label">Момент</div>
+                        <div class="value before">620 Нм</div>
+                        <div style="color: var(--accent-green); font-size: 14px;">↓</div>
+                        <div class="value">720 Нм</div>
+                    </div>
+                </div>
+                <p class="case-text">"X5 поехал совсем иначе! На трассе обгоны теперь — одно удовольствие. С прицепом в горку идёт уверенно, без переключений. Расход упал на 1.2 литра."</p>
+            </div>
+            
+            <div class="case-card fade-in">
+                <div class="case-header">
+                    <div>
+                        <h3>BMW M3 G80</h3>
+                        <div class="specs">S58 3.0T • 480 л.с. • пробег 25 000 км</div>
+                    </div>
+                </div>
+                <p style="color: #ccc; font-size: 14px; line-height: 1.6;">
+                    <strong>Задача:</strong> Клиент хотел максимум мощности для трека, но без физических модификаций (Stage 1).
+                </p>
+                <p style="color: #ccc; font-size: 14px; line-height: 1.6; margin-top: 10px;">
+                    <strong>Решение:</strong> Stage 1 M-Performance. Калибровка карт впрыска, наддува, зажигания и ограничения скорости под S58.
+                </p>
+                <div class="case-results">
+                    <div class="case-result">
+                        <div class="label">Мощность</div>
+                        <div class="value before">480 л.с.</div>
+                        <div style="color: var(--accent-green); font-size: 14px;">↓</div>
+                        <div class="value">550 л.с.</div>
+                    </div>
+                    <div class="case-result">
+                        <div class="label">Разгон 0-100</div>
+                        <div class="value before">3.9 сек</div>
+                        <div style="color: var(--accent-green); font-size: 14px;">↓</div>
+                        <div class="value">3.4 сек</div>
+                    </div>
+                </div>
+                <p class="case-text">"M3 стала просто ракетой! На треке время круга сократилось на 2 секунды. Машина едет как M3 CSL, но без физических модификаций. Рекомендую!"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Отзывы клиентов — BMW</h2>
+            <p class="section-subtitle">Более 500 довольных клиентов по всей России</p>
+        </div>
+        
+        <div class="reviews-grid">
+            <div class="review-card fade-in">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"BMW 530d G30, 2020 год, пробег 75 000 км. До прошивки машина ехала нормально, но хотелось больше. Сделал Stage 1 — разница колоссальная! Машина поехала как 540i. Разгон на трассе — одно удовольствие. Расход упал с 8 до 7 литров на трассе. Гарантия дилера сохранилась — проверял перед ТО, всё ок. Kalibr-ECU — профессионалы своего дела. Рекомендую!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">А</div>
+                    <div class="review-info">
+                        <h4>Андрей, г. Москва</h4>
+                        <p>BMW 530d G30, 2020 г.в., B57 265 л.с.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review-card fade-in">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"BMW X5 M50i G05, 2021 год. Машина и так мощная, но после Stage 1 — просто космос! 530 → 630 л.с. Разгон как у суперкара. Сделали за 5 часов, прислали подробную инструкцию. Загрузил сам у знакомого в сервисе. Гарантия дилера сохранилась — проверял через ISTA. Kalibr-ECU знают своё дело с BMW. Рекомендую всем владельцам M-Performance!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">Д</div>
+                    <div class="review-info">
+                        <h4>Дмитрий, г. Санкт-Петербург</h4>
+                        <p>BMW X5 M50i G05, 2021 г.в., S63 530 л.с.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review-card fade-in">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"BMW 320d F30, 2017 год, пробег 120 000 км. Были постоянные ошибки AdBlue — каждые 10-15 тысяч км. Обратился в Kalibr-ECU, сделали Stage 1 + отключение AdBlue. Машина поехала как 330i, ошибок больше нет. Расход упал с 6.5 до 5.8 литров. Гарантия дилера сохранилась. Спасибо!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">С</div>
+                    <div class="review-info">
+                        <h4>Сергей, г. Екатеринбург</h4>
+                        <p>BMW 320d F30, 2017 г.в., B47 190 л.с.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review-card fade-in">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"BMW M3 G80, 2022 год. Хотел максимум мощности для трека. Сделал Stage 1 в Kalibr-ECU — 480 → 550 л.с. Разгон 0-100 за 3.4 секунды! На треке время круга сократилось на 2 секунды. Машина едет как M3 CSL, но без физических модификаций. Kalibr-ECU — эксперты по M-серии. Рекомендую!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">М</div>
+                    <div class="review-info">
+                        <h4>Максим, г. Казань</h4>
+                        <p>BMW M3 G80, 2022 г.в., S58 480 л.с.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Почему выбирают Kalibr-ECU</h2>
+            <p class="section-subtitle">9 лет опыта, 500+ прошитых BMW, гарантия 1 год</p>
+        </div>
+        
+        <div class="why-grid">
+            <div class="why-item fade-in">
+                <div class="icon">🏆</div>
+                <h3>9 лет опыта с BMW</h3>
+                <p>Работаем с 2015 года. Прошили более 500 BMW. Знаем все нюансы двигателей B47, B57, B58, N57, S58, S63 и ЭБУ Bosch MG1, MD1, MEVD17.</p>
+            </div>
+            <div class="why-item fade-in">
+                <div class="icon">🛡️</div>
+                <h3>Сохраняем гарантию дилера</h3>
+                <p>Сохраняем оригинальные идентификаторы прошивки (VIN, индекс калибровки). Дилерское оборудование ISTA/ISID не видит изменений. Гарантия дилера сохраняется.</p>
+            </div>
+            <div class="why-item fade-in">
+                <div class="icon">⚡</div>
+                <h3>Быстро</h3>
+                <p>Среднее время работы — 3-4 часа. Срочная прошивка — за 2 часа. Для M-серии — 6-10 часов. Двигатели BMW — хорошо изученные блоки, работаем быстро.</p>
+            </div>
+            <div class="why-item fade-in">
+                <div class="icon">🌍</div>
+                <h3>Удалённо по всей России</h3>
+                <p>Вам не нужно никуда ехать. Работаем от Калининграда до Владивостока. Также с клиентами из Казахстана и Беларуси.</p>
+            </div>
+            <div class="why-item fade-in">
+                <div class="icon">💰</div>
+                <h3>Честные цены</h3>
+                <p>Stage 1 — от 5000₽, для M-серии — от 15000₽. Без скрытых платежей. Точную цену называем сразу, без "сюрпризов".</p>
+            </div>
+            <div class="why-item fade-in">
+                <div class="icon">🔧</div>
+                <h3>Индивидуальная калибровка</h3>
+                <p>Не используем готовые прошивки из интернета. Калибруем каждую BMW индивидуально под её состояние, пробег и задачи владельца.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Стоимость работ для BMW</h2>
+            <p class="section-subtitle">Прозрачные цены без скрытых платежей</p>
+        </div>
+        <div class="pricing-box fade-in">
+            <div class="pricing-item">
+                <div>
+                    <h4>Stage 1 (обычные модели)</h4>
+                    <p>Прирост мощности до 30%, оптимизация карт впрыска и наддува</p>
+                </div>
+                <div class="price">от 5 000 ₽</div>
+            </div>
+            <div class="pricing-item">
+                <div>
+                    <h4>Stage 1 M-Performance</h4>
+                    <p>M3, M4, M5, X3 M, X4 M, X5 M, X6 M. Прирост 15-20%</p>
+                </div>
+                <div class="price">от 15 000 ₽</div>
+            </div>
+            <div class="pricing-item">
+                <div>
+                    <h4>Stage 2</h4>
+                    <p>Stage 1 + даунпайп/интеркулер. Прирост до 45%</p>
+                </div>
+                <div class="price">от 10 000 ₽</div>
+            </div>
+            <div class="pricing-item">
+                <div>
+                    <h4>Отключение AdBlue / DPF / EGR</h4>
+                    <p>Полное программное отключение без ошибок</p>
+                </div>
+                <div class="price">от 4 000 ₽</div>
+            </div>
+            <div class="pricing-item">
+                <div>
+                    <h4>Комплекс (Stage 1 + Эко)</h4>
+                    <p>Максимальный эффект: мощность + экономия + отсутствие ошибок</p>
+                </div>
+                <div class="price">от 8 000 ₽</div>
+            </div>
+        </div>
+        <p style="color: var(--text-gray); font-size: 15px; margin-top: 30px; text-align: center;">
+            💡 Точная цена зависит от модели, двигателя и версии ПО. Пришлите нам файл прошивки в WhatsApp или Telegram, и мы назовём точную сумму за 15 минут.
+        </p>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="#contact" class="btn">💰 Получить точный расчёт</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Частые вопросы</h2>
+            <p class="section-subtitle">Ответы на самые популярные вопросы о прошивке BMW</p>
+        </div>
+        
+        <div class="faq-list">
+            <div class="faq-item fade-in">
+                <div class="faq-question">Слетит ли гарантия BMW после чип-тюнинга?</div>
+                <div class="faq-answer">Нет, если мы сохраняем оригинальные идентификаторы прошивки. Дилерское оборудование BMW (ISTA/ISID) не увидит изменений. Также мы бесплатно возвращаем сток в любой момент — например, перед плановым ТО или продажей автомобиля.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Не навредит ли Stage 1 двигателю BMW?</div>
+                <div class="faq-answer">Нет. Двигатели BMW (B47, B57, B58, N57) имеют огромный запас прочности — они рассчитаны на европейские нагрузки. Мы работаем в пределах заводского запаса прочности, не превышаем допустимые температуры и давления. За 9 лет работы ни один двигатель BMW не пострадал из-за нашей прошивки.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Что такое Stage 1 и Stage 2 для BMW?</div>
+                <div class="faq-answer">Stage 1 — это чип-тюнинг без физических модификаций: только калибровка ЭБУ. Прибавка 20-30% мощности. Stage 2 — это Stage 1 + даунпайп, интеркулер или впуск. Прибавка 30-45% мощности. Для M-серии доступен Stage 3 с турбо-апгрейдом.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Сколько времени занимает прошивка BMW?</div>
+                <div class="faq-answer">От момента получения файла прошивки до отправки готового результата — от 2 до 6 часов. В среднем — 3-4 часа. Для M-серии — 6-10 часов. Двигатели B-серии (B47, B57, B58) — хорошо изученные блоки Bosch MG1 и MD1, работаем быстро.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Как происходит удалённая прошивка BMW?</div>
+                <div class="faq-answer">Вы или ваш мастер считываете стоковую прошивку через OBD-II разъём (инструменты KESS, KTAG, Flex) и отправляете файл нам в мессенджер. Мы калибруем прошивку и присылаем готовый файл обратно. Вы загружаете его в ЭБУ. Весь процесс занимает от 2 до 6 часов.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Увеличится ли расход после чип-тюнинга?</div>
+                <div class="faq-answer">Нет, при спокойной езде расход даже снизится на 0.5-1.5 литра благодаря оптимизации карт впрыска. Расход увеличивается только при агрессивной езде — но вы же и получаете прибавку мощности для этого.</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Можно ли прошить BMW M3/M5?</div>
+                <div class="faq-answer">Да, мы специализируемся на M-серии. Для M3/M4 (S58) доступен Stage 1 (480→550 л.с.), Stage 2 (до 620 л.с.) и Stage 3 (с турбо-апгрейдом до 750+ л.с.). Для M5 (S63) — Stage 1 (600→700 л.с.), Stage 2 (до 800 л.с.).</div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question">Сколько стоит чип-тюнинг BMW?</div>
+                <div class="faq-answer">Stage 1 для обычных моделей — от 5000₽, для M-серии — от 15000₽. Отключение AdBlue/DPF/EGR — от 4000₽. Комплекс — от 8000₽. Точную цену назовём после получения файла прошивки.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta" id="contact">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="fade-in">Готовы раскрыть потенциал своей BMW?</h2>
+            <p class="fade-in">Оставьте заявку — рассчитаем стоимость и сроки за 15 минут. Или напишите нам в мессенджер — ответим сразу!</p>
+            
+            <form class="form-group fade-in" onsubmit="handleSubmit(event)" id="leadForm">
+                <input type="text" class="form-input" id="clientName" placeholder="Ваше имя" required>
+                <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required>
+                <input type="text" class="form-input" id="carModel" placeholder="Модель BMW (например: BMW 530d G30 2020)" required>
+                
+                <input type="hidden" id="utm_source" name="utm_source" value="">
+                <input type="hidden" id="utm_medium" name="utm_medium" value="">
+                <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
+                
+                <button type="submit" class="btn" id="submitBtn">🚀 Получить расчёт</button>
+                <p class="form-note">🔒 Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>.</p>
+            </form>
+            
+            <div class="cta-buttons fade-in">
+                <a href="https://wa.me/79000978031" class="btn" target="_blank">💬 WhatsApp</a>
+                <a href="https://t.me/kalibr_compass" class="btn" target="_blank" style="background: linear-gradient(135deg, #0088cc, #00aaff) !important;">✈️ Telegram</a>
+                <a href="tel:+79000978031" class="btn" style="background: linear-gradient(135deg, #10B981, #34D399) !important;">📞 +7 (900) 097-80-31</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/79000978031" class="floating-whatsapp" target="_blank" title="Написать в WhatsApp">💬</a>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>О компании</h4>
+                <p>Профессиональная удалённая калибровка ЭБУ для BMW 3, 5, 7 Series, X3, X5, X6, X7, M3, M5. Работаем по всей России с 2015 года.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Услуги</h4>
+                <a href="/">Главная</a>
+                <a href="mercedes.html">Чип-тюнинг Mercedes</a>
+                <a href="audi.html">Чип-тюнинг Audi</a>
+                <a href="kamaz.html">Чип-тюнинг КАМАЗ</a>
+                <a href="sitrak.html">Чип-тюнинг Sitrak</a>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <a href="tel:+79000978031">📞 +7 (900) 097-80-31</a>
+                <a href="mailto:aleks_moroz84@mail.ru">📧 aleks_moroz84@mail.ru</a>
+                <a href="https://wa.me/79000978031" target="_blank">💬 WhatsApp</a>
+                <a href="https://t.me/kalibr_compass" target="_blank">✈️ Telegram</a>
+                <p style="margin-top: 10px;">🌍 Работаем удалённо по всей России</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024-2026 Kalibr-ECU. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const TELEGRAM_BOT_TOKEN = '8620925258:AAEEApK9ea6nNaTAyBCioOzscnHZh9quGlc';
+    const TELEGRAM_CHAT_ID = '802893584';
+    const METRIKA_ID = 109753043;
+
+    (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(field => {
+            const value = urlParams.get(field);
+            if (value) {
+                const input = document.getElementById(field);
+                if (input) input.value = value;
+            }
+        });
+    })();
+
+    const phoneInput = document.getElementById('phone');
+    phoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 0) {
+            if (value[0] === '7' || value[0] === '8') value = value.substring(1);
+            let formattedValue = '+7';
+            if (value.length > 0) formattedValue += ' (' + value.substring(0, 3);
+            if (value.length >= 3) formattedValue += ') ' + value.substring(3, 6);
+            if (value.length >= 6) formattedValue += '-' + value.substring(6, 8);
+            if (value.length >= 8) formattedValue += '-' + value.substring(8, 10);
+            e.target.value = formattedValue;
+        }
+    });
+
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    function reachGoal(goalName) {
+        if (typeof ym !== 'undefined') {
+            ym(METRIKA_ID, 'reachGoal', goalName);
+        }
+    }
+
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            q.parentElement.classList.toggle('open');
+        });
+    });
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        const originalText = btn.innerHTML;
+        const name = document.getElementById('clientName').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const car = document.getElementById('carModel').value.trim();
+        
+        btn.disabled = true;
+        btn.innerHTML = '⏳ Отправка...';
+        
+        const safeName = escapeHtml(name);
+        const safePhone = escapeHtml(phone);
+        const safeCar = escapeHtml(car);
+        const dateStr = escapeHtml(new Date().toLocaleString('ru-RU'));
+        
+        const message = `🏁 <b>НОВАЯ ЗАЯВКА BMW</b>\n\n👤 <b>Имя:</b> ${safeName}\n📞 <b>Телефон:</b> ${safePhone}\n🚙 <b>Авто:</b> ${safeCar}\n📅 <b>Дата:</b> ${dateStr}`;
+        
+        try {
+            const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message, parse_mode: 'HTML' })
+            });
+            const result = await response.json();
+            
+            if (result.ok) {
+                btn.innerHTML = '✅ Заявка отправлена!';
+                btn.style.background = 'linear-gradient(135deg, #10B981 0%, #34D399 100%)';
+                reachGoal('bmw_form_submit');
+                setTimeout(() => {
+                    btn.innerHTML = originalText; btn.style.background = ''; btn.disabled = false; e.target.reset();
+                }, 4000);
+            } else { throw new Error(`Telegram API: ${result.description}`); }
+        } catch (error) {
+            btn.innerHTML = '❌ Ошибка. Напишите нам!';
+            btn.style.background = 'linear-gradient(135deg, #EF4444 0%, #F87171 100%)';
+            setTimeout(() => {
+                if (confirm('Не удалось отправить форму. Открыть Telegram?')) {
+                    window.open(`https://t.me/kalibr_compass?text=Заявка BMW:%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AАвто: ${encodeURIComponent(car)}`, '_blank');
+                }
+                btn.innerHTML = originalText; btn.style.background = ''; btn.disabled = false;
+            }, 2000);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
