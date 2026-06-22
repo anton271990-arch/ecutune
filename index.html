@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Чип-тюнинг и калибровка ЭБУ по всей России | Kalibr-ECU</title>
-<meta name="description" content="Калибровка прошивок ЭБУ на закак с гарантией 1 год. Отключение AdBlue (мочевины), DPF, EGR для легковых и грузовых авто (Sitrak, Howo, Shacman, КАМАЗ, МАЗ, ГАЗ, BMW, Mercedes, Audi, Toyota). Цены от 2500₽.">
+<meta name="description" content="Калибровка прошивок ЭБУ на заказ с гарантией 1 год. Отключение AdBlue (мочевины), DPF, EGR для легковых и грузовых авто (Sitrak, Howo, Shacman, КАМАЗ, МАЗ, ГАЗ, BMW, Mercedes, Audi, Toyota). Цены от 2500₽.">
 <meta name="keywords" content="чип тюнинг, калибровка эбу, отключение adblue, удаление мочевины, отключение dpf, прошивка эбу грузовых, sitrak, howo, камаз, маз, газ, bmw, mercedes, audi, toyota">
 <meta name="robots" content="index, follow">
 <meta name="language" content="Russian">
@@ -220,10 +220,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .review-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; }
 .review-info h4 { font-size: 16px; margin-bottom: 4px; }
 .review-info p { color: var(--text-gray); font-size: 13px; }
-.timer-block { display: flex; gap: 15px; justify-content: center; margin: 24px 0; flex-wrap: wrap; }
-.timer-item { background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 18px; min-width: 80px; text-align: center; }
-.timer-value { font-size: 30px; font-weight: 800; color: var(--accent-light); line-height: 1; }
-.timer-label { font-size: 12px; color: var(--text-gray); text-transform: uppercase; margin-top: 4px; }
 .faq-list { max-width: 800px; margin: 0 auto; }
 .faq-item { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 10px; overflow: hidden; transition: all 0.3s; }
 .faq-item:hover { border-color: var(--accent-blue); }
@@ -289,7 +285,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     .floating-whatsapp { width: 56px; height: 56px; bottom: 20px; right: 20px; font-size: 28px; }
     .floating-telegram { width: 56px; height: 56px; bottom: 90px; right: 20px; }
     .floating-telegram svg { width: 28px; height: 28px; }
-    .timer-value { font-size: 24px; }
     .calc-price-row { flex-direction: column; align-items: flex-start; }
     .calc-price-value { font-size: 26px; }
 }
@@ -298,35 +293,33 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 4px; }
 </style>
 
+<!-- Единая Schema.org разметка: AutoRepair + Reviews + AggregateRating -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "name": "Kalibr-ECU",
-    "description": "Профессиональная калибровка прошивок ЭБУ и чип-тюнинг для легковых и грузовых автомобилей",
+    "description": "Профессиональная удалённая калибровка прошивок ЭБУ и чип-тюнинг для легковых и грузовых автомобилей",
     "url": "https://kalibr-ecu.ru",
     "telephone": "+7-900-097-80-31",
     "email": "aleks_moroz84@mail.ru",
-    "address": { "@type": "PostalAddress", "addressCountry": "RU" },
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RU"
+    },
     "priceRange": "от 2500 ₽",
-    "areaServed": { "@type": "Country", "name": "Россия" },
+    "areaServed": {
+        "@type": "Country",
+        "name": "Россия"
+    },
     "openingHours": "Mo-Su 00:00-23:59",
     "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
-        "reviewCount": "500"
-    }
-}
-</script>
-
-<!-- Schema.org разметка для отзывов -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "Kalibr-ECU",
-    "url": "https://kalibr-ecu.ru",
-    "telephone": "+7-900-097-80-31",
+        "reviewCount": "500",
+        "bestRating": "5",
+        "worstRating": "1"
+    },
     "review": [
         {
             "@type": "Review",
@@ -436,13 +429,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
             "reviewBody": "Howo T7H, комплекс работ: чип + отключение всей экологии. Ребята знают своё дело, всё объяснили, гарантию дали.",
             "datePublished": "2020-09-22"
         }
-    ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "500",
-        "bestRating": "5"
-    }
+    ]
 }
 </script>
 </head>
@@ -719,82 +706,52 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
             <p class="section-subtitle">Более 500 довольных клиентов по всей России</p>
         </div>
         <div class="reviews-grid">
-            <article class="review-card fade-in" itemscope itemtype="https://schema.org/Review">
-                <div class="review-stars" aria-label="Оценка 5 из 5" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                    <span itemprop="ratingValue">5</span>★★★★★
-                </div>
-                <p class="review-text" itemprop="reviewBody">"Отключали AdBlue и DPF на Sitrak C7H. Всё сделали минут за 20. Машина перестала тупить и уходить в аварийку. Спасибо!"</p>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"Отключали AdBlue и DPF на Sitrak C7H. Всё сделали минут за 20. Машина перестала тупить и уходить в аварийку. Спасибо!"</p>
                 <div class="review-author">
                     <div class="review-avatar">И</div>
-                    <div class="review-info">
-                        <h4 itemprop="author">Игорь</h4>
-                        <p>Sitrak C7H, 2021</p>
-                    </div>
+                    <div class="review-info"><h4>Игорь</h4><p>Sitrak C7H, 2021</p></div>
                 </div>
             </article>
-            <article class="review-card fade-in" itemscope itemtype="https://schema.org/Review">
-                <div class="review-stars" aria-label="Оценка 5 из 5" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                    <span itemprop="ratingValue">5</span>★★★★★
-                </div>
-                <p class="review-text" itemprop="reviewBody">"Прошивал КАМАЗ-5490. Отключили мочевину и DPF, сделали чип-тюнинг. Расход упал на 2 литра, тяга стала намного увереннее. Рекомендую!"</p>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"Прошивал КАМАЗ-5490. Отключили мочевину и DPF, сделали чип-тюнинг. Расход упал на 2 литра, тяга стала намного увереннее. Рекомендую!"</p>
                 <div class="review-author">
                     <div class="review-avatar">А</div>
-                    <div class="review-info">
-                        <h4 itemprop="author">Алексей</h4>
-                        <p>КАМАЗ-5490, 2019</p>
-                    </div>
+                    <div class="review-info"><h4>Алексей</h4><p>КАМАЗ-5490, 2019</p></div>
                 </div>
             </article>
-            <article class="review-card fade-in" itemscope itemtype="https://schema.org/Review">
-                <div class="review-stars" aria-label="Оценка 5 из 5" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                    <span itemprop="ratingValue">5</span>★★★★★
-                </div>
-                <p class="review-text" itemprop="reviewBody">"Отключали DPF и EGR на Kia Sportage. Всё сделали, прислали файл с инструкцией. Уже полгода проблем нет."</p>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"Отключали DPF и EGR на Kia Sportage. Всё сделали, прислали файл с инструкцией. Уже полгода проблем нет."</p>
                 <div class="review-author">
                     <div class="review-avatar">Д</div>
-                    <div class="review-info">
-                        <h4 itemprop="author">Дмитрий</h4>
-                        <p>Kia Sportage, 2016</p>
-                    </div>
+                    <div class="review-info"><h4>Дмитрий</h4><p>Kia Sportage, 2016</p></div>
                 </div>
             </article>
-            <article class="review-card fade-in" itemscope itemtype="https://schema.org/Review">
-                <div class="review-stars" aria-label="Оценка 5 из 5" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                    <span itemprop="ratingValue">5</span>★★★★★
-                </div>
-                <p class="review-text" itemprop="reviewBody">"МАЗ-5440, отключили AdBlue и сделали чип. Машина ожила, ошибок больше нет. Сделали за 2 часа, всё чётко!"</p>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"МАЗ-5440, отключили AdBlue и сделали чип. Машина ожила, ошибок больше нет. Сделали за 2 часа, всё чётко!"</p>
                 <div class="review-author">
                     <div class="review-avatar">С</div>
-                    <div class="review-info">
-                        <h4 itemprop="author">Сергей</h4>
-                        <p>МАЗ-5440, 2018</p>
-                    </div>
+                    <div class="review-info"><h4>Сергей</h4><p>МАЗ-5440, 2018</p></div>
                 </div>
             </article>
-            <article class="review-card fade-in" itemscope itemtype="https://schema.org/Review">
-                <div class="review-stars" aria-label="Оценка 5 из 5" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                    <span itemprop="ratingValue">5</span>★★★★★
-                </div>
-                <p class="review-text" itemprop="reviewBody">"ГАЗель NEXT с Cummins. Чипанул и отключил EGR. Расход с 13 упал до 10.5 литров, тяга на гружёной отличная."</p>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"ГАЗель NEXT с Cummins. Чипанул и отключил EGR. Расход с 13 упал до 10.5 литров, тяга на гружёной отличная."</p>
                 <div class="review-author">
                     <div class="review-avatar">В</div>
-                    <div class="review-info">
-                        <h4 itemprop="author">Виктор</h4>
-                        <p>ГАЗель NEXT, 2020</p>
-                    </div>
+                    <div class="review-info"><h4>Виктор</h4><p>ГАЗель NEXT, 2020</p></div>
                 </div>
             </article>
-            <article class="review-card fade-in" itemscope itemtype="https://schema.org/Review">
-                <div class="review-stars" aria-label="Оценка 5 из 5" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                    <span itemprop="ratingValue">5</span>★★★★★
-                </div>
-                <p class="review-text" itemprop="reviewBody">"Howo T7H, комплекс работ: чип + отключение всей экологии. Ребята знают своё дело, всё объяснили, гарантию дали."</p>
+            <article class="review-card fade-in">
+                <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                <p class="review-text">"Howo T7H, комплекс работ: чип + отключение всей экологии. Ребята знают своё дело, всё объяснили, гарантию дали."</p>
                 <div class="review-author">
                     <div class="review-avatar">М</div>
-                    <div class="review-info">
-                        <h4 itemprop="author">Михаил</h4>
-                        <p>Howo T7H, 2020</p>
-                    </div>
+                    <div class="review-info"><h4>Михаил</h4><p>Howo T7H, 2020</p></div>
                 </div>
             </article>
         </div>
@@ -843,12 +800,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 <section class="cta" id="contact" aria-labelledby="contact-title">
     <div class="container">
         <div class="cta-content">
-            <div class="discount-badge">🔥 Скидка <span>10%</span> на первую калибровку — только сегодня!</div>
-            <div class="timer-block">
-                <div class="timer-item"><div class="timer-value" id="timerHours">23</div><div class="timer-label">часов</div></div>
-                <div class="timer-item"><div class="timer-value" id="timerMinutes">59</div><div class="timer-label">минут</div></div>
-                <div class="timer-item"><div class="timer-value" id="timerSeconds">59</div><div class="timer-label">секунд</div></div>
-            </div>
+            <div class="discount-badge">🔥 Скидка <span>10%</span> на первую калибровку</div>
             <h2 class="fade-in" id="contact-title">Получите бесплатную консультацию</h2>
             <p class="fade-in">Оставьте заявку и мы рассчитаем стоимость чип-тюнинга для вашего автомобиля в течение 15 минут.</p>
             <form class="form-group fade-in" aria-label="Форма заявки" id="leadForm">
@@ -878,7 +830,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
         <div class="footer-content">
             <div class="footer-col">
                 <h4>О компании</h4>
-                <p>Профессиональная калибровка и чип-тюнинг ЭБУ. Работаем по всей России с 2015 года.</p>
+                <p>Профессиональная удаленная калибровка и чип-тюнинг ЭБУ. Работаем по всей России с 2015 года.</p>
             </div>
             <div class="footer-col">
                 <h4>Легковые авто</h4>
@@ -975,23 +927,6 @@ function reachGoal(goalName) {
         }
     } catch (err) { console.error(err); }
 }
-
-// ========== ТАЙМЕР ==========
-function updateTimer() {
-    const now = new Date();
-    const end = new Date();
-    end.setHours(23, 59, 59, 999);
-    let diff = end - now;
-    if (diff < 0) diff = 0;
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    document.getElementById('timerHours').textContent = String(h).padStart(2, '0');
-    document.getElementById('timerMinutes').textContent = String(m).padStart(2, '0');
-    document.getElementById('timerSeconds').textContent = String(s).padStart(2, '0');
-}
-updateTimer();
-setInterval(updateTimer, 1000);
 
 // ========== FAQ ==========
 document.querySelectorAll('.faq-question').forEach(q => {
