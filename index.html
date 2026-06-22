@@ -147,7 +147,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .service-card h3 { font-size: 22px; margin-bottom: 16px; }
 .service-card p { color: var(--text-gray); font-size: 15px; line-height: 1.7; }
 
-/* PRICING — ИСПРАВЛЕНО: кнопки на одном уровне */
+/* PRICING */
 .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
 .pricing-card { 
     background: rgba(255,255,255,0.03); 
@@ -240,7 +240,11 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .footer-bottom a { color: var(--text-gray); text-decoration: underline; display: inline-block; margin-top: 10px; }
 .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; width: 64px; height: 64px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); z-index: 999; transition: all 0.3s ease; animation: pulse 2s infinite; }
 .floating-whatsapp:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6); }
+.floating-telegram { position: fixed; bottom: 110px; right: 30px; width: 64px; height: 64px; background: linear-gradient(135deg, #0088cc 0%, #0099FF 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 8px 24px rgba(0, 136, 204, 0.4); z-index: 999; transition: all 0.3s ease; animation: pulseTelegram 2s infinite; }
+.floating-telegram:hover { transform: scale(1.1) translateY(-2px); box-shadow: 0 12px 32px rgba(0, 136, 204, 0.6); }
+.floating-telegram svg { width: 32px; height: 32px; fill: white; }
 @keyframes pulse { 0% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7); } 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } }
+@keyframes pulseTelegram { 0% { box-shadow: 0 8px 24px rgba(0, 136, 204, 0.4); } 50% { box-shadow: 0 8px 32px rgba(0, 136, 204, 0.7); } 100% { box-shadow: 0 8px 24px rgba(0, 136, 204, 0.4); } }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
 .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -269,6 +273,8 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     .pricing-card.popular { transform: scale(1); }
     .pricing-card.popular:hover { transform: translateY(-8px); }
     .floating-whatsapp { width: 56px; height: 56px; bottom: 20px; right: 20px; font-size: 28px; }
+    .floating-telegram { width: 56px; height: 56px; bottom: 90px; right: 20px; }
+    .floating-telegram svg { width: 28px; height: 28px; }
     .timer-value { font-size: 24px; }
     .calc-price-row { flex-direction: column; align-items: flex-start; }
     .calc-price-value { font-size: 26px; }
@@ -683,6 +689,12 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 </section>
 
 <a href="https://wa.me/79000978031" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" data-goal="whatsapp_click" title="Написать в WhatsApp">💬</a>
+
+<a href="https://t.me/kalibr_compass" class="floating-telegram" target="_blank" rel="noopener" aria-label="Написать в Telegram" data-goal="telegram_click" title="Написать в Telegram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+    </svg>
+</a>
 
 <footer class="footer" role="contentinfo">
     <div class="container">
