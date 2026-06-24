@@ -69,19 +69,19 @@
     
     <!-- ========== ГРУЗОВЫЕ АВТОМОБИЛИ ========== -->
     <url>
-        <loc>https://kalibr-ecu.ru/kamaz.html</loc>
+        <loc>https://kalibr-ecu.ru/kamaz-adblue/</loc>
         <lastmod>2026-06-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://kalibr-ecu.ru/maz.html</loc>
+        <loc>https://kalibr-ecu.ru/maz-adblue/</loc>
         <lastmod>2026-06-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://kalibr-ecu.ru/gaz.html</loc>
+        <loc>https://kalibr-ecu.ru/gaz-adblue/</loc>
         <lastmod>2026-06-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -93,13 +93,13 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://kalibr-ecu.ru/howo.html</loc>
+        <loc>https://kalibr-ecu.ru/howo-adblue/</loc>
         <lastmod>2026-06-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://kalibr-ecu.ru/shacman.html</loc>
+        <loc>https://kalibr-ecu.ru/shacman-adblue/</loc>
         <lastmod>2026-06-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
