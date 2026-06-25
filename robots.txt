@@ -1,81 +1,45 @@
-# robots.txt для https://kalibr-ecu.ru
-# Обновлено: 2026-06-18
+# robots.txt для https://kalibr-ecu.ru/
+# Обновлено: 25 июня 2026 г.
 
-# Общие правила для всех поисковых систем
+# Разрешаем всем поисковым роботам доступ к сайту
 User-agent: *
 Allow: /
-Allow: *.css
-Allow: *.js
-Allow: *.png
-Allow: *.jpg
-Allow: *.jpeg
-Allow: *.gif
-Allow: *.svg
-Allow: *.ico
-Allow: *.woff
-Allow: *.woff2
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.woff$
+Allow: /*.woff2$
 
-# Запрет индексации технических параметров
-Disallow: /*?utm_
-Disallow: /*?yclid
-Disallow: /*?gclid
-Disallow: /*?fbclid
-Disallow: /*?from=
-Disallow: /*?ref=
-
-# Запрет индексации служебных файлов
-Disallow: /cars.json
+# Закрываем от индексации служебные и технические страницы
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /private/
+Disallow: /*?utm_
+Disallow: /*?from=
+Disallow: /*?ref=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?yclid=
+Disallow: /*?openstat=
 
-# Указание главного зеркала
+# Закрываем старые страницы с .html (они перенаправляют на новые)
+# Это поможет поисковикам быстрее понять структуру
+Disallow: /sitrak.html
+Disallow: /kamaz.html
+Disallow: /howo.html
+Disallow: /shacman.html
+Disallow: /maz.html
+Disallow: /gaz.html
+Disallow: /faw.html
+Disallow: /jac.html
+
+# Указываем главный домен (если есть www-зеркало)
 Host: kalibr-ecu.ru
 
-# Путь к карте сайта
-Sitemap: https://kalibr-ecu.ru/sitemap.xml
-
-# Отдельные правила для Яндекса
-User-agent: Yandex
-Allow: /
-Allow: *.css
-Allow: *.js
-Allow: *.png
-Allow: *.jpg
-Allow: *.jpeg
-Allow: *.gif
-Allow: *.svg
-Allow: *.ico
-
-Disallow: /*?utm_
-Disallow: /*?yclid
-Disallow: /*?gclid
-Disallow: /*?fbclid
-Disallow: /cars.json
-
-Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
-Clean-param: yclid
-Clean-param: gclid
-Clean-param: fbclid
-
-Host: kalibr-ecu.ru
-Sitemap: https://kalibr-ecu.ru/sitemap.xml
-
-# Отдельные правила для Google
-User-agent: Googlebot
-Allow: /
-Allow: *.css
-Allow: *.js
-Allow: *.png
-Allow: *.jpg
-Allow: *.jpeg
-Allow: *.gif
-Allow: *.svg
-Allow: *.ico
-
-Disallow: /*?utm_
-Disallow: /*?gclid
-Disallow: /*?fbclid
-Disallow: /cars.json
-
+# Указываем путь к карте сайта
 Sitemap: https://kalibr-ecu.ru/sitemap.xml
