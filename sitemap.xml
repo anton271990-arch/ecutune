@@ -1,120 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    
-    <!-- ========== ГЛАВНАЯ СТРАНИЦА ========== -->
+
+    <!-- Главная страница -->
     <url>
         <loc>https://kalibr-ecu.ru/</loc>
-        <lastmod>2026-06-18</lastmod>
+        <lastmod>2026-06-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- ========== СЛУЖЕБНЫЕ СТРАНИЦЫ ========== -->
+
+    <!-- Страница услуги: Sitrak -->
     <url>
-        <loc>https://kalibr-ecu.ru/adblue.html</loc>
-        <lastmod>2026-06-10</lastmod>
-        <changefreq>monthly</changefreq>
+        <loc>https://kalibr-ecu.ru/sitrak-adblue/</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/privacy.html</loc>
-        <lastmod>2026-06-10</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    
-    <!-- ========== ЛЕГКОВЫЕ АВТОМОБИЛИ ========== -->
-    <url>
-        <loc>https://kalibr-ecu.ru/bmw.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/mercedes.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/audi.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/volkswagen.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/toyota.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/kia.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/hyundai.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- ========== ГРУЗОВЫЕ АВТОМОБИЛИ ========== -->
+
+    <!-- Страница услуги: КАМАЗ -->
     <url>
         <loc>https://kalibr-ecu.ru/kamaz-adblue/</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/maz-adblue/</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/gaz-adblue/</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://kalibr-ecu.ru/sitrak.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+
+    <!-- Страница услуги: Howo -->
     <url>
         <loc>https://kalibr-ecu.ru/howo-adblue/</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
+
+    <!-- Страница услуги: Shacman -->
     <url>
         <loc>https://kalibr-ecu.ru/shacman-adblue/</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
+
+    <!-- Страница услуги: МАЗ -->
     <url>
-        <loc>https://kalibr-ecu.ru/faw.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <loc>https://kalibr-ecu.ru/maz-adblue/</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
+
+    <!-- Страница услуги: ГАЗ -->
     <url>
-        <loc>https://kalibr-ecu.ru/jac.html</loc>
-        <lastmod>2026-06-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <loc>https://kalibr-ecu.ru/gaz-adblue/</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
-    
+
+    <!-- Страница услуги: FAW -->
+    <url>
+        <loc>https://kalibr-ecu.ru/faw-adblue/</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Страница услуги: JAC -->
+    <url>
+        <loc>https://kalibr-ecu.ru/jac-adblue/</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
 </urlset>
