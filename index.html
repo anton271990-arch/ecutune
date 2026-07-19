@@ -74,13 +74,14 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     /* СТИЛИ ДЛЯ НОМЕРА ТЕЛЕФОНА В HEADER */
 .header-phone,
 a.header-phone {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--text-white) !important;
     text-decoration: none !important;
     transition: none;
     border: none;
     outline: none;
+    white-space: nowrap; /* Запрещаем перенос текста */
 }
 
 .header-phone:hover,
@@ -166,11 +167,13 @@ a.header-phone:active {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    white-space: nowrap; /* Запрещаем перенос всего блока */
 }
 
 .header-schedule {
     font-size: 12px;
     color: var(--text-gray);
+    white-space: nowrap; /* Запрещаем перенос графика */
 }
 
 /* МЕССЕНДЖЕРЫ */
