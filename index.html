@@ -86,21 +86,183 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .header-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,102,255,0.3); }
 
 /* HERO */
-.hero { margin-top: 110px; min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(10,14,26,0.92) 0%, rgba(13,17,23,0.85) 100%), url("Banner Without Buttons.png") center/cover no-repeat; border-bottom: 1px solid var(--border-color); }
-.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(0,102,255,0.15) 0%, transparent 50%); pointer-events: none; }
-.hero-content { position: relative; z-index: 2; max-width: 850px; padding: 60px 0; }
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; background: rgba(0,102,255,0.1); border: 1px solid rgba(0,102,255,0.3); border-radius: 30px; font-size: 14px; color: var(--accent-light); font-weight: 600; margin-bottom: 24px; animation: fadeInDown 0.8s ease; }
-.hero h1 { font-size: 56px; margin-bottom: 24px; font-weight: 800; line-height: 1.1; animation: fadeInUp 0.8s ease 0.2s backwards; }
-.hero h1 span { background: linear-gradient(135deg, #FFFFFF 0%, #0099FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.hero-subtitle { font-size: 19px; color: var(--text-gray); margin-bottom: 32px; line-height: 1.6; max-width: 700px; animation: fadeInUp 0.8s ease 0.4s backwards; }
-.hero-features { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.6s backwards; }
-.feature-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-white); background: rgba(255,255,255,0.03); padding: 10px 18px; border-radius: 8px; border: 1px solid var(--border-color); }
-.feature-item::before { content: '✓'; color: var(--accent-light); font-weight: bold; font-size: 16px; }
-.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.8s backwards; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 36px; background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%) !important; color: #FFFFFF !important; text-decoration: none !important; border-radius: 10px; font-weight: 600; font-size: 16px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,102,255,0.25); }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(0,102,255,0.4); background: linear-gradient(135deg, #0077FF 0%, #00AAFF 100%) !important; }
-.btn-secondary { background: transparent !important; border: 1px solid #1E2A3A; box-shadow: none; color: #FFFFFF !important; }
-.btn-secondary:hover { background: rgba(255,255,255,0.05) !important; border-color: #0066FF; }
+.hero { 
+    margin-top: 110px; 
+    min-height: 90vh; 
+    display: flex; 
+    align-items: center; 
+    position: relative; 
+    overflow: hidden; 
+    background: url("Banner Without Buttons.png") center/cover no-repeat;
+    border-bottom: 1px solid var(--border-color); 
+}
+
+/* Уменьшаем оверлей до минимума - только легкое затемнение для читаемости текста */
+.hero::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: linear-gradient(90deg, rgba(10,14,26,0.85) 0%, rgba(10,14,26,0.4) 50%, transparent 100%);
+    pointer-events: none; 
+}
+
+.hero-content { 
+    position: relative; 
+    z-index: 2; 
+    max-width: 600px; 
+    padding: 60px 40px;
+    text-align: left;
+}
+
+.hero-badge { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+    padding: 8px 18px; 
+    background: rgba(0,102,255,0.15); 
+    border: 1px solid rgba(0,102,255,0.4); 
+    border-radius: 30px; 
+    font-size: 14px; 
+    color: var(--accent-light); 
+    font-weight: 600; 
+    margin-bottom: 24px; 
+    animation: fadeInDown 0.8s ease; 
+}
+
+.hero h1 { 
+    font-size: 48px; 
+    margin-bottom: 24px; 
+    font-weight: 800; 
+    line-height: 1.1; 
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+    text-align: left;
+}
+
+.hero h1 span { 
+    background: linear-gradient(135deg, #FFFFFF 0%, #0099FF 100%); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+}
+
+.hero-subtitle { 
+    font-size: 18px; 
+    color: #e0e0e0; 
+    margin-bottom: 32px; 
+    line-height: 1.6; 
+    max-width: 550px;
+    text-align: left;
+    animation: fadeInUp 0.8s ease 0.4s backwards; 
+}
+
+.hero-features { 
+    display: flex; 
+    gap: 16px; 
+    margin-bottom: 40px; 
+    flex-wrap: wrap; 
+    animation: fadeInUp 0.8s ease 0.6s backwards;
+    justify-content: flex-start;
+}
+
+.feature-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 14px; 
+    color: var(--text-white); 
+    background: rgba(255,255,255,0.08); 
+    padding: 10px 18px; 
+    border-radius: 8px; 
+    border: 1px solid rgba(255,255,255,0.15); 
+}
+
+.feature-item::before { 
+    content: '✓'; 
+    color: #0099FF; 
+    font-weight: bold; 
+    font-size: 16px; 
+}
+
+.hero-buttons { 
+    display: flex; 
+    gap: 16px; 
+    flex-wrap: wrap; 
+    animation: fadeInUp 0.8s ease 0.8s backwards;
+    justify-content: flex-start;
+}
+
+.btn { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    padding: 18px 36px; 
+    background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%) !important; 
+    color: #FFFFFF !important; 
+    text-decoration: none !important; 
+    border-radius: 10px; 
+    font-weight: 600; 
+    font-size: 16px; 
+    border: none; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 10px 30px rgba(0,102,255,0.25); 
+}
+
+.btn:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 15px 40px rgba(0,102,255,0.4); 
+    background: linear-gradient(135deg, #0077FF 0%, #00AAFF 100%) !important; 
+}
+
+.btn-secondary { 
+    background: rgba(255,255,255,0.1) !important; 
+    border: 1px solid rgba(255,255,255,0.3); 
+    box-shadow: none; 
+    color: #FFFFFF !important; 
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover { 
+    background: rgba(255,255,255,0.2) !important; 
+    border-color: #0066FF; 
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+        background-position: center right;
+    }
+    
+    .hero::before {
+        background: linear-gradient(180deg, rgba(10,14,26,0.9) 0%, rgba(10,14,26,0.7) 100%);
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        padding: 40px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
 
 /* CALCULATOR */
 .calc-section { padding: 80px 0; background: linear-gradient(180deg, var(--primary-dark) 0%, var(--secondary-dark) 100%); position: relative; overflow: hidden; border-bottom: 1px solid var(--border-color); }
