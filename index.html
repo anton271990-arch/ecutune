@@ -240,8 +240,36 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .calc-select:focus { outline: none; border-color: var(--accent-blue); background-color: rgba(0,102,255,0.05); box-shadow: 0 0 0 3px rgba(0,102,255,0.15); }
 .calc-select:disabled { opacity: 0.5; cursor: not-allowed; background-color: rgba(255,255,255,0.01); }
 .calc-select option { background: var(--secondary-dark); color: var(--text-white); }
-.calc-btn { width: 100%; padding: 20px; background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%); color: #fff; border: none; border-radius: 12px; font-size: 17px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,102,255,0.3); display: flex; align-items: center; justify-content: center; gap: 10px; }
-.calc-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(0,102,255,0.5); }
+.calc-btn { 
+    width: 100%; 
+    padding: 20px; 
+    background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%); 
+    color: #fff; 
+    border: none; 
+    border-radius: 12px; 
+    font-size: 17px; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 10px 30px rgba(0,102,255,0.3); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 20px;
+}
+.calc-btn:hover:not(:disabled) { 
+    transform: translateY(-2px); 
+    box-shadow: 0 15px 40px rgba(0,102,255,0.5); 
+}
+.calc-btn:disabled { 
+    background: linear-gradient(135deg, #2a3244 0%, #1e2533 100%); 
+    cursor: not-allowed; 
+    box-shadow: none; 
+    opacity: 0.6; 
+}
 .calc-btn:disabled { background: linear-gradient(135deg, #2a3244 0%, #1e2533 100%); cursor: not-allowed; box-shadow: none; opacity: 0.6; }
 .calc-result { margin-top: 30px; padding: 30px; background: linear-gradient(135deg, rgba(0,102,255,0.08) 0%, rgba(0,153,255,0.03) 100%); border: 1px solid rgba(0,102,255,0.3); border-radius: 16px; display: none; animation: calcFadeIn 0.6s ease; }
 .calc-result.visible { display: block; }
@@ -661,7 +689,9 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
                     </select>
                 </div>
             </div>
-            <!-- КНОПКА "РАССЧИТАТЬ ТЮНИНГ" УДАЛЕНА -->
+            <!-- КНОПКА В СТРОКЕ С ПОЛЯМИ -->
+            <button class="calc-btn" id="calcBtn" onclick="calcRun()" disabled>🚀 Получить расчёт</button>
+            
             <div class="calc-result" id="calcResult">
                 <div class="calc-result-title"><span>📊</span><span id="calcResTitle">Результат расчёта</span></div>
                 <div class="calc-stats">
@@ -679,8 +709,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
                         <span class="calc-price-value" id="calcPrice">— <span>₽</span></span>
                     </div>
                 </div>
-                <!-- НОВАЯ КНОПКА "ПОЛУЧИТЬ РАСЧЁТ" -->
-                <button class="calc-order-btn" onclick="calcOrder()">Получить расчёт</button>
+                <button class="calc-order-btn" onclick="calcOrder()">🚀 Заказать со скидкой 10%</button>
             </div>
         </div>
     </div>
