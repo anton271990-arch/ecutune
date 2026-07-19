@@ -141,24 +141,26 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .hero__buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px; /* Уменьшили расстояние между кнопками */
     margin-bottom: 60px;
+    align-items: center;
 }
 
 .btn { 
     display: inline-flex; 
     align-items: center; 
     justify-content: center; 
-    gap: 10px; 
-    padding: 16px 32px; 
+    gap: 8px; 
+    padding: 14px 24px; /* Уменьшили отступы */
     border-radius: 10px; 
-    font-size: 16px; 
-    font-weight: 400; /* Убран жирный шрифт */
+    font-size: 15px; /* Чуть уменьшили шрифт */
+    font-weight: 400;
     text-decoration: none; 
     color: #FFFFFF !important; 
     border: 1px solid transparent; 
     cursor: pointer; 
     transition: all 0.3s ease; 
+    white-space: nowrap; /* Запрещаем перенос текста внутри кнопки */
 }
 
 .btn svg { width: 20px; height: 20px; fill: currentColor; }
