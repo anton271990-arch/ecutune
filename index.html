@@ -232,10 +232,9 @@ a.header-phone:active {
 /* НАВИГАЦИЯ */
 .nav { 
     display: flex; 
-    gap: 30px; 
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid var(--border-color);
+    gap: 20px; 
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .nav a { 
@@ -244,6 +243,7 @@ a.header-phone:active {
     font-weight: 500; 
     font-size: 14px; 
     transition: color 0.3s; 
+    white-space: nowrap;
 }
 
 .nav a:hover { 
@@ -254,33 +254,21 @@ a.header-phone:active {
 @media (max-width: 992px) {
     .header-main {
         flex-wrap: wrap;
+        gap: 15px;
     }
     .nav { 
-        display: none; 
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 15px;
+        padding-top: 15px;
+        border-top: 1px solid var(--border-color);
     }
     .logo-text {
         font-size: 20px;
     }
     .header-phone {
         font-size: 18px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-main {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .header-contacts-center {
-        flex-direction: column;
-        gap: 12px;
-    }
-    .header-phone-block {
-        text-align: center;
-    }
-    .header-cta {
-        width: 100%;
-        text-align: center;
     }
 }
 
@@ -811,10 +799,20 @@ a.header-phone:active {
                 </a>
             </div>
 
+            <!-- НАВИГАЦИЯ ПО ЦЕНТРУ -->
+            <nav class="nav" aria-label="Основная навигация">
+                <a href="#calculator">Калькулятор</a>
+                <a href="#services">Услуги</a>
+                <a href="#pricing">Цены</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#process">Как работаем</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
             <!-- ПРАВАЯ ЧАСТЬ: ИКОНКИ + ТЕЛЕФОН/ГРАФИК + КНОПКА -->
             <div class="header-right">
                 <div class="header-contacts-right">
-                    <!-- СНАЧАЛА ИКОНКИ -->
                     <div class="header-messengers">
                         <a href="https://wa.me/79000978031" class="messenger-icon messenger-whatsapp" title="WhatsApp" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -827,27 +825,14 @@ a.header-phone:active {
                             </svg>
                         </a>
                     </div>
-                    <!-- ПОТОМ ТЕЛЕФОН И ГРАФИК -->
                     <div class="header-phone-block">
                         <a href="tel:+79000978031" class="header-phone" aria-label="Позвонить нам">+7 (900) 097-80-31</a>
                         <span class="header-schedule">Ежедневно с 9:00 до 21:00</span>
                     </div>
                 </div>
-                <!-- В КОНЦЕ КНОПКА -->
                 <a href="#contact" class="header-cta" data-goal="order_click">Получить расчёт</a>
             </div>
         </div>
-
-        <!-- НАВИГАЦИЯ -->
-        <nav class="nav" aria-label="Основная навигация">
-            <a href="#calculator">Калькулятор</a>
-            <a href="#services">Услуги</a>
-            <a href="#pricing">Цены</a>
-            <a href="#advantages">Преимущества</a>
-            <a href="#process">Как работаем</a>
-            <a href="#reviews">Отзывы</a>
-            <a href="#faq">FAQ</a>
-        </nav>
     </div>
 </header>
 
