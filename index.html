@@ -231,7 +231,13 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .calc-header p { color: var(--text-gray); font-size: 16px; }
 
 /* ИЗМЕНЕНИЕ: 4 колонки в одну строку на десктопе */
-.calc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 30px; }
+.calc-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr) auto; 
+    gap: 15px; 
+    margin-bottom: 30px; 
+    align-items: end;
+}
 
 .calc-field { display: flex; flex-direction: column; gap: 8px; }
 .calc-field label { font-size: 13px; font-weight: 600; color: var(--text-gray); text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; }
@@ -259,6 +265,13 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     justify-content: center; 
     gap: 10px; 
     margin-top: 20px;
+}
+    .calc-btn--inline {
+    height: 52px;
+    padding: 0 24px;
+    margin-top: 0;
+    white-space: nowrap;
+    align-self: end;
 }
 .calc-btn:hover:not(:disabled) { 
     transform: translateY(-2px); 
@@ -423,6 +436,14 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     .hero__title { font-size: 32px; }
     .hero__subtitle { font-size: 16px; }
     .section { padding: 50px 0; }
+    .calc-grid {
+    grid-template-columns: 1fr;
+}
+.calc-btn--inline {
+    width: 100%;
+    height: auto;
+    padding: 18px;
+}
     .calc-section { padding: 50px 0; }
     .calc-wrapper { padding: 30px 20px; }
     /* На мобильных калькулятор становится в 1 колонку для удобства */
@@ -664,53 +685,53 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
                 <p>Выберите параметры авто и получите расчёт прибавки мощности и стоимости работ</p>
             </div>
             <div class="calc-grid">
-                <div class="calc-field">
-                    <label for="calcMake">Марка</label>
-                    <select id="calcMake" class="calc-select" onchange="calcUpdateModels()">
-                        <option value="">— Загрузка базы... —</option>
-                    </select>
-                </div>
-                <div class="calc-field">
-                    <label for="calcModel">Модель</label>
-                    <select id="calcModel" class="calc-select" onchange="calcUpdateYears()" disabled>
-                        <option value="">— Сначала выберите марку —</option>
-                    </select>
-                </div>
-                <div class="calc-field">
-                    <label for="calcYear">Поколение</label>
-                    <select id="calcYear" class="calc-select" onchange="calcUpdateEngines()" disabled>
-                        <option value="">— Сначала выберите модель —</option>
-                    </select>
-                </div>
-                <div class="calc-field">
-                    <label for="calcEngine">Двигатель</label>
-                    <select id="calcEngine" class="calc-select" onchange="calcCheckReady()" disabled>
-                        <option value="">— Сначала выберите поколение —</option>
-                    </select>
-                </div>
-            </div>
-            <!-- КНОПКА В СТРОКЕ С ПОЛЯМИ -->
-            <button class="calc-btn" id="calcBtn" onclick="calcRun()" disabled>🚀 Получить расчёт</button>
-            
-            <div class="calc-result" id="calcResult">
-                <div class="calc-result-title"><span>📊</span><span id="calcResTitle">Результат расчёта</span></div>
-                <div class="calc-stats">
-                    <div class="calc-stat"><div class="calc-stat-label">Было</div><div class="calc-stat-value" id="calcHpBefore">— <small>л.с.</small></div></div>
-                    <div class="calc-stat gain"><div class="calc-stat-label">Станет</div><div class="calc-stat-value" id="calcHpAfter">— <small>л.с.</small></div></div>
-                    <div class="calc-stat gain"><div class="calc-stat-label">Прибавка момента</div><div class="calc-stat-value" id="calcTorque">— <small>Нм</small></div></div>
-                </div>
-                <div class="calc-price-row">
-                    <div>
-                        <div class="calc-price-label">Стоимость работ</div>
-                        <div style="font-size:13px; color: var(--text-gray); margin-top:4px;">Включая гарантию 1 год</div>
-                    </div>
-                    <div>
-                        <span class="calc-old-price" id="calcOldPrice"></span>
-                        <span class="calc-price-value" id="calcPrice">— <span>₽</span></span>
-                    </div>
-                </div>
-                <button class="calc-order-btn" onclick="calcOrder()">🚀 Заказать со скидкой 10%</button>
-            </div>
+    <div class="calc-field">
+        <label for="calcMake">Марка</label>
+        <select id="calcMake" class="calc-select" onchange="calcUpdateModels()">
+            <option value="">— Загрузка базы... —</option>
+        </select>
+    </div>
+    <div class="calc-field">
+        <label for="calcModel">Модель</label>
+        <select id="calcModel" class="calc-select" onchange="calcUpdateYears()" disabled>
+            <option value="">— Сначала выберите марку —</option>
+        </select>
+    </div>
+    <div class="calc-field">
+        <label for="calcYear">Поколение</label>
+        <select id="calcYear" class="calc-select" onchange="calcUpdateEngines()" disabled>
+            <option value="">— Сначала выберите модель —</option>
+        </select>
+    </div>
+    <div class="calc-field">
+        <label for="calcEngine">Двигатель</label>
+        <select id="calcEngine" class="calc-select" onchange="calcCheckReady()" disabled>
+            <option value="">— Сначала выберите поколение —</option>
+        </select>
+    </div>
+    <!-- КНОПКА В СТРОКЕ С ПОЛЯМИ -->
+    <button class="calc-btn calc-btn--inline" id="calcBtn" onclick="calcRun()" disabled>🚀 Получить расчёт</button>
+</div>
+
+<div class="calc-result" id="calcResult">
+    <div class="calc-result-title"><span>📊</span><span id="calcResTitle">Результат расчёта</span></div>
+    <div class="calc-stats">
+        <div class="calc-stat"><div class="calc-stat-label">Было</div><div class="calc-stat-value" id="calcHpBefore">— <small>л.с.</small></div></div>
+        <div class="calc-stat gain"><div class="calc-stat-label">Станет</div><div class="calc-stat-value" id="calcHpAfter">— <small>л.с.</small></div></div>
+        <div class="calc-stat gain"><div class="calc-stat-label">Прибавка момента</div><div class="calc-stat-value" id="calcTorque">— <small>Нм</small></div></div>
+    </div>
+    <div class="calc-price-row">
+        <div>
+            <div class="calc-price-label">Стоимость работ</div>
+            <div style="font-size:13px; color: var(--text-gray); margin-top:4px;">Включая гарантию 1 год</div>
+        </div>
+        <div>
+            <span class="calc-old-price" id="calcOldPrice"></span>
+            <span class="calc-price-value" id="calcPrice">— <span>₽</span></span>
+        </div>
+    </div>
+    <button class="calc-order-btn" onclick="calcOrder()">🚀 Заказать со скидкой 10%</button>
+</div>
         </div>
     </div>
 </section>
