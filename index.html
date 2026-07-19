@@ -394,6 +394,16 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .cta-content { max-width: 650px; margin: 0 auto; position: relative; z-index: 2; }
 .cta h2 { font-size: 38px; margin-bottom: 16px; }
 .cta p { font-size: 17px; color: var(--text-gray); margin-bottom: 30px; }
+.cta .btn {
+    background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 10px 30px rgba(0,102,255,0.25);
+}
+.cta .btn:hover {
+    background: linear-gradient(135deg, #0077FF 0%, #00AAFF 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0,102,255,0.4);
+}
 .discount-badge { display: inline-block; background: rgba(0,102,255,0.15); border: 1px solid var(--accent-blue); color: var(--accent-light); padding: 10px 24px; border-radius: 30px; font-size: 15px; font-weight: 700; margin-bottom: 20px; box-shadow: 0 0 30px rgba(0,102,255,0.2); }
 .discount-badge span { color: #FFD700; font-size: 18px; }
 .form-group { display: flex; flex-direction: column; gap: 14px; max-width: 500px; margin: 0 auto; }
@@ -710,7 +720,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
         </select>
     </div>
     <!-- КНОПКА В СТРОКЕ С ПОЛЯМИ -->
-    <button class="calc-btn calc-btn--inline" id="calcBtn" onclick="calcRun()" disabled>🚀 Получить расчёт</button>
+    <button class="calc-btn calc-btn--inline" id="calcBtn" onclick="calcRun()" disabled>Получить расчёт</button>
 </div>
 
 <div class="calc-result" id="calcResult">
