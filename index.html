@@ -574,6 +574,43 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .form-input { padding: 14px 18px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 10px; color: white; font-size: 15px; transition: all 0.3s ease; }
 .form-input:focus { outline: none; border-color: var(--accent-blue); background: rgba(255,255,255,0.06); }
 .form-input::placeholder { color: var(--text-gray); }
+/* СТИЛЬНОЕ ПОЛЕ ЗАГРУЗКИ ФАЙЛА */
+.file-upload-wrapper {
+    width: 100%;
+    margin-bottom: 12px;
+}
+.upload-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    border: 1px dashed var(--border-color) !important; /* Пунктирная рамка */
+    background: rgba(255,255,255,0.02) !important;
+    transition: all 0.3s ease;
+    height: auto; /* Чтобы влезла маленькая подпись */
+    min-height: 50px;
+}
+.upload-label:hover {
+    border-color: var(--accent-blue) !important;
+    background: rgba(0,102,255,0.05) !important;
+}
+.upload-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+.upload-text {
+    font-size: 15px;
+    color: var(--text-gray);
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+.upload-label:hover .upload-text {
+    color: #fff;
+}
+/* Когда файл выбран - меняем цвет текста на зеленый */
+.file-selected {
+    color: var(--accent-green) !important;
+}
 .form-note { color: var(--text-gray); font-size: 12px; margin-top: 14px; opacity: 0.7; }
 .form-note a { color: var(--accent-light); text-decoration: underline; }
 .form-note a:hover { color: #FFFFFF; }
@@ -1252,10 +1289,20 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
             <div class="discount-badge">🔥 Скидка <span>10%</span> на первую калибровку</div>
             <h2 class="fade-in" id="contact-title">Получите бесплатную консультацию</h2>
             <p class="fade-in">Оставьте заявку и мы рассчитаем стоимость чип-тюнинга для вашего автомобиля в течение 15 минут.</p>
-            <form class="form-group fade-in" aria-label="Форма заявки" id="leadForm">
+      <form class="form-group fade-in" aria-label="Форма заявки" id="leadForm">
     <input type="text" class="form-input" id="clientName" placeholder="Ваше имя или название СТО" required>
     <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required>
     <input type="text" class="form-input" id="carModel" placeholder="Марка авто или тип ЭБУ (EDC17, MD1...)" required>
+    
+    <!-- НОВОЕ: Стильное поле загрузки файла -->
+    <div class="file-upload-wrapper">
+        <input type="file" id="dumpFile" accept=".bin,.zip,.xml,.rar,.iso" hidden>
+        <label for="dumpFile" class="form-input upload-label">
+            <span class="upload-icon">📎</span>
+            <span class="upload-text" id="fileName">Прикрепить дамп (.bin / .zip) <small style="opacity: 0.6; font-size: 11px; display: block; margin-top: 2px;">(необязательно, но ускорит расчет)</small></span>
+        </label>
+    </div>
+
     <input type="hidden" id="utm_source" name="utm_source" value="">
     <input type="hidden" id="utm_medium" name="utm_medium" value="">
     <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
@@ -1395,34 +1442,73 @@ document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
 });
 
-document.getElementById('leadForm').addEventListener('submit', function(e) {
+// Красивая смена текста при выборе файла
+document.getElementById('dumpFile').addEventListener('change', function(e) {
+    const fileNameDisplay = document.getElementById('fileName');
+    if (e.target.files.length > 0) {
+        fileNameDisplay.innerHTML = '✅ ' + e.target.files[0].name;
+        fileNameDisplay.classList.add('file-selected');
+    } else {
+        fileNameDisplay.innerHTML = 'Прикрепить дамп (.bin / .zip) <small style="opacity: 0.6; font-size: 11px; display: block; margin-top: 2px;">(необязательно, но ускорит расчет)</small>';
+        fileNameDisplay.classList.remove('file-selected');
+    }
+});
+
+document.getElementById('leadForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
-    const originalText = btn.innerHTML;
-    const name = document.getElementById('clientName').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const car = document.getElementById('carModel').value.trim();
-
-    btn.disabled = true;
-    btn.innerHTML = '✅ Открываем Telegram...';
-    btn.style.background = 'linear-gradient(135deg, #10B981 0%, #34D399 100%)';
-
-    const message = `Заявка с сайта Kalibr-ECU\n\nИмя: ${name}\nТелефон: ${phone}\nАвто: ${car}\nДата: ${new Date().toLocaleString('ru-RU')}`;
-    const telegramUrl = `https://t.me/kalibr_compass?text=${encodeURIComponent(message)}`;
+    const fileInput = document.getElementById('dumpFile');
     
-    const win = window.open(telegramUrl, '_blank');
-    
-    if (!win || win.closed || typeof win.closed == 'undefined') {
-        window.location.href = `https://web.telegram.org/a/#?tgaddr=tg%3A//resolve%3Fdomain%3Dkalibr_compass%26text%3D${encodeURIComponent(message)}`;
+    // ЕСЛИ ФАЙЛ НЕ ВЫБРАН - открываем Telegram по-старому (как запасной вариант)
+    if (fileInput.files.length === 0) {
+        const name = document.getElementById('clientName').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const car = document.getElementById('carModel').value.trim();
+        const message = `Заявка с сайта Kalibr-ECU\n\nИмя: ${name}\nТелефон: ${phone}\nАвто: ${car}\nДата: ${new Date().toLocaleString('ru-RU')}`;
+        window.open(`https://t.me/kalibr_compass?text=${encodeURIComponent(message)}`, '_blank');
+        return;
     }
 
-    reachGoal('form_submit');
+    // ЕСЛИ ФАЙЛ ВЫБРАН - отправляем через Cloudflare Worker
+    btn.disabled = true;
+    btn.innerHTML = '⏳ Загрузка дампа на сервер...';
 
-    setTimeout(() => {
-        btn.innerHTML = '✅ Заявка отправлена! Мы свяжемся с вами.';
-        btn.style.background = '';
-        e.target.reset();
-    }, 3000);
+    // ВСТАВЬ СЮДА ССЫЛКУ НА СВОЙ WORKER ИЗ ШАГА 2!
+    const WORKER_URL = "https://blue-cloud-2f41.anton271990.workers.dev/"; 
+
+    const formData = new FormData();
+    formData.append("clientName", document.getElementById('clientName').value);
+    formData.append("phone", document.getElementById('phone').value);
+    formData.append("carModel", document.getElementById('carModel').value);
+    formData.append("dumpFile", fileInput.files[0]);
+
+    try {
+        const response = await fetch(WORKER_URL, { method: "POST", body: formData });
+        const result = await response.json();
+        
+        if (result.success) {
+            btn.innerHTML = '✅ Дамп успешно отправлен!';
+            btn.style.background = 'linear-gradient(135deg, #10B981 0%, #34D399 100%)';
+            reachGoal('form_submit');
+            setTimeout(() => {
+                e.target.reset();
+                document.getElementById('fileName').textContent = 'Файл не выбран';
+                btn.innerHTML = 'Получить расчет со скидкой 10%';
+                btn.style.background = '';
+                btn.disabled = false;
+            }, 4000);
+        } else {
+            throw new Error('Server error');
+        }
+    } catch (error) {
+        btn.innerHTML = '❌ Ошибка загрузки. Напишите в Telegram';
+        btn.style.background = '#FF0000';
+        setTimeout(() => {
+            btn.innerHTML = 'Получить расчет со скидкой 10%';
+            btn.style.background = '';
+            btn.disabled = false;
+        }, 4000);
+    }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
