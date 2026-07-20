@@ -359,7 +359,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     max-width: 1100px; margin: 0 auto; background: rgba(255,255,255,0.02); 
     border: 1px solid var(--border-color); border-radius: 24px; 
     padding: 40px 30px; position: relative; backdrop-filter: blur(10px); 
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4); 
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 50px rgba(0, 102, 255, 0.15); /* Добавили синее свечение вокруг */
 }
 .calc-header { text-align: center; margin-bottom: 35px; }
 .calc-header h2 { font-size: 32px; margin-bottom: 12px; font-weight: 800; }
@@ -465,7 +465,12 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
 .pricing-card { background: rgba(255,255,255,0.03); border: 2px solid var(--border-color); border-radius: 20px; padding: 32px 24px; text-align: center; transition: all 0.3s; position: relative; display: flex; flex-direction: column; }
-.pricing-card.popular { border-color: var(--accent-blue); background: rgba(0,102,255,0.05); transform: scale(1.03); }
+.pricing-card.popular { 
+    border-color: var(--accent-blue); 
+    background: linear-gradient(180deg, rgba(0,102,255,0.1) 0%, rgba(0,102,255,0.02) 100%); /* Легкий синий градиент внутри */
+    transform: scale(1.03); 
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.15); /* Добавили тень */
+}
 .pricing-card.popular::before { content: 'ПОПУЛЯРНО'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; }
 .pricing-card:hover { transform: translateY(-8px); border-color: var(--accent-blue); }
 .pricing-card.popular:hover { transform: scale(1.03) translateY(-8px); }
@@ -572,6 +577,45 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 ::-webkit-scrollbar-track { background: var(--primary-dark); }
 ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 4px; }
 
+/* ПЛАВАЮЩАЯ КНОПКА ЗАГРУЗКИ ДАМПА */
+.floating-upload {
+    position: fixed;
+    bottom: 24px;
+    left: 24px; /* Привязана к левому краю, чтобы не мешать мессенджерам справа */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); /* Оранжевый цвет (акцент) */
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 30px; /* Форма таблетки */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
+    z-index: 999;
+    transition: all 0.3s ease;
+    animation: pulseUpload 2.5s infinite;
+}
+
+.floating-upload svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.floating-upload:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.7);
+    background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+}
+
+@keyframes pulseUpload {
+    0% { box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4); }
+    50% { box-shadow: 0 8px 28px rgba(245, 158, 11, 0.8); }
+    100% { box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4); }
+}
+
 /* АДАПТИВНОСТЬ */
 @media (max-width: 1100px) {
     .calc-grid { grid-template-columns: repeat(2, 1fr); }
@@ -616,6 +660,23 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     #contact .cta-content { padding-bottom: 80px; }
     .calc-price-row { flex-direction: column; align-items: flex-start; }
     .calc-price-value { font-size: 24px; }
+.floating-upload {
+        bottom: 15px;
+        left: 15px;
+        padding: 0; /* Убираем внутренние отступы */
+        width: 48px; /* Делаем круглой */
+        height: 48px;
+        justify-content: center; /* Центрируем иконку */
+        border-radius: 50%;
+    }
+    .floating-upload span {
+        display: none; /* Прячем текст на мобильных */
+    }
+    .floating-upload svg {
+        width: 24px;
+        height: 24px;
+    }
+}
 }
 
 @media (max-width: 480px) {
@@ -625,6 +686,10 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     .logo-subtitle { font-size: 10px; }
     .nav { gap: 8px; }
     .nav a { font-size: 11px; }
+}
+#process {
+    background-color: var(--secondary-dark);
+    background-image: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.05) 0%, transparent 60%);
 }
 </style>
 
@@ -847,22 +912,31 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
             <p class="section-subtitle">Основные направления работы по калибровке ЭБУ</p>
         </div>
         <div class="services-grid">
-            <a href="#contact" class="service-card fade-in">
-                <div class="service-icon" aria-hidden="true">🌿</div>
-                <h3>Эко-тюнинг (DPF, EGR)</h3>
-                <p>Программное отключение сажевого фильтра (DPF), системы рециркуляции (EGR) и вихревых заслонок. Полное решение проблем с экологией.</p>
-            </a>
-            <a href="#contact" class="service-card fade-in">
-                <div class="service-icon" aria-hidden="true">⚡</div>
-                <h3>Чип-тюнинг Stage 1/2</h3>
-                <p>Безопасное увеличение мощности и крутящего момента без вмешательства в железо. Прирост до 30% мощности для легковых и грузовых авто.</p>
-            </a>
-            <a href="#contact" class="service-card fade-in">
-                <div class="service-icon" aria-hidden="true">🚛</div>
-                <h3>Комплекс для грузовых</h3>
-                <p>Увеличение мощности, снижение расхода топлива и полное отключение экологии для Sitrak, Howo, Shacman, КАМАЗ, МАЗ, ГАЗ.</p>
-            </a>
+    <a href="#contact" class="service-card fade-in">
+        <div class="service-icon" aria-hidden="true">
+            <!-- Иконка Листа (Экология) -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
         </div>
+        <h3>Эко-тюнинг (DPF, EGR)</h3>
+        <p>Программное отключение сажевого фильтра (DPF), системы рециркуляции (EGR) и вихревых заслонок. Полное решение проблем с экологией.</p>
+    </a>
+    <a href="#contact" class="service-card fade-in">
+        <div class="service-icon" aria-hidden="true">
+            <!-- Иконка Спидометра (Мощность) -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+        </div>
+        <h3>Чип-тюнинг Stage 1/2</h3>
+        <p>Безопасное увеличение мощности и крутящего момента без вмешательства в железо. Прирост до 30% мощности для легковых и грузовых авто.</p>
+    </a>
+    <a href="#contact" class="service-card fade-in">
+        <div class="service-icon" aria-hidden="true">
+            <!-- Иконка Грузовика -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+        </div>
+        <h3>Комплекс для грузовых</h3>
+        <p>Увеличение мощности, снижение расхода топлива и полное отключение экологии для Sitrak, Howo, Shacman, КАМАЗ, МАЗ, ГАЗ.</p>
+    </a>
+</div>
     </div>
 </section>
 
@@ -1096,6 +1170,14 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     </svg>
 </a>
 
+<!-- Плавающая кнопка "Загрузить дамп" -->
+<a href="https://t.me/kalibr_compass" target="_blank" rel="noopener" class="floating-upload" aria-label="Отправить дамп ЭБУ на расчет" data-goal="upload_dump_click" title="Отправить дамп на расчет">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+    </svg>
+    <span>Загрузить дамп</span>
+</a>
+
 <footer class="footer" role="contentinfo">
     <div class="container">
         <div class="footer-content">
@@ -1242,6 +1324,7 @@ document.querySelectorAll('[data-goal="order_click"]').forEach(el => el.addEvent
 document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('click', () => reachGoal('phone_click')));
 document.querySelectorAll('a[href*="wa.me"]').forEach(el => el.addEventListener('click', () => reachGoal('whatsapp_click')));
 document.querySelectorAll('a[href*="t.me"]').forEach(el => el.addEventListener('click', () => reachGoal('telegram_click')));
+document.querySelectorAll('[data-goal="upload_dump_click"]').forEach(el => el.addEventListener('click', () => reachGoal('upload_dump_click')));
 
 // ПУЛЕНЕПРОБИВАЕМЫЙ INTERSECTION OBSERVER
 const fadeElements = document.querySelectorAll('.fade-in');
