@@ -1,20 +1,11 @@
 # robots.txt для https://kalibr-ecu.ru/
-# Обновлено: 25 июня 2026 г.
+# Обновлено: 24 мая 2024 г.
 
 # Разрешаем всем поисковым роботам доступ к сайту
 User-agent: *
 Allow: /
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.ico$
-Allow: /*.woff$
-Allow: /*.woff2$
-
+Allow: /blog/
+Allow: /blog/*.html$ Allow: /*.css$ Allow: /*.js$ Allow: /*.webp$ Allow: /*.jpg$ Allow: /*.jpeg$ Allow: /*.png$ Allow: /*.gif$ Allow: /*.svg$ Allow: /*.ico$ Allow: /*.woff$ Allow: /*.woff2$ 
 # Закрываем от индексации служебные и технические страницы
 Disallow: /cgi-bin/
 Disallow: /tmp/
@@ -28,7 +19,6 @@ Disallow: /*?yclid=
 Disallow: /*?openstat=
 
 # Закрываем старые страницы с .html (они перенаправляют на новые)
-# Это поможет поисковикам быстрее понять структуру
 Disallow: /sitrak.html
 Disallow: /kamaz.html
 Disallow: /howo.html
