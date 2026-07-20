@@ -1,12 +1,9 @@
-# robots.txt для https://kalibr-ecu.ru/
-# Обновлено: 24 мая 2024 г.
-
-# Разрешаем всем поисковым роботам доступ к сайту
 User-agent: *
+
+# Разрешаем индексировать весь сайт
 Allow: /
-Allow: /blog/
-Allow: /blog/*.html$ Allow: /*.css$ Allow: /*.js$ Allow: /*.webp$ Allow: /*.jpg$ Allow: /*.jpeg$ Allow: /*.png$ Allow: /*.gif$ Allow: /*.svg$ Allow: /*.ico$ Allow: /*.woff$ Allow: /*.woff2$ 
-# Закрываем от индексации служебные и технические страницы
+
+# Закрываем технический мусор и параметры рекламы
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /private/
@@ -18,7 +15,7 @@ Disallow: /*?gclid=
 Disallow: /*?yclid=
 Disallow: /*?openstat=
 
-# Закрываем старые страницы с .html (они перенаправляют на новые)
+# Закрываем старые страницы
 Disallow: /sitrak.html
 Disallow: /kamaz.html
 Disallow: /howo.html
@@ -28,8 +25,8 @@ Disallow: /gaz.html
 Disallow: /faw.html
 Disallow: /jac.html
 
-# Указываем главный домен (если есть www-зеркало)
+# Указываем главное зеркало (если нужно)
 Host: kalibr-ecu.ru
 
-# Указываем путь к карте сайта
+# Карта сайта
 Sitemap: https://kalibr-ecu.ru/sitemap.xml
