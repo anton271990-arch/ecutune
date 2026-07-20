@@ -1,1 +1,119 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог | Калибровка ЭБУ и чип-тюнинг | Kalibr-ECU</title>
+<meta name="description" content="Экспертные статьи по чип-тюнингу, отключению экологии (DPF, EGR, AdBlue) и калибровке ЭБУ в WinOLS. Советы для диагностов и тюнинг-ателье.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --primary-dark: #0A0E1A;
+    --secondary-dark: #0D1117;
+    --accent-blue: #0066FF;
+    --accent-light: #0099FF;
+    --text-white: #FFFFFF;
+    --text-gray: #8899A6;
+    --border-color: #1E2A3A;
+}
+body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--primary-dark); color: var(--text-white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* Шапка (упрощенная версия твоей шапки для блога) */
+.blog-header { padding: 30px 0; border-bottom: 1px solid var(--border-color); margin-bottom: 40px; }
+.blog-header .container { display: flex; justify-content: space-between; align-items: center; }
+.back-to-main { color: var(--accent-light); text-decoration: none; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+.back-to-main:hover { opacity: 0.8; }
+
+/* Заголовок блога */
+.blog-intro { text-align: center; margin-bottom: 50px; }
+.blog-intro h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
+.blog-intro h1 span { color: var(--accent-light); }
+.blog-intro p { color: var(--text-gray); font-size: 16px; max-width: 600px; margin: 0 auto; }
+
+/* Сетка статей */
+.articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; padding-bottom: 60px; }
+.article-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; transition: all 0.3s ease; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+.article-card:hover { border-color: var(--accent-blue); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,102,255,0.1); }
+.article-image { width: 100%; height: 180px; background-color: #111; overflow: hidden; }
+.article-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.article-card:hover .article-image img { transform: scale(1.05); }
+.article-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.article-tag { display: inline-block; background: rgba(0,102,255,0.1); color: var(--accent-light); padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; margin-bottom: 12px; align-self: flex-start; }
+.article-card h2 { font-size: 18px; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+.article-card p { color: var(--text-gray); font-size: 14px; margin-bottom: 16px; flex-grow: 1; }
+.read-more { color: var(--accent-light); font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 6px; }
+
+@media (max-width: 600px) {
+    .blog-intro h1 { font-size: 28px; }
+    .articles-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="blog-header">
+    <div class="container">
+        <a href="https://kalibr-ecu.ru/" class="back-to-main">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            На главную
+        </a>
+        <div style="font-weight: 800; font-size: 18px;">KALIBR-<span style="color: var(--accent-light);">ECU</span></div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="blog-intro">
+        <h1>Экспертный <span>Блог</span></h1>
+        <p>Статьи по калибровке ЭБУ, отключению экологии и чип-тюнингу. Только технические разборы и практика работы в WinOLS для диагностов и СТО.</p>
+    </div>
+
+    <div class="articles-grid">
+        <!-- Статья 1 -->
+        <a href="winols-vs-pcmflash.html" class="article-card">
+            <div class="article-image">
+                <img src="https://via.placeholder.com/600x400/0A0E1A/0099FF?text=WinOLS+vs+PCMFlash" alt="WinOLS vs PCMFlash">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">B2B / Софт</span>
+                <h2>WinOLS vs PCMFlash: почему мы калибруем вручную?</h2>
+                <p>Разбираем отличия ручной калибровки карт от использования готовых модулей. Почему "нажать кнопку MAX" — не всегда лучшее решение для мотора.</p>
+                <span class="read-more">Читать статью →</span>
+            </div>
+        </a>
+
+        <!-- Статья 2 -->
+        <a href="otkluchenie-egr-edc17.html" class="article-card">
+            <div class="article-image">
+                <img src="https://via.placeholder.com/600x400/0A0E1A/0099FF?text=EGR+EDC17" alt="Отключение EGR EDC17">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">Технологии</span>
+                <h2>Как программно отключить EGR на блоке EDC17</h2>
+                <p>Пошаговый процесс отключения клапана рециркуляции отработавших газов. Какие карты менять в WinOLS и как избежать ошибок по диагностике.</p>
+                <span class="read-more">Читать статью →</span>
+            </div>
+        </a>
+
+        <!-- Статья 3 -->
+        <a href="oshibka-p2463-dpf.html" class="article-card">
+            <div class="article-image">
+                <img src="https://via.placeholder.com/600x400/0A0E1A/0099FF?text=DPF+P2463" alt="Ошибка P2463 DPF">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">Решение проблем</span>
+                <h2>Ошибка P2463 (сажевый фильтр): программное решение</h2>
+                <p>Что делать, если забился сажевый фильтр (DPF). Как полностью удалить систему из прошивки без физического вырезания банки.</p>
+                <span class="read-more">Читать статью →</span>
+            </div>
+        </a>
+    </div>
+</main>
+
+</body>
+</html>
