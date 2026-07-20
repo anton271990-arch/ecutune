@@ -4,73 +4,89 @@
     <!-- Главная страница -->
     <url>
         <loc>https://kalibr-ecu.ru/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2024-05-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Страница услуги: Sitrak -->
+    <!-- Страницы услуг (Грузовики) -->
     <url>
         <loc>https://kalibr-ecu.ru/sitrak-adblue/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2024-05-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-    <!-- Страница услуги: КАМАЗ -->
     <url>
         <loc>https://kalibr-ecu.ru/kamaz-adblue/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2024-05-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-    <!-- Страница услуги: Howo -->
     <url>
         <loc>https://kalibr-ecu.ru/howo-adblue/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2024-05-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-    <!-- Страница услуги: Shacman -->
     <url>
         <loc>https://kalibr-ecu.ru/shacman-adblue/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2024-05-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-    <!-- Страница услуги: МАЗ -->
     <url>
         <loc>https://kalibr-ecu.ru/maz-adblue/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2024-05-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-    <!-- Страница услуги: ГАЗ -->
     <url>
         <loc>https://kalibr-ecu.ru/gaz-adblue/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2024-05-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-    <!-- Страница услуги: FAW -->
     <url>
         <loc>https://kalibr-ecu.ru/faw-adblue/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2024-05-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://kalibr-ecu.ru/jac-adblue/</loc>
+        <lastmod>2024-05-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- Страница услуги: JAC -->
+    <!-- Раздел: Блог -->
     <url>
-        <loc>https://kalibr-ecu.ru/jac-adblue/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <loc>https://kalibr-ecu.ru/blog/</loc>
+        <lastmod>2024-05-25</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Статьи блога -->
+    <url>
+        <loc>https://kalibr-ecu.ru/blog/winols.html</loc>
+        <lastmod>2024-05-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://kalibr-ecu.ru/blog/oshibka-p0400-egr.html</loc>
+        <lastmod>2024-05-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://kalibr-ecu.ru/blog/oshibka-p2002-dpf.html</loc>
+        <lastmod>2024-05-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
 </urlset>
