@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Чип-тюнинг и калибровка ЭБУ по всей России | Kalibr-ECU</title>
-<meta name="description" content="Калибровка прошивок ЭБУ на заказ с гарантией 1 год. Отключение AdBlue (мочевины), DPF, EGR для легковых и грузовых авто (Sitrak, Howo, Shacman, КАМАЗ, МАЗ, ГАЗ, BMW, Mercedes, Audi, Toyota). Цены от 2500₽.">
-<meta name="keywords" content="чип тюнинг, калибровка эбу, отключение adblue, удаление мочевины, отключение dpf, прошивка эбу грузовых, sitrak, howo, камаз, маз, газ, bmw, mercedes, audi, toyota">
+<meta name="theme-color" content="#0A0E1A">
+<title>Удаленная калибровка ЭБУ для тюнинг-ателье | Kalibr-ECU</title>
+<meta name="description" content="Профессиональная удаленная калибровка прошивок ЭБУ для СТО и чип-тюнеров. Ручная работа в WinOLS. Отключение AdBlue, DPF, EGR. Сроки до 2 часов. Безналичная оплата.">
+<meta name="keywords" content="калибровка эбу, чип тюнинг, прошивка эбу, отключение adblue, удаление мочевины, отключение dpf, winols, калибровка для сто, прошивка грузовых, sitrak, howo, камаз, маз, газ, bmw, mercedes, audi, toyota">
 <meta name="robots" content="index, follow">
 <meta name="language" content="Russian">
 <meta name="author" content="Kalibr-ECU">
@@ -13,20 +14,20 @@
 <meta name="yandex-verification" content="9cb6013ee1a158a6" />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:title" content="Чип-тюнинг и калибровка ЭБУ | Kalibr-ECU">
-<meta property="og:description" content="Увеличим мощность до 30%, отключим экологию. Гарантия 1 год. Работаем с грузовиками и легковыми авто.">
+<meta property="og:title" content="Удаленная калибровка ЭБУ для тюнинг-ателье | Kalibr-ECU">
+<meta property="og:description" content="Ручная работа в WinOLS. Сроки до 2 часов. Гарантия сохранения стока. Работаем с легковыми и грузовыми авто.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kalibr-ecu.ru">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:image" content="https://kalibr-ecu.ru/og-image.jpg"> <!-- Убедитесь, что этот файл есть на хостинге! -->
+<meta property="og:image" content="https://kalibr-ecu.ru/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Kalibr-ECU">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Чип-тюнинг и калибровка ЭБУ | Kalibr-ECU">
-<meta name="twitter:description" content="Увеличим мощность до 30%, отключим экологию. Гарантия 1 год. Работаем с грузовиками и легковыми авто.">
+<meta name="twitter:title" content="Удаленная калибровка ЭБУ для тюнинг-ателье | Kalibr-ECU">
+<meta name="twitter:description" content="Ручная работа в WinOLS. Сроки до 2 часов. Гарантия сохранения стока. Работаем с легковыми и грузовыми авто.">
 <meta name="twitter:image" content="https://kalibr-ecu.ru/og-image.jpg">
 <meta name="twitter:site" content="@kalibr_ecu">
 
@@ -91,9 +92,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     gap: 15px;
 }
 
-.header-logo {
-    flex-shrink: 0;
-}
+.header-logo { flex-shrink: 0; }
 
 .logo-link {
     display: flex;
@@ -224,11 +223,11 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     align-items: center; 
     position: relative; 
     overflow: hidden; 
-    background-color: #111;
-    /* ВАЖНО: Переименуйте файл на хостинге в ingredients-result-2.png */
-    background-image: url('bg.webp');
+    background-color: #0A0E1A; 
+    /* Легкий градиент слева для читабельности текста + сама картинка */
+    background-image: linear-gradient(90deg, rgba(10, 14, 26, 0.85) 0%, rgba(10, 14, 26, 0) 50%), url('bg.webp');
     background-size: cover;
-    background-position: center;
+    background-position: right center; 
     background-repeat: no-repeat;
     border-bottom: 1px solid var(--border-color); 
 }
@@ -237,8 +236,8 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 1200px;
-    margin: 0;
+    max-width: 1200px; /* Вернули нормальную ширину контейнера */
+    margin: 0 auto; /* Контейнер по центру */
     padding: 60px 20px;
 }
 
@@ -247,8 +246,8 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
-    max-width: 800px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    max-width: 600px; /* Ограничили ширину ТОЛЬКО заголовка */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
 }
 
 .hero__highlight { color: var(--accent-light); }
@@ -256,10 +255,10 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .hero__subtitle {
     font-size: 18px;
     color: #ffffff;
-    max-width: 700px;
+    max-width: 500px; /* Ограничили ширину ТОЛЬКО подзаголовка */
     margin-bottom: 35px;
     line-height: 1.6;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
 }
 
 .hero__buttons {
@@ -552,10 +551,22 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 @keyframes pulse { 0% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7); } 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } }
 @keyframes pulseTelegram { 0% { box-shadow: 0 8px 24px rgba(0, 136, 204, 0.4); } 50% { box-shadow: 0 8px 32px rgba(0, 136, 204, 0.7); } 100% { box-shadow: 0 8px 24px rgba(0, 136, 204, 0.4); } }
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* АНИМАЦИИ (ПУЛЕНЕПРОБИВАЕМЫЙ ВАРИАНТ) */
+.fade-in {
+    opacity: 1; /* По умолчанию всё видно */
+    transform: none;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+/* Класс добавляется только через JS, чтобы скрыть элемент для анимации */
+.fade-in.js-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--primary-dark); }
@@ -563,22 +574,13 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 /* АДАПТИВНОСТЬ */
 @media (max-width: 1100px) {
-    .calc-grid {
-        grid-template-columns: repeat(2, 1fr); /* Калькулятор в 2 колонки на средних экранах */
-    }
-    .calc-btn--inline {
-        grid-column: 1 / -1;
-        height: auto;
-        padding: 16px;
-    }
+    .calc-grid { grid-template-columns: repeat(2, 1fr); }
+    .calc-btn--inline { grid-column: 1 / -1; height: auto; padding: 16px; }
 }
 
 @media (max-width: 992px) {
     .header-main { flex-wrap: wrap; gap: 10px; }
-    .nav { 
-        order: 3; width: 100%; justify-content: center; gap: 12px; 
-        padding-top: 10px; border-top: 1px solid var(--border-color); margin-top: 5px; flex-wrap: wrap; 
-    }
+    .nav { order: 3; width: 100%; justify-content: center; gap: 12px; padding-top: 10px; border-top: 1px solid var(--border-color); margin-top: 5px; flex-wrap: wrap; }
     .hero__title { font-size: 36px; }
     .section-title, .cta h2, .calc-header h2 { font-size: 28px; }
     .calc-stats { grid-template-columns: 1fr; }
@@ -592,7 +594,10 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     .header-contacts-right { flex-direction: row; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .header-phone-block { text-align: center; align-items: center; }
     .header-cta { width: 100%; text-align: center; padding: 12px 20px; }
-    .hero { margin-top: 130px; min-height: auto; padding: 40px 0; }
+    .hero { margin-top: 180px; /* Увеличили отступ с 130px до 180px */
+        min-height: auto; 
+        padding: 40px 0; 
+    }
     .hero-container { padding: 40px 20px; }
     .hero__title { font-size: 28px; }
     .hero__subtitle { font-size: 15px; }
@@ -606,9 +611,9 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     .services-grid, .pricing-grid, .advantages-grid, .process-steps, .reviews-grid { grid-template-columns: 1fr; }
     .pricing-card.popular { transform: scale(1); }
     .pricing-card.popular:hover { transform: translateY(-8px); }
-    .floating-whatsapp { width: 50px; height: 50px; bottom: 20px; right: 20px; font-size: 24px; }
-    .floating-telegram { width: 50px; height: 50px; bottom: 84px; right: 20px; }
-    .floating-telegram svg { width: 24px; height: 24px; }
+    .floating-whatsapp, .floating-telegram { width: 48px; height: 48px; bottom: 15px; right: 15px; }
+    .floating-telegram { bottom: 75px; }
+    #contact .cta-content { padding-bottom: 80px; }
     .calc-price-row { flex-direction: column; align-items: flex-start; }
     .calc-price-value { font-size: 24px; }
 }
@@ -623,7 +628,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 }
 </style>
 
-<!-- Schema.org разметка (без изменений, она отличная) -->
+<!-- Schema.org разметка -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -711,38 +716,38 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 <section class="hero" aria-labelledby="hero-title">
     <div class="hero-container">
         <h1 id="hero-title" class="hero__title">
-            УВЕЛИЧИМ МОЩНОСТЬ ВАШЕГО АВТОМОБИЛЯ<br>
-            <span class="hero__highlight">ДО 30%</span> БЕЗ РИСКА
+            УДАЛЕННАЯ КАЛИБРОВКА ЭБУ<br>
+            <span class="hero__highlight">ДЛЯ ТЮНИНГ-АТЕЛЬЕ И СТО</span>
         </h1>
         <p class="hero__subtitle">
-            Профессиональная калибровка ЭБУ и отключение экологии для легковых и грузовых автомобилей по всей России
+            Ручная работа с дампами в оригинальном ПО WinOLS. Сроки отработки до 2 часов. Сохраняем сток, даем гарантию.
         </p>
         <div class="hero__buttons">
             <a href="#calculator" class="btn btn--primary" data-goal="order_click">
-                <span>РАССЧИТАТЬ ВОЗМОЖНОСТИ АВТО</span>
+                <span>РАССЧИТАТЬ СТОИМОСТЬ</span>
                 <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
             </a>
-            <a href="https://www.youtube.com/@Ru-tuning/videos" target="_blank" rel="noopener" class="btn btn--secondary">
-                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                <span>Смотреть видео о нашей работе</span>
+            <a href="https://t.me/kalibr_compass" target="_blank" rel="noopener" class="btn btn--secondary">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Отправить дамп в Telegram</span>
             </a>
         </div>
         <div class="hero__features">
             <div class="feature">
                 <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
-                <span>Гарантия 1 год</span>
+                <span>Только ручная работа (WinOLS)</span>
             </div>
             <div class="feature">
                 <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
-                <span>Срок работы до 2 часов</span>
-            </div>
-            <div class="feature">
-                <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-                <span>Более 5000 успешных работ</span>
+                <span>Сроки калибровки: до 2 часов</span>
             </div>
             <div class="feature">
                 <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
-                <span>Удаленно по всей России</span>
+                <span>Работаем по всей России</span>
+            </div>
+            <div class="feature">
+                <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                <span>Опыт более 5000 файлов</span>
             </div>
         </div>
     </div>
@@ -806,7 +811,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     </div>
 </section>
 
-<!-- Остальные секции (Услуги, Цены, Преимущества, Процесс, Отзывы, FAQ, Форма, Футер) остаются без изменений, они отличные -->
 <section class="section section-dark" aria-labelledby="brands-title">
     <div class="container">
         <div class="section-header fade-in">
@@ -945,23 +949,23 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
         <div class="process-steps">
             <article class="step fade-in">
                 <div class="step-number">1</div>
-                <h3>Присылаете прошивку</h3>
-                <p>Считываете стоковую прошивку с вашего ЭБУ и отправляете её нам.</p>
+                <h3>Считываете дамп</h3>
+                <p>Считываете стоковую прошивку через OBD или на стенде. Отправляете файл нам в Telegram.</p>
             </article>
             <article class="step fade-in">
                 <div class="step-number">2</div>
-                <h3>Анализируем</h3>
-                <p>Проверяем файл, определяем версию ПО и согласуем детали.</p>
+                <h3>Анализ в WinOLS</h3>
+                <p>Проверяем файл, определяем софт, согласуем задачи (EGR, DPF, Stage 1) и стоимость.</p>
             </article>
             <article class="step fade-in">
                 <div class="step-number">3</div>
-                <h3>Вносим изменения</h3>
-                <p>Вносим изменения в программный код под ваши задачи.</p>
+                <h3>Калибровка карт</h3>
+                <p>Вносим изменения в карты калибровки ЭБУ. Никаких готовых модулей, только ручная работа.</p>
             </article>
             <article class="step fade-in">
                 <div class="step-number">4</div>
-                <h3>Присылаем результат</h3>
-                <p>Отправляем готовую прошивку с подробной инструкцией. Поддержка 24/7.</p>
+                <h3>Готовый файл</h3>
+                <p>Присылаем готовый модифицированный файл с инструкцией по записи. Поддержка 24/7.</p>
             </article>
         </div>
     </div>
@@ -1072,15 +1076,15 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
             <h2 class="fade-in" id="contact-title">Получите бесплатную консультацию</h2>
             <p class="fade-in">Оставьте заявку и мы рассчитаем стоимость чип-тюнинга для вашего автомобиля в течение 15 минут.</p>
             <form class="form-group fade-in" aria-label="Форма заявки" id="leadForm">
-                <input type="text" class="form-input" id="clientName" placeholder="Ваше имя" required>
-                <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required>
-                <input type="text" class="form-input" id="carModel" placeholder="Марка и модель авто (например: КАМАЗ-5490)" required>
-                <input type="hidden" id="utm_source" name="utm_source" value="">
-                <input type="hidden" id="utm_medium" name="utm_medium" value="">
-                <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
-                <button type="submit" class="btn" id="submitBtn">Получить расчет со скидкой 10%</button>
-                <p class="form-note">🔒 Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>.</p>
-            </form>
+    <input type="text" class="form-input" id="clientName" placeholder="Ваше имя или название СТО" required>
+    <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required>
+    <input type="text" class="form-input" id="carModel" placeholder="Марка авто или тип ЭБУ (EDC17, MD1...)" required>
+    <input type="hidden" id="utm_source" name="utm_source" value="">
+    <input type="hidden" id="utm_medium" name="utm_medium" value="">
+    <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
+    <button type="submit" class="btn" id="submitBtn">Получить расчет со скидкой 10%</button>
+    <p class="form-note">🔒 Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>.</p>
+</form>
         </div>
     </div>
 </section>
@@ -1097,7 +1101,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
         <div class="footer-content">
             <div class="footer-col">
                 <h4>О компании</h4>
-                <p>Профессиональная удаленная калибровка и чип-тюнинг ЭБУ. Работаем по всей России с 2015 года.</p>
+                <p>Профессиональная удаленная калибровка и чип-тюнинг Эбу. Работаем по всей России с 2015 года.</p>
             </div>
             <div class="footer-col">
                 <h4>Легковые авто</h4>
@@ -1208,13 +1212,18 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
 
     const message = `Заявка с сайта Kalibr-ECU\n\nИмя: ${name}\nТелефон: ${phone}\nАвто: ${car}\nДата: ${new Date().toLocaleString('ru-RU')}`;
     const telegramUrl = `https://t.me/kalibr_compass?text=${encodeURIComponent(message)}`;
-    window.open(telegramUrl, '_blank', 'noopener');
+    
+    const win = window.open(telegramUrl, '_blank');
+    
+    if (!win || win.closed || typeof win.closed == 'undefined') {
+        window.location.href = `https://web.telegram.org/a/#?tgaddr=tg%3A//resolve%3Fdomain%3Dkalibr_compass%26text%3D${encodeURIComponent(message)}`;
+    }
+
     reachGoal('form_submit');
 
     setTimeout(() => {
-        btn.innerHTML = originalText;
+        btn.innerHTML = '✅ Заявка отправлена! Мы свяжемся с вами.';
         btn.style.background = '';
-        btn.disabled = false;
         e.target.reset();
     }, 3000);
 });
@@ -1234,10 +1243,26 @@ document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('
 document.querySelectorAll('a[href*="wa.me"]').forEach(el => el.addEventListener('click', () => reachGoal('whatsapp_click')));
 document.querySelectorAll('a[href*="t.me"]').forEach(el => el.addEventListener('click', () => reachGoal('telegram_click')));
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+// ПУЛЕНЕПРОБИВАЕМЫЙ INTERSECTION OBSERVER
+const fadeElements = document.querySelectorAll('.fade-in');
+if ('IntersectionObserver' in window) {
+    // Скрываем элементы только если JS точно работает и поддерживает Observer
+    fadeElements.forEach(el => el.classList.add('js-hidden'));
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    fadeElements.forEach(el => observer.observe(el));
+} else {
+    // Если старый браузер - просто показываем всё
+    fadeElements.forEach(el => el.classList.add('visible'));
+}
 
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
