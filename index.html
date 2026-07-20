@@ -812,6 +812,13 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
             <div class="header-right">
                 <div class="header-contacts-right">
                     <div class="header-messengers">
+ <!-- Сюда вставляй ВК и YouTube -->
+    <a href="https://vk.ru/kalibr_compass" class="messenger-icon" style="background: #0077FF;" title="ВКонтакте" target="_blank" rel="noopener" aria-label="Наша группа ВКонтакте">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.785 16.241s.288-.032.435-.193c.135-.148.131-.426.131-.426s-.019-1.302.586-1.495c.596-.19 1.361 1.262 2.172 1.821.613.422 1.079.33 1.079.33l2.168-.031s1.133-.071.596-.964c-.044-.073-.313-.661-1.611-1.872-1.357-1.265-1.175-1.059.46-3.246.997-1.332 1.396-2.146 1.271-2.49-.119-.33-.852-.243-.852-.243l-2.4.015s-.178-.024-.31.055c-.129.078-.212.258-.212.258s-.381 1.02-.89 1.887c-1.073 1.82-1.502 1.915-1.678 1.799-.408-.264-.306-1.059-.306-1.624 0-1.766.267-2.504-.521-2.693-.262-.063-.455-.105-1.125-.112-.86-.009-1.589.003-2.002.205-.275.135-.486.436-.357.453.159.021.519.098.71.36.246.336.237 1.085.237 1.085s.142 2.056-.333 2.311c-.325.175-.772-.182-1.731-1.881-.489-.842-.858-1.776-.858-1.776s-.071-.174-.198-.268c-.154-.113-.369-.149-.369-.149l-2.281.015s-.342.01-.468.156c-.112.131-.009.402-.009.402s1.785 4.179 3.804 6.29c1.851 1.929 3.952 1.803 3.952 1.803h.951z"/></svg>
+    </a>
+    <a href="https://youtube.com/@Ru-tuning/videos" class="messenger-icon" style="background: #FF0000;" title="YouTube" target="_blank" rel="noopener" aria-label="Наш YouTube канал">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
 <a href="https://max.ru/u/f9LHodD0cOISyrgF-1M5TN90WIYI2gtqufHKx8D32svi8wcemuu1xxBzbiQ" class="messenger-icon" style="background: linear-gradient(135deg, #7000FF 0%, #3B0FFF 100%);" title="MAX" target="_blank" rel="noopener" aria-label="Написать в MAX">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
     </a>
@@ -1242,6 +1249,12 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 <footer class="footer" role="contentinfo">
     <div class="container">
         <div class="footer-content">
+<div class="footer-col">
+    <h4>Мы в сети</h4>
+    <a href="https://youtube.com/@Ru-tuning/videos target="_blank" rel="noopener">▶️ YouTube (Процесс работы)</a>
+    <a href="https://vk.ru/kalibr_compass" target="_blank" rel="noopener">🔵 ВКонтакте (Акции)</a>
+    <a href="https://t.me/kalibr_compass" target="_blank" rel="noopener">✈️ Telegram (Связь)</a>
+</div>
             <div class="footer-col">
                 <h4>О компании</h4>
                 <p>Профессиональная удаленная калибровка и чип-тюнинг Эбу. Работаем по всей России с 2015 года.</p>
@@ -1387,6 +1400,8 @@ document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('
 document.querySelectorAll('a[href*="wa.me"]').forEach(el => el.addEventListener('click', () => reachGoal('whatsapp_click')));
 document.querySelectorAll('a[href*="t.me"]').forEach(el => el.addEventListener('click', () => reachGoal('telegram_click')));
 document.querySelectorAll('[data-goal="upload_dump_click"]').forEach(el => el.addEventListener('click', () => reachGoal('upload_dump_click')));
+document.querySelectorAll('a[href*="youtube.com"]').forEach(el => el.addEventListener('click', () => reachGoal('youtube_click')));
+document.querySelectorAll('a[href*="vk.com"]').forEach(el => el.addEventListener('click', () => reachGoal('vk_click')));
 
 // ПУЛЕНЕПРОБИВАЕМЫЙ INTERSECTION OBSERVER
 const fadeElements = document.querySelectorAll('.fade-in');
