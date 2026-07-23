@@ -89,4 +89,11 @@
         <priority>0.7</priority>
     </url>
 
+     <url>
+        <loc>https://kalibr-ecu.ru/blog/oshibki-sazhevogo-filtra-dpf.html</loc>
+        <lastmod>2024-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
 </urlset>
