@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0A0E1A">
-<title>Удаленная калибровка ЭБУ | Чип-тюнинг и отключение AdBlue, DPF, EGR по России | Kalibr-ECU</title>
-<meta name="description" content="Профессиональная удаленная калибровка ЭБУ для всех марок авто. Ручная работа в WinOLS. Отключение AdBlue, DPF, EGR на грузовиках и легковых. Сроки до 2 часов, гарантия. Узнайте стоимость!">
+<title>Удаленная калибровка ЭБУ, чип-тюнинг и отключение AdBlue/DPF по России | Kalibr-ECU</title>
+<meta name="description" content="Профессиональная удаленная калибровка ЭБУ и чип-тюнинг для всех марок авто. Ручная работа в WinOLS. Отключение AdBlue, DPF, EGR на грузовиках и легковых. Сроки до 2 часов, гарантия. Узнайте стоимость!">
 <meta name="keywords" content="калибровка эбу, чип тюнинг, прошивка эбу, отключение adblue, удаление мочевины, отключение dpf, winols, калибровка для сто, прошивка грузовых, sitrak, howo, камаз, маз, газ, bmw, mercedes, audi, toyota">
 <meta name="robots" content="index, follow">
 <meta name="language" content="Russian">
@@ -162,13 +162,11 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     justify-content: center; 
     text-decoration: none; 
     transition: all 0.3s ease; 
-    /* Базовый стиль (Темное стекло) */
     background: rgba(255, 255, 255, 0.05); 
     border: 1px solid var(--border-color);
     color: var(--text-gray); 
 }
 
-/* Эффекты при наведении (каждая иконка загорается своим цветом) */
 .messenger-whatsapp:hover { 
     background: #25D366; 
     border-color: #25D366;
@@ -262,8 +260,8 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     position: relative; 
     overflow: hidden; 
     background-color: #0A0E1A; 
-    /* Легкий градиент слева для читабельности текста + сама картинка */
-    background-image: linear-gradient(90deg, rgba(10, 14, 26, 0.85) 0%, rgba(10, 14, 26, 0) 50%), url('bg.webp');
+    /* Усиленный градиент для лучшей читаемости текста */
+    background-image: linear-gradient(90deg, rgba(10, 14, 26, 0.9) 0%, rgba(10, 14, 26, 0.5) 60%, rgba(10, 14, 26, 0.2) 100%), url('bg.webp');
     background-size: cover;
     background-position: right center; 
     background-repeat: no-repeat;
@@ -274,8 +272,8 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 1200px; /* Вернули нормальную ширину контейнера */
-    margin: 0 auto; /* Контейнер по центру */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 60px 20px;
 }
 
@@ -284,8 +282,8 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
-    max-width: 600px; /* Ограничили ширину ТОЛЬКО заголовка */
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+    max-width: 600px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
 }
 
 .hero__highlight { color: var(--accent-light); }
@@ -293,10 +291,10 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .hero__subtitle {
     font-size: 18px;
     color: #ffffff;
-    max-width: 500px; /* Ограничили ширину ТОЛЬКО подзаголовка */
+    max-width: 500px;
     margin-bottom: 35px;
     line-height: 1.6;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
 }
 
 .hero__buttons {
@@ -397,7 +395,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     max-width: 1100px; margin: 0 auto; background: rgba(255,255,255,0.02); 
     border: 1px solid var(--border-color); border-radius: 24px; 
     padding: 40px 30px; position: relative; backdrop-filter: blur(10px); 
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 50px rgba(0, 102, 255, 0.15); /* Добавили синее свечение вокруг */
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 50px rgba(0, 102, 255, 0.15);
 }
 .calc-header { text-align: center; margin-bottom: 35px; }
 .calc-header h2 { font-size: 32px; margin-bottom: 12px; font-weight: 800; }
@@ -505,9 +503,9 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .pricing-card { background: rgba(255,255,255,0.03); border: 2px solid var(--border-color); border-radius: 20px; padding: 32px 24px; text-align: center; transition: all 0.3s; position: relative; display: flex; flex-direction: column; }
 .pricing-card.popular { 
     border-color: var(--accent-blue); 
-    background: linear-gradient(180deg, rgba(0,102,255,0.1) 0%, rgba(0,102,255,0.02) 100%); /* Легкий синий градиент внутри */
+    background: linear-gradient(180deg, rgba(0,102,255,0.1) 0%, rgba(0,102,255,0.02) 100%);
     transform: scale(1.03); 
-    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.15); /* Добавили тень */
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.15);
 }
 .pricing-card.popular::before { content: 'ПОПУЛЯРНО'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--accent-blue), var(--accent-light)); padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; }
 .pricing-card:hover { transform: translateY(-8px); border-color: var(--accent-blue); }
@@ -584,10 +582,10 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     align-items: center;
     gap: 12px;
     cursor: pointer;
-    border: 1px dashed var(--border-color) !important; /* Пунктирная рамка */
+    border: 1px dashed var(--border-color) !important;
     background: rgba(255,255,255,0.02) !important;
     transition: all 0.3s ease;
-    height: auto; /* Чтобы влезла маленькая подпись */
+    height: auto;
     min-height: 50px;
 }
 .upload-label:hover {
@@ -607,7 +605,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .upload-label:hover .upload-text {
     color: #fff;
 }
-/* Когда файл выбран - меняем цвет текста на зеленый */
 .file-selected {
     color: var(--accent-green) !important;
 }
@@ -632,13 +629,12 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 @keyframes pulse { 0% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7); } 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); } }
 @keyframes pulseTelegram { 0% { box-shadow: 0 8px 24px rgba(0, 136, 204, 0.4); } 50% { box-shadow: 0 8px 32px rgba(0, 136, 204, 0.7); } 100% { box-shadow: 0 8px 24px rgba(0, 136, 204, 0.4); } }
 
-/* АНИМАЦИИ (ПУЛЕНЕПРОБИВАЕМЫЙ ВАРИАНТ) */
+/* АНИМАЦИИ */
 .fade-in {
-    opacity: 1; /* По умолчанию всё видно */
+    opacity: 1;
     transform: none;
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
-/* Класс добавляется только через JS, чтобы скрыть элемент для анимации */
 .fade-in.js-hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -656,14 +652,14 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .floating-upload {
     position: fixed;
     bottom: 24px;
-    left: 24px; /* Привязана к левому краю, чтобы не мешать мессенджерам справа */
+    left: 24px;
     display: flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); /* Оранжевый цвет (акцент) */
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     color: #fff;
     padding: 12px 22px;
-    border-radius: 30px; /* Форма таблетки */
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
@@ -691,14 +687,14 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     100% { box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4); }
 }
 
-/* ПЛАВАЮЩАЯ КНОПКА MAX (МЕССЕНДЖЕР) */
+/* ПЛАВАЮЩАЯ КНОПКА MAX */
 .floating-max-messenger {
     position: fixed;
-    bottom: 168px; /* Поднимаем выше Telegram (96px) */
+    bottom: 168px;
     right: 24px;
     width: 56px;
     height: 56px;
-    background: linear-gradient(135deg, #7000FF 0%, #3B0FFF 100%); /* Фирменный фиолетово-синий MAX */
+    background: linear-gradient(135deg, #7000FF 0%, #3B0FFF 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -749,10 +745,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     .header-contacts-right { flex-direction: row; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .header-phone-block { text-align: center; align-items: center; }
     .header-cta { width: 100%; text-align: center; padding: 12px 20px; }
-    .hero { margin-top: 180px; /* Увеличили отступ с 130px до 180px */
-        min-height: auto; 
-        padding: 40px 0; 
-    }
+    .hero { margin-top: 180px; min-height: auto; padding: 40px 0; }
     .hero-container { padding: 40px 20px; }
     .hero__title { font-size: 28px; }
     .hero__subtitle { font-size: 15px; }
@@ -771,37 +764,34 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     #contact .cta-content { padding-bottom: 80px; }
     .calc-price-row { flex-direction: column; align-items: flex-start; }
     .calc-price-value { font-size: 24px; }
-.floating-upload {
+    .floating-upload {
         bottom: 15px;
         left: 15px;
-        padding: 0; /* Убираем внутренние отступы */
-        width: 48px; /* Делаем круглой */
+        padding: 0;
+        width: 48px;
         height: 48px;
-        justify-content: center; /* Центрируем иконку */
+        justify-content: center;
         border-radius: 50%;
     }
     .floating-upload span {
-        display: none; /* Прячем текст на мобильных */
+        display: none;
     }
     .floating-upload svg {
         width: 24px;
         height: 24px;
     }
-
-.floating-whatsapp, .floating-telegram, .floating-max-messenger {
+    .floating-whatsapp, .floating-telegram, .floating-max-messenger {
         width: 48px;
         height: 48px;
         right: 15px;
     }
     .floating-whatsapp { bottom: 15px; }
     .floating-telegram { bottom: 75px; }
-    .floating-max-messenger { bottom: 135px; } /* Третья кнопка еще выше */
-    
+    .floating-max-messenger { bottom: 135px; }
     .floating-max-messenger svg {
         width: 24px;
         height: 24px;
     }
-}
 }
 
 @media (max-width: 480px) {
@@ -815,7 +805,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 @media (max-width: 1100px) {
     .header-phone-block {
-        display: none; /* Прячем телефон на средних экранах */
+        display: none;
     }
 }
 
@@ -887,7 +877,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     <a href="#process">Как работаем</a>
     <a href="#reviews">Отзывы</a>
     <a href="#faq">FAQ</a>
-    <!-- НОВАЯ КНОПКА -->
     <a href="/blog/" style="color: var(--accent-light); font-weight: 700;">Блог</a>
 </nav>
 
@@ -895,7 +884,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
                 <div class="header-contacts-right">
                     <div class="header-messengers">
     <!-- MAX -->
-    <a href="https://max.ru/ТВОЙ_НИК" class="messenger-icon messenger-max" title="MAX" target="_blank" rel="noopener" aria-label="Написать в MAX">
+    <a href="https://max.ru/u/f9LHodD0cOISyrgF-1M5TN90WIYI2gtqufHKx8D32svi8wcemuu1xxBzbiQ" class="messenger-icon messenger-max" title="MAX" target="_blank" rel="noopener" aria-label="Написать в MAX">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 20.5V3.5C3 3.2 3.2 3 3.5 3h2.8c.2 0 .4.1.5.3l4.7 9.7c.2.4.7.4.9 0l4.7-9.7c.1-.2.3-.3.5-.3h2.8c.3 0 .5.2.5.5v17c0 .3-.2.5-.5.5h-2.4c-.3 0-.5-.2-.5-.5V8.2c0-.5-.7-.6-.9-.2L13 17.5c-.1.2-.3.3-.5.3h-1c-.2 0-.4-.1-.5-.3L6.8 8c-.2-.4-.9-.3-.9.2v12.3c0 .3-.2.5-.5.5H3.5c-.3 0-.5-.2-.5-.5z"/></svg>
     </a>
     
@@ -921,8 +910,9 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 <section class="hero" aria-labelledby="hero-title">
     <div class="hero-container">
-        <h1>Удаленная калибровка ЭБУ</h1>
-<p class="subtitle">Для СТО, тюнинг-ателье и автовладельцев по всей России</p>
+        <h1 id="hero-title" class="hero__title">
+            Калибровка ЭБУ, чип-тюнинг и отключение DPF/AdBlue<br>
+            <span class="hero__highlight">По всей России для СТО и автовладельцев</span>
         </h1>
         <p class="hero__subtitle">
             Ручная работа с дампами в оригинальном ПО WinOLS. Сроки отработки до 2 часов. Сохраняем сток, даем гарантию.
@@ -1016,6 +1006,25 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     </div>
 </section>
 
+<!-- НОВЫЙ SEO-ТЕКСТОВЫЙ БЛОК -->
+<section class="section section-light" style="padding-top: 0; padding-bottom: 20px;">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; color: var(--text-gray); font-size: 15px; line-height: 1.7; text-align: center;">
+            <p style="margin-bottom: 12px;">
+                <strong>Kalibr-ECU</strong> – это профессиональная удаленная калибровка ЭБУ для легковых и грузовых автомобилей. 
+                Мы работаем с прошивками <strong>Bosch, Denso, Delphi, Continental</strong> и другими. 
+                Основные услуги: <strong>чип-тюнинг Stage 1/2</strong>, <strong>отключение AdBlue (мочевины)</strong>, 
+                <strong>удаление сажевого фильтра (DPF/FAP)</strong>, <strong>отключение EGR</strong> и вихревых заслонок.
+            </p>
+            <p>
+                С нами сотрудничают СТО и тюнинг-ателье из <strong>Москвы, Санкт-Петербурга, Новосибирска, Екатеринбурга, 
+                Казани, Краснодара</strong> и других городов. Работаем удалённо – присылайте дамп в Telegram, 
+                получайте готовую прошивку за <strong>до 2 часов</strong>. Гарантия 1 год, бесплатный откат до стока.
+            </p>
+        </div>
+    </div>
+</section>
+
 <section class="section section-dark" aria-labelledby="brands-title">
     <div class="container">
         <div class="section-header fade-in">
@@ -1024,23 +1033,23 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
         </div>
         <div class="brands-grid">
             <div class="brand-category">🚗 Легковые автомобили</div>
-            <a href="bmw.html" class="brand-item fade-in">BMW</a>
-            <a href="mercedes.html" class="brand-item fade-in">Mercedes</a>
-            <a href="audi.html" class="brand-item fade-in">Audi</a>
-            <a href="volkswagen.html" class="brand-item fade-in">Volkswagen</a>
-            <a href="toyota.html" class="brand-item fade-in">Toyota</a>
-            <a href="kia.html" class="brand-item fade-in">Kia</a>
-            <a href="hyundai.html" class="brand-item fade-in">Hyundai</a>
+            <a href="bmw.html" class="brand-item fade-in">Чип-тюнинг BMW</a>
+            <a href="mercedes.html" class="brand-item fade-in">Чип-тюнинг Mercedes</a>
+            <a href="audi.html" class="brand-item fade-in">Чип-тюнинг Audi</a>
+            <a href="volkswagen.html" class="brand-item fade-in">Чип-тюнинг Volkswagen</a>
+            <a href="toyota.html" class="brand-item fade-in">Чип-тюнинг Toyota</a>
+            <a href="kia.html" class="brand-item fade-in">Чип-тюнинг Kia</a>
+            <a href="hyundai.html" class="brand-item fade-in">Чип-тюнинг Hyundai</a>
             <a href="#calculator" class="brand-item fade-in">И другие</a>
             <div class="brand-category">🚛 Грузовые автомобили</div>
-            <a href="kamaz-adblue/" class="brand-item fade-in">КАМАЗ</a>
-            <a href="maz-adblue/" class="brand-item fade-in">МАЗ</a>
-            <a href="gaz-adblue/" class="brand-item fade-in">ГАЗ</a>
-            <a href="sitrak-adblue/" class="brand-item fade-in">Sitrak</a>
-            <a href="howo-adblue/" class="brand-item fade-in">Howo</a>
-            <a href="shacman-adblue/" class="brand-item fade-in">Shacman</a>
-            <a href="faw-adblue/" class="brand-item fade-in">FAW</a>
-            <a href="jac-adblue/" class="brand-item fade-in">JAC</a>
+            <a href="/kamaz-adblue/" class="brand-item fade-in">Чип-тюнинг КАМАЗ</a>
+            <a href="/maz-adblue/" class="brand-item fade-in">Чип-тюнинг МАЗ</a>
+            <a href="/gaz-adblue/" class="brand-item fade-in">Чип-тюнинг ГАЗ</a>
+            <a href="/sitrak-adblue/" class="brand-item fade-in">Чип-тюнинг Sitrak</a>
+            <a href="/howo-adblue/" class="brand-item fade-in">Чип-тюнинг Howo</a>
+            <a href="/shacman-adblue/" class="brand-item fade-in">Чип-тюнинг Shacman</a>
+            <a href="/faw-adblue/" class="brand-item fade-in">Чип-тюнинг FAW</a>
+            <a href="/jac-adblue/" class="brand-item fade-in">Чип-тюнинг JAC</a>
         </div>
     </div>
 </section>
@@ -1054,7 +1063,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
         <div class="services-grid">
     <a href="#contact" class="service-card fade-in">
         <div class="service-icon" aria-hidden="true">
-            <!-- Иконка Листа (Экология) -->
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
         </div>
         <h3>Эко-тюнинг (DPF, EGR)</h3>
@@ -1062,7 +1070,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     </a>
     <a href="#contact" class="service-card fade-in">
         <div class="service-icon" aria-hidden="true">
-            <!-- Иконка Спидометра (Мощность) -->
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
         </div>
         <h3>Чип-тюнинг Stage 1/2</h3>
@@ -1070,7 +1077,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     </a>
     <a href="#contact" class="service-card fade-in">
         <div class="service-icon" aria-hidden="true">
-            <!-- Иконка Грузовика -->
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
         </div>
         <h3>Комплекс для грузовых</h3>
@@ -1294,7 +1300,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     <input type="tel" class="form-input" id="phone" placeholder="Телефон (например: +7 (999) 999-99-99)" required>
     <input type="text" class="form-input" id="carModel" placeholder="Марка авто или тип ЭБУ (EDC17, MD1...)" required>
     
-    <!-- НОВОЕ: Стильное поле загрузки файла -->
     <div class="file-upload-wrapper">
         <input type="file" id="dumpFile" accept=".bin,.zip,.xml,.rar,.iso" hidden>
         <label for="dumpFile" class="form-input upload-label">
@@ -1312,10 +1317,9 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
         </div>
     </div>
 </section>
-<!-- Плавающая кнопка Мессенджера MAX -->
+
 <a href="https://max.ru/u/f9LHodD0cOISyrgF-1M5TN90WIYI2gtqufHKx8D32svi8wcemuu1xxBzbiQ" class="floating-max-messenger" target="_blank" rel="noopener" aria-label="Написать в MAX" data-goal="max_messenger_click" title="Написать в MAX">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <!-- Иконка сообщения для MAX -->
         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
     </svg>
 </a>
@@ -1326,7 +1330,6 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
     </svg>
 </a>
 
-<!-- Плавающая кнопка "Загрузить дамп" -->
 <a href="https://t.me/kalibr_compass" target="_blank" rel="noopener" class="floating-upload" aria-label="Отправить дамп ЭБУ на расчет" data-goal="upload_dump_click" title="Отправить дамп на расчет">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
@@ -1339,9 +1342,9 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
         <div class="footer-content">
 <div class="footer-col">
     <h4>Мы в сети</h4>
-    <a href="https://youtube.com/@Ru-tuning/videos" target="_blank" rel="noopener">▶️ YouTube</a>
-    <a href="https://vk.ru/kalibr_compass" target="_blank" rel="noopener">🔵 ВКонтакте</a>
-    <a href="https://t.me/kalibr_compass" target="_blank" rel="noopener">✈️ Telegram</a>
+    <a href="https://youtube.com/@Ru-tuning/videos" target="_blank" rel="noopener">▶️ YouTube (Процесс работы)</a>
+    <a href="https://vk.com/kalibr_compass" target="_blank" rel="noopener">🔵 ВКонтакте (Акции)</a>
+    <a href="https://t.me/kalibr_compass" target="_blank" rel="noopener">✈️ Telegram (Связь)</a>
 </div>
             <div class="footer-col">
                 <h4>О компании</h4>
@@ -1442,7 +1445,6 @@ document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
 });
 
-// Красивая смена текста при выборе файла
 document.getElementById('dumpFile').addEventListener('change', function(e) {
     const fileNameDisplay = document.getElementById('fileName');
     if (e.target.files.length > 0) {
@@ -1459,7 +1461,6 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
     const btn = document.getElementById('submitBtn');
     const fileInput = document.getElementById('dumpFile');
     
-    // ЕСЛИ ФАЙЛ НЕ ВЫБРАН - открываем Telegram по-старому (как запасной вариант)
     if (fileInput.files.length === 0) {
         const name = document.getElementById('clientName').value.trim();
         const phone = document.getElementById('phone').value.trim();
@@ -1469,11 +1470,9 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
         return;
     }
 
-    // ЕСЛИ ФАЙЛ ВЫБРАН - отправляем через Cloudflare Worker
     btn.disabled = true;
     btn.innerHTML = '⏳ Загрузка дампа на сервер...';
 
-    // ВСТАВЬ СЮДА ССЫЛКУ НА СВОЙ WORKER ИЗ ШАГА 2!
     const WORKER_URL = "https://blue-cloud-2f41.anton271990.workers.dev/"; 
 
     const formData = new FormData();
@@ -1530,12 +1529,9 @@ document.querySelectorAll('[data-goal="upload_dump_click"]').forEach(el => el.ad
 document.querySelectorAll('a[href*="youtube.com"]').forEach(el => el.addEventListener('click', () => reachGoal('youtube_click')));
 document.querySelectorAll('a[href*="vk.com"]').forEach(el => el.addEventListener('click', () => reachGoal('vk_click')));
 
-// ПУЛЕНЕПРОБИВАЕМЫЙ INTERSECTION OBSERVER
 const fadeElements = document.querySelectorAll('.fade-in');
 if ('IntersectionObserver' in window) {
-    // Скрываем элементы только если JS точно работает и поддерживает Observer
     fadeElements.forEach(el => el.classList.add('js-hidden'));
-    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -1544,10 +1540,8 @@ if ('IntersectionObserver' in window) {
             }
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    
     fadeElements.forEach(el => observer.observe(el));
 } else {
-    // Если старый браузер - просто показываем всё
     fadeElements.forEach(el => el.classList.add('visible'));
 }
 
