@@ -4,10 +4,9 @@ from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 import os
 
-# Загружаем настройки из .env файла
 load_dotenv()
-   BOT_TOKEN = os.getenv('BOT_TOKEN')
-   ADMIN_ID = os.getenv('ADMIN_ID')
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+ADMIN_ID = os.getenv('ADMIN_ID')
 
 print("=== ПРОВЕРКА ДАННЫХ ПРИ ЗАПУСКЕ ===")
 print(f"Токен: {repr(BOT_TOKEN)}")
@@ -18,7 +17,6 @@ print("===================================")
 app = Flask(__name__)
 
 async def send_to_admin(data):
-    """Отправляет заявку админу в Telegram"""
     try:
         bot = Bot(token=BOT_TOKEN)
         
@@ -43,7 +41,6 @@ async def send_to_admin(data):
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    """Получает данные с сайта"""
     try:
         data = request.json
         print(f"📩 Получены данные: {data}")
@@ -58,4 +55,4 @@ def home():
     return "Бот работает!"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
