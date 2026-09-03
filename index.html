@@ -1437,8 +1437,13 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
     formData.append("dumpFile", fileInput.files[0]);
 
     try {
-        const response = await fetch(WORKER_URL, { method: "POST", body: formData });
-        const result = await response.json();
+        const response = await fetch('https://my-telegram-bot-nqm1.onrender.com/webhook', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data)
+});
         
         if (result.success) {
             btn.innerHTML = '✅ Дамп успешно отправлен!';
